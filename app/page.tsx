@@ -139,10 +139,10 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">FORMATION</h2>
           <div className="border-l-8 border-blue-400 pl-8 py-6 bg-blue-50">
-            <h3 className="text-2xl font-bold text-blue-800 mb-2">{cvData.formation.diplome}</h3>
-            <p className="text-lg text-blue-700 font-semibold mb-2">{cvData.formation.etablissement}</p>
-            <p className="text-base text-gray-700">{cvData.formation.specialite} · {cvData.formation.periode}</p>
-            <p className="text-lg font-bold text-blue-800 mt-3">{cvData.formation.mention}</p>
+            <h3 className="text-2xl font-bold text-blue-800 mb-2">{cvData.formations[0].diplome}</h3>
+            <p className="text-lg text-blue-700 font-semibold mb-2">{cvData.formations[0].etablissement}</p>
+            <p className="text-base text-gray-700">{"Économie et gestion"} · {cvData.formations[0].annee}</p>
+            <p className="text-lg font-bold text-blue-800 mt-3">{"Mention Bien"}</p>
           </div>
         </section>
 
@@ -199,10 +199,10 @@ export default function Home() {
           <section className="mb-10">
             <h2 className="text-lg font-bold uppercase tracking-widest border-b-2 border-purple-300 pb-3 mb-6">FORMATION</h2>
             <div className="text-base">
-              <p className="font-bold mb-2 text-purple-100 text-lg">{cvData.formation.diplome}</p>
-              <p className="text-purple-200 mb-2">{cvData.formation.etablissement}</p>
-              <p className="text-purple-300 text-sm mt-2">{cvData.formation.periode}</p>
-              <p className="text-purple-100 mt-4 font-bold text-lg">{cvData.formation.mention}</p>
+              <p className="font-bold mb-2 text-purple-100 text-lg">{cvData.formations[0].diplome}</p>
+              <p className="text-purple-200 mb-2">{cvData.formations[0].etablissement}</p>
+              <p className="text-purple-300 text-sm mt-2">{cvData.formations[0].annee}</p>
+              <p className="text-purple-100 mt-4 font-bold text-lg">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -296,9 +296,9 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.4em] text-center mb-6 text-teal-800">FORMATION</h2>
           <div className="text-center">
-            <p className="text-base font-light text-teal-900">{cvData.formation.diplome}</p>
-            <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-            <p className="text-xs text-teal-700 font-semibold mt-1">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-teal-900">{cvData.formations[0].diplome}</p>
+            <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+            <p className="text-xs text-teal-700 font-semibold mt-1">{"Mention Bien"}</p>
           </div>
         </section>
 
@@ -364,10 +364,10 @@ export default function Home() {
               FORMATION
             </h2>
             <div className="bg-gray-50 p-4 rounded">
-              <p className="font-bold text-sm">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-xs font-semibold text-gray-700 mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-xs font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -429,9 +429,9 @@ export default function Home() {
             <section className="col-span-1">
               <h2 className="text-lg font-semibold uppercase tracking-widest mb-4 pb-2 border-b-2 border-gray-800">Formation</h2>
               <div className="text-xs">
-                <p className="font-semibold">{cvData.formation.diplome}</p>
-                <p className="text-gray-700">{cvData.formation.etablissement}</p>
-                <p className="text-gray-600 mt-1">{cvData.formation.mention}</p>
+                <p className="font-semibold">{cvData.formations[0].diplome}</p>
+                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="text-gray-600 mt-1">{"Mention Bien"}</p>
               </div>
             </section>
 
@@ -489,10 +489,10 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Formation</h2>
               <div>
-                <h3 className="text-sm font-semibold">{cvData.formation.diplome}</h3>
-                <p className="text-xs text-gray-700">{cvData.formation.etablissement}</p>
-                <p className="text-[10px] text-gray-600 mt-1">{cvData.formation.periode}</p>
-                <p className="text-xs font-semibold text-gray-700 mt-2">{cvData.formation.mention}</p>
+                <h3 className="text-sm font-semibold">{cvData.formations[0].diplome}</h3>
+                <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="text-xs font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
               </div>
             </div>
 
@@ -581,10 +581,10 @@ export default function Home() {
                 <h2 className="text-lg font-bold uppercase tracking-wider">FORMATION</h2>
               </div>
               <div className="bg-gray-50 p-4 rounded-sm">
-                <p className="font-bold text-sm">{cvData.formation.diplome}</p>
-                <p className="text-xs text-gray-700">{cvData.formation.etablissement}</p>
-                <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-                <p className="text-xs font-semibold mt-2">{cvData.formation.mention}</p>
+                <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
+                <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="text-xs font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
 
@@ -621,10 +621,10 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-sm font-bold uppercase tracking-wide mb-4">FORMATION</h2>
               <div className="text-xs">
-                <p className="font-bold">{cvData.formation.diplome}</p>
-                <p className="text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-                <p className="text-[10px] text-gray-500 mt-1">{cvData.formation.periode}</p>
-                <p className="font-semibold mt-2">{cvData.formation.mention}</p>
+                <p className="font-bold">{cvData.formations[0].diplome}</p>
+                <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+                <p className="text-[10px] text-gray-500 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
 
@@ -715,10 +715,10 @@ export default function Home() {
           <section className="break-inside-avoid mb-8">
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Formation Académique</h2>
             <div>
-              <p className="text-sm font-bold">{cvData.formation.diplome}</p>
-              <p className="text-xs text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-[10px] text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-xs font-semibold mt-2">{cvData.formation.mention}</p>
+              <p className="text-sm font-bold">{cvData.formations[0].diplome}</p>
+              <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-xs font-semibold mt-2">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -780,9 +780,9 @@ export default function Home() {
                 <h2 className="text-sm font-black uppercase tracking-wider">FORMATION</h2>
               </div>
               <div className="mb-6 text-xs">
-                <p className="font-bold">{cvData.formation.diplome}</p>
-                <p className="text-gray-700">{cvData.formation.etablissement}</p>
-                <p className="text-gray-600 mt-1">{cvData.formation.mention}</p>
+                <p className="font-bold">{cvData.formations[0].diplome}</p>
+                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="text-gray-600 mt-1">{"Mention Bien"}</p>
               </div>
 
               <div className="bg-gray-100 px-3 py-2 mb-4">
@@ -832,10 +832,10 @@ export default function Home() {
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">FORMATION</h2>
             <div>
-              <p className="font-semibold text-sm text-gray-900">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm text-gray-700 mt-2">{cvData.formation.mention}</p>
+              <p className="font-semibold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm text-gray-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -889,10 +889,10 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-6">
             <section className="bg-white p-6 rounded-lg shadow-sm">
               <h2 className="text-xl font-bold mb-4 text-gray-800 border-l-8 border-gray-900 pl-4">FORMATION</h2>
-              <p className="font-bold text-sm text-gray-900">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-semibold text-gray-700 mt-3">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-semibold text-gray-700 mt-3">{"Mention Bien"}</p>
             </section>
 
             <section className="bg-white p-6 rounded-lg shadow-sm">
@@ -948,10 +948,10 @@ export default function Home() {
             <section className="mb-6">
               <h2 className="text-sm font-bold uppercase mb-3 bg-gray-900 text-white px-2 py-1">FORMATION</h2>
               <div className="text-[10px]">
-                <p className="font-bold">{cvData.formation.diplome}</p>
-                <p className="text-gray-700">{cvData.formation.etablissement}</p>
-                <p className="text-gray-600 mt-1">{cvData.formation.periode}</p>
-                <p className="font-semibold mt-2">{cvData.formation.mention}</p>
+                <p className="font-bold">{cvData.formations[0].diplome}</p>
+                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
 
@@ -1025,10 +1025,10 @@ export default function Home() {
           <section>
             <h2 className="text-center text-sm uppercase tracking-[0.4em] text-gray-500 mb-6">Formation</h2>
             <div className="text-center">
-              <p className="font-semibold text-sm text-gray-900">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-2">{cvData.formation.periode}</p>
-              <p className="text-sm font-semibold text-gray-700 mt-3">{cvData.formation.mention}</p>
+              <p className="font-semibold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-2">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-semibold text-gray-700 mt-3">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -1063,10 +1063,10 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-700">FORMATION</h2>
               <div className="text-xs">
-                <p className="font-bold text-gray-900">{cvData.formation.diplome}</p>
-                <p className="text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-                <p className="text-[10px] text-gray-600 mt-1">{cvData.formation.periode}</p>
-                <p className="font-semibold text-gray-700 mt-2">{cvData.formation.mention}</p>
+                <p className="font-bold text-gray-900">{cvData.formations[0].diplome}</p>
+                <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
               </div>
             </section>
 
@@ -1172,10 +1172,10 @@ export default function Home() {
               <h2 className="text-xs font-bold uppercase tracking-widest">FORMATION</h2>
             </div>
             <div className="bg-white p-3 mb-4 text-[10px]">
-              <p className="font-bold text-gray-900">{cvData.formation.diplome}</p>
-              <p className="text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-              <p className="text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="font-semibold mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-gray-900">{cvData.formations[0].diplome}</p>
+              <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+              <p className="text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-semibold mt-2">{"Mention Bien"}</p>
             </div>
 
             <div className="bg-gray-900 text-white px-3 py-2 mb-4">
@@ -1251,10 +1251,10 @@ export default function Home() {
               <div className="flex-1 h-px bg-gray-300"></div>
             </div>
             <div className="text-center">
-              <p className="font-serif font-semibold text-sm">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-semibold mt-2">{cvData.formation.mention}</p>
+              <p className="font-serif font-semibold text-sm">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-semibold mt-2">{"Mention Bien"}</p>
             </div>
           </section>
 
@@ -1333,10 +1333,10 @@ export default function Home() {
                 <div className="w-1 h-5 bg-black"></div>
                 <h2 className="text-base font-black uppercase tracking-widest">FORMATION</h2>
         </div>
-              <p className="font-bold text-sm">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-bold mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold mt-2">{"Mention Bien"}</p>
             </section>
 
             <section className="border border-gray-200 p-4">
@@ -1373,10 +1373,10 @@ export default function Home() {
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">FORMATION</h2>
               <div className="text-[10px]">
-                <p className="font-bold mb-1">{cvData.formation.diplome}</p>
-                <p className="opacity-90">{cvData.formation.etablissement}</p>
-                <p className="opacity-70 mt-2">{cvData.formation.periode}</p>
-                <p className="font-semibold mt-2">{cvData.formation.mention}</p>
+                <p className="font-bold mb-1">{cvData.formations[0].diplome}</p>
+                <p className="opacity-90">{cvData.formations[0].etablissement}</p>
+                <p className="opacity-70 mt-2">{cvData.formations[0].annee}</p>
+                <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </div>
 
@@ -1482,10 +1482,10 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
           <div>
-            <p className="text-base font-medium">{cvData.formation.diplome}</p>
-            <p className="text-sm text-gray-700 mt-1">{cvData.formation.etablissement}</p>
-            <p className="text-xs text-gray-500 mt-1">{cvData.formation.periode}</p>
-            <p className="text-sm text-gray-700 mt-2">{cvData.formation.mention}</p>
+            <p className="text-base font-medium">{cvData.formations[0].diplome}</p>
+            <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-xs text-gray-500 mt-1">{cvData.formations[0].annee}</p>
+            <p className="text-sm text-gray-700 mt-2">{"Mention Bien"}</p>
           </div>
         </section>
 
@@ -1544,10 +1544,10 @@ export default function Home() {
             <section>
               <h2 className="text-3xl font-bold mb-6 text-emerald-700 border-b-8 border-emerald-500 pb-4 inline-block">FORMATION</h2>
               <div className="bg-emerald-50 p-6 rounded-xl shadow-md">
-                <p className="font-bold text-xl text-emerald-900 mb-2">{cvData.formation.diplome}</p>
-                <p className="text-lg text-emerald-700 mb-2">{cvData.formation.etablissement}</p>
-                <p className="text-base text-gray-700 mt-3">{cvData.formation.periode}</p>
-                <p className="text-xl font-bold text-emerald-700 mt-4">{cvData.formation.mention}</p>
+                <p className="font-bold text-xl text-emerald-900 mb-2">{cvData.formations[0].diplome}</p>
+                <p className="text-lg text-emerald-700 mb-2">{cvData.formations[0].etablissement}</p>
+                <p className="text-base text-gray-700 mt-3">{cvData.formations[0].annee}</p>
+                <p className="text-xl font-bold text-emerald-700 mt-4">{"Mention Bien"}</p>
               </div>
             </section>
             <section>
@@ -1605,9 +1605,9 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-10">
           <section className="bg-orange-50 p-8 rounded-xl shadow-md border-t-8 border-orange-500">
             <h2 className="text-2xl font-black uppercase text-orange-900 mb-6">FORMATION</h2>
-            <p className="text-xl font-bold mb-2">{cvData.formation.diplome}</p>
-            <p className="text-base mb-2">{cvData.formation.etablissement}</p>
-            <p className="text-lg text-orange-700 font-bold mt-4">{cvData.formation.mention}</p>
+            <p className="text-xl font-bold mb-2">{cvData.formations[0].diplome}</p>
+            <p className="text-base mb-2">{cvData.formations[0].etablissement}</p>
+            <p className="text-lg text-orange-700 font-bold mt-4">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2 bg-orange-50 p-8 rounded-xl shadow-md border-t-8 border-orange-500">
             <h2 className="text-2xl font-black uppercase text-orange-900 mb-6">EXPERTISE</h2>
@@ -1660,10 +1660,10 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-serif italic mb-4 text-pink-900 border-l-4 border-pink-400 pl-4">Formation</h2>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="font-semibold text-sm text-pink-900">{cvData.formation.diplome}</p>
-              <p className="text-sm">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-semibold text-pink-700 mt-2">{cvData.formation.mention}</p>
+              <p className="font-semibold text-sm text-pink-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-semibold text-pink-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
           <section>
@@ -1726,9 +1726,9 @@ export default function Home() {
                     <h2 className="text-lg font-bold text-indigo-900">FORMATION</h2>
                   </div>
                   <div className="bg-indigo-50 p-4 rounded">
-                    <p className="font-bold text-sm text-indigo-900">{cvData.formation.diplome}</p>
-                    <p className="text-xs">{cvData.formation.etablissement}</p>
-                    <p className="text-xs text-indigo-700 font-semibold mt-2">{cvData.formation.mention}</p>
+                    <p className="font-bold text-sm text-indigo-900">{cvData.formations[0].diplome}</p>
+                    <p className="text-xs">{cvData.formations[0].etablissement}</p>
+                    <p className="text-xs text-indigo-700 font-semibold mt-2">{"Mention Bien"}</p>
                   </div>
                 </section>
                 <section>
@@ -1790,9 +1790,9 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-6">
           <section className="col-span-1 bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-6 rounded-lg">
             <h2 className="text-base font-black uppercase mb-4">FORMATION</h2>
-            <p className="text-sm font-bold">{cvData.formation.diplome}</p>
-            <p className="text-xs opacity-90 mt-1">{cvData.formation.etablissement}</p>
-            <p className="text-sm font-bold mt-3">{cvData.formation.mention}</p>
+            <p className="text-sm font-bold">{cvData.formations[0].diplome}</p>
+            <p className="text-xs opacity-90 mt-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm font-bold mt-3">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2">
             <h2 className="text-base font-black uppercase tracking-widest mb-4 text-cyan-900">COMPÉTENCES</h2>
@@ -1853,10 +1853,10 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-bold mb-4 text-amber-900 bg-amber-100 px-4 py-2 rounded inline-block">FORMATION</h2>
             <div className="bg-white p-5 rounded-lg shadow-sm">
-              <p className="font-bold text-sm text-amber-900">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-bold text-amber-700 mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm text-amber-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold text-amber-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
           <section>
@@ -1916,10 +1916,10 @@ export default function Home() {
                 <span className="w-1.5 h-6 bg-lime-600"></span>
                 FORMATION
               </h2>
-              <p className="font-bold text-sm text-lime-900">{cvData.formation.diplome}</p>
-              <p className="text-sm">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-bold text-lime-700 mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm text-lime-900">{cvData.formations[0].diplome}</p>
+              <p className="text-sm">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold text-lime-700 mt-2">{"Mention Bien"}</p>
             </section>
             <section className="border-2 border-lime-200 rounded-lg p-6">
               <h2 className="text-lg font-black mb-4 text-lime-900 flex items-center gap-2">
@@ -1975,10 +1975,10 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-6">
             <section className="bg-gradient-to-br from-fuchsia-950 to-gray-900 p-6 rounded border-t-4 border-fuchsia-600">
               <h2 className="text-lg font-black uppercase mb-4 text-fuchsia-400">FORMATION</h2>
-              <p className="font-bold text-sm text-fuchsia-300">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-300">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-400 mt-1">{cvData.formation.periode}</p>
-              <p className="text-sm font-bold text-fuchsia-400 mt-2">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm text-fuchsia-300">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-300">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-400 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold text-fuchsia-400 mt-2">{"Mention Bien"}</p>
             </section>
             <section className="bg-gradient-to-br from-fuchsia-950 to-gray-900 p-6 rounded border-t-4 border-fuchsia-600">
               <h2 className="text-lg font-black uppercase mb-4 text-fuchsia-400">COMPÉTENCES</h2>
@@ -2040,10 +2040,10 @@ export default function Home() {
           <section>
             <h2 className="text-lg font-bold mb-4 text-center text-sky-900 bg-sky-100 py-2 rounded-t-lg">FORMATION</h2>
             <div className="bg-white rounded-b-xl shadow-md p-5">
-              <p className="font-bold text-sm text-sky-900 text-center">{cvData.formation.diplome}</p>
-              <p className="text-sm text-center">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1 text-center">{cvData.formation.periode}</p>
-              <p className="text-sm font-bold text-sky-700 mt-2 text-center">{cvData.formation.mention}</p>
+              <p className="font-bold text-sm text-sky-900 text-center">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-center">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-600 mt-1 text-center">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold text-sky-700 mt-2 text-center">{"Mention Bien"}</p>
             </div>
           </section>
           <section>
@@ -2081,10 +2081,10 @@ export default function Home() {
             </div>
             <div className="mb-8">
               <h2 className="text-xs uppercase tracking-widest mb-4 text-slate-400 border-b border-slate-700 pb-2">FORMATION</h2>
-              <p className="text-xs font-bold text-slate-100 mb-1">{cvData.formation.diplome}</p>
-              <p className="text-xs text-slate-300">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-slate-400 mt-1">{cvData.formation.periode}</p>
-              <p className="text-xs font-bold text-slate-200 mt-2">{cvData.formation.mention}</p>
+              <p className="text-xs font-bold text-slate-100 mb-1">{cvData.formations[0].diplome}</p>
+              <p className="text-xs text-slate-300">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-slate-400 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-xs font-bold text-slate-200 mt-2">{"Mention Bien"}</p>
             </div>
             <div>
               <h2 className="text-xs uppercase tracking-widest mb-4 text-slate-400 border-b border-slate-700 pb-2">COMPÉTENCES</h2>
@@ -2167,9 +2167,9 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
@@ -2226,9 +2226,9 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-16">
           <section>
             <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600 mb-1">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600 mb-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Compétences</h2>
@@ -2278,8 +2278,8 @@ export default function Home() {
         <div className="text-center space-y-12">
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600 mt-2">{cvData.formation.etablissement}</p>
+            <p className="text-base font-light text-gray-900">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600 mt-2">{cvData.formations[0].etablissement}</p>
           </section>
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
@@ -2334,9 +2334,9 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-serif text-gray-900 mb-2">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+            <p className="text-base font-serif text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
@@ -2364,9 +2364,9 @@ export default function Home() {
             />
             <section className="mb-12">
               <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-              <p className="text-sm font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
-              <p className="text-sm text-gray-600 mb-1">{cvData.formation.etablissement}</p>
-              <p className="text-xs text-gray-500 mt-3">{cvData.formation.mention}</p>
+              <p className="text-sm font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+              <p className="text-sm text-gray-600 mb-1">{cvData.formations[0].etablissement}</p>
+              <p className="text-xs text-gray-500 mt-3">{"Mention Bien"}</p>
             </section>
             <section>
               <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
@@ -2451,9 +2451,9 @@ export default function Home() {
         <div className="pt-12 border-t border-gray-200 grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Expertise</h2>
@@ -2517,9 +2517,9 @@ export default function Home() {
               <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
               <h2 className="text-sm uppercase tracking-wider text-gray-400">Formation</h2>
             </div>
-            <p className="text-base font-light text-gray-900 mb-1">{cvData.formation.diplome}</p>
-            <p className="text-sm text-gray-600">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations[0].diplome}</p>
+            <p className="text-sm text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2">
             <div className="flex items-center gap-3 mb-6">
@@ -2578,9 +2578,9 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-12 pt-8 border-t border-gray-200">
             <section>
               <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
-              <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
-              <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
-              <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+              <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
+              <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+              <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
             </section>
             <section>
               <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
@@ -2635,9 +2635,9 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-1">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Compétences</h2>
@@ -2686,9 +2686,9 @@ export default function Home() {
         <div className="text-center space-y-16">
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900">{cvData.formation.diplome}</p>
-            <p className="text-base text-gray-600 mt-1">{cvData.formation.etablissement}</p>
-            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+            <p className="text-base font-light text-gray-900">{cvData.formations[0].diplome}</p>
+            <p className="text-base text-gray-600 mt-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
