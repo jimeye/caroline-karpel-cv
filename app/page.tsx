@@ -1,11 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { cvData } from './data/cv-data';
 
 export default function Home() {
   const [currentCV, setCurrentCV] = useState(1);
+
+  // Raccourcis clavier pour navigation
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+        setCurrentCV(prev => Math.max(1, prev - 1));
+      } else if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+        setCurrentCV(prev => Math.min(50, prev + 1));
+      } else if (event.key === 'Home') {
+        setCurrentCV(1);
+      } else if (event.key === 'End') {
+        setCurrentCV(50);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
 
   const cvTemplates = [
     // CV 1 - Classique élégant avec touches de couleur
@@ -3558,6 +3576,9 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL 50 VERSIONS ✨</h1>
             <div className="flex items-center gap-4">
               <span className="text-sm text-gray-600">VERSION {currentCV} / 50</span>
+              <div className="text-xs text-gray-500 hidden md:block">
+                💡 Utilisez ← → ou ↑ ↓ pour naviguer
+              </div>
               <div className="flex gap-2">
                 <button
                   onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
@@ -3582,20 +3603,36 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-            {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => (
-              <button
-                key={num}
-                onClick={() => setCurrentCV(num)}
-                className={`px-3 py-1 text-xs font-semibold transition-colors ${
-                  currentCV === num
-                    ? 'bg-gray-900 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {num}
-              </button>
-            ))}
+          <div className="mt-4 flex items-center gap-4">
+            <button
+              onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
+              disabled={currentCV === 1}
+              className="px-3 py-2 bg-gray-200 text-gray-700 text-sm font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-300 transition-colors"
+            >
+              ←
+            </button>
+            <div className="flex gap-2 overflow-x-auto pb-2 flex-1 scrollbar-hide smooth-scroll">
+              {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => (
+                <button
+                  key={num}
+                  onClick={() => setCurrentCV(num)}
+                  className={`px-3 py-1 text-xs font-semibold transition-colors whitespace-nowrap ${
+                    currentCV === num
+                      ? 'bg-gray-900 text-white'
+                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  }`}
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setCurrentCV(Math.min(50, currentCV + 1))}
+              disabled={currentCV === 50}
+              className="px-3 py-2 bg-gray-200 text-gray-700 text-sm font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-300 transition-colors"
+            >
+              →
+            </button>
           </div>
         </div>
       </div>

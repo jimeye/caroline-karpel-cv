@@ -3,10 +3,25 @@
 @tailwind utilities;
 
 @media print {
-  @page {
-    size: A4;
-    margin: 0;
-  }
+@page {
+  size: A4;
+  margin: 0;
+}
+
+/* Styles pour le slider horizontal */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animation fluide pour le défilement */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
   
   body {
     print-color-adjust: exact;
