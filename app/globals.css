@@ -23,7 +23,7 @@
   scroll-behavior: smooth;
 }
 
-/* Styles pour la navigation tactile */
+/* Styles pour la navigation tactile et drag */
 .touch-container {
   touch-action: pan-y;
   -webkit-touch-callout: none;
@@ -32,6 +32,22 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: grab;
+}
+
+.touch-container:active {
+  cursor: grabbing;
+}
+
+/* Amélioration du drag sur desktop */
+@media (min-width: 769px) {
+  .touch-container {
+    cursor: grab;
+  }
+  
+  .touch-container:active {
+    cursor: grabbing;
+  }
 }
 
 /* Amélioration de l'expérience tactile sur mobile */

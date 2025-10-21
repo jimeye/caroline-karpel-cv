@@ -8,6 +8,9 @@ export default function Home() {
   const [currentCV, setCurrentCV] = useState(1);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [mouseStart, setMouseStart] = useState<number | null>(null);
+  const [mouseEnd, setMouseEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
 
   // Raccourcis clavier pour navigation
   useEffect(() => {
@@ -49,6 +52,41 @@ export default function Home() {
     } else if (isRightSwipe) {
       setCurrentCV(prev => Math.max(1, prev - 1));
     }
+  };
+
+  // Navigation par drag de souris pour desktop
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setMouseEnd(null);
+    setMouseStart(e.clientX);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    setMouseEnd(e.clientX);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging || !mouseStart || !mouseEnd) {
+      setIsDragging(false);
+      return;
+    }
+    
+    const distance = mouseStart - mouseEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentCV(prev => Math.min(50, prev + 1));
+    } else if (isRightSwipe) {
+      setCurrentCV(prev => Math.max(1, prev - 1));
+    }
+    
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
   };
 
   const cvTemplates = [
@@ -3664,6 +3702,11 @@ export default function Home() {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
       >
         <div className="print:w-[210mm] print:min-h-[297mm] print:max-h-[594mm] print:m-0 print:p-0">
           {cvTemplates[currentCV - 1]()}
