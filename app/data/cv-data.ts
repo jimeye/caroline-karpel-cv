@@ -2,16 +2,16 @@ export const cvData = {
   nom: "Caroline Karpel",
   localisation: "Paris, Île-de-France, France",
   posteActuel: "Sales Business Partner chez Ennov Group",
+  email: "caroline.karpel@example.com",
+  telephone: "+33 6 12 34 56 78",
+  profil: "Sales Business Partner expérimentée avec plus de 20 ans d'expertise dans la gestion commerciale, la facturation et le développement de projets B2B. Spécialisée dans l'optimisation des flux de trésorerie et la gestion des relations clients internationaux.",
   
   experiences: [
     {
-      titre: "Sales Business Partner",
-      entreprise: "Ennov",
-      type: "CDI",
-      periode: "janv. 2020 - aujourd'hui",
-      duree: "5 ans 10 mois",
-      lieu: "Ville de Paris, Île-de-France, France",
-      mode: "Sur site",
+      poste: "Sales Business Partner",
+      entreprise: "Ennov Group",
+      duree: "janv. 2020 - aujourd'hui",
+      description: "Gestion de la facturation pour des clients B2B français et étrangers, optimisation des flux de trésorerie et suivi des projets.",
       missions: [
         "J'initie la facturation pour des clients B2B français et étrangers :",
         "1) sur l'intégralité de la vie du projet, de la prise de commande à la recette finale (mise en œuvre des termes contractuels, des jalons techniques, en support des équipes commerciales, juridiques et opérationnelles)",
@@ -21,13 +21,10 @@ export const cvData = {
       ]
     },
     {
-      titre: "Responsable de la gestion commerciale",
+      poste: "Responsable de la gestion commerciale",
       entreprise: "Spring Valley (Société Agro-alimentaire)",
-      type: "CDD",
-      periode: "janv. 2012 - janv. 2018",
-      duree: "6 ans 1 mois",
-      lieu: "Ville de Paris, Île-de-France, France",
-      mode: "Sur site",
+      duree: "janv. 2012 - janv. 2018",
+      description: "Gestion commerciale et développement des activités import-export dans le secteur agro-alimentaire.",
       missions: [
         "Prospection de nouveaux comptes fournisseurs",
         "Gestion des actions et activités négoce import-export",
@@ -37,23 +34,10 @@ export const cvData = {
       ]
     },
     {
-      titre: "Congé parental",
-      entreprise: "Pause professionnelle",
-      type: "",
-      periode: "janv. 2010 - janv. 2012",
-      duree: "2 ans 1 mois",
-      lieu: "Ville de Paris, Île-de-France, France",
-      mode: "",
-      missions: []
-    },
-    {
-      titre: "Responsable de la gestion commerciale",
+      poste: "Responsable de la gestion commerciale",
       entreprise: "Shneider's",
-      type: "CDD",
-      periode: "janv. 2003 - janv. 2010",
-      duree: "7 ans 1 mois",
-      lieu: "Ville de Paris, Île-de-France, France",
-      mode: "Sur site",
+      duree: "janv. 2003 - janv. 2010",
+      description: "Gestion commerciale et développement de nouveaux produits avec veille concurrentielle.",
       missions: [
         "Gestion catalogue produit",
         "Lancement des nouveaux produits (phases test premier marché BtoC, gestion retour, gestion marketing)",
@@ -64,13 +48,10 @@ export const cvData = {
       ]
     },
     {
-      titre: "Attachée commerciale",
+      poste: "Attachée commerciale",
       entreprise: "Forma +",
-      type: "CDD",
-      periode: "janv. 2001 - janv. 2003",
-      duree: "2 ans 1 mois",
-      lieu: "Ville de Paris, Île-de-France, France",
-      mode: "Sur site",
+      duree: "janv. 2001 - janv. 2003",
+      description: "Développement commercial dans le secteur e-learning et gestion des formations.",
       missions: [
         "Prospection clientèle et relation client secteur e-learning",
         "Gestion des plannings de formations",
@@ -80,52 +61,46 @@ export const cvData = {
     }
   ],
   
-  formation: {
-    etablissement: "Université Paris 1 Panthéon-Sorbonne",
-    diplome: "Maîtrise de gestion (MSG)",
-    specialite: "Économie et gestion",
-    periode: "sept. 1990 - juin 1995",
-    mention: "Mention Bien"
-  },
+  formations: [
+    {
+      diplome: "Maîtrise de gestion (MSG)",
+      etablissement: "Université Paris 1 Panthéon-Sorbonne",
+      annee: "1995"
+    }
+  ],
   
-  competences: {
-    interpersonnelles: [
-      "Communication",
-      "Gestion de la performance",
-      "Planification des affaires",
-      "Compétences analytiques",
-      "Aisance relationnelle",
-      "Qualité de présentation et de service",
-      "Négociation",
-      "Célérité",
-      "Réactivité",
-      "Écoute",
-      "Autonomie",
-      "Due diligence opérationnelle",
-      "Flexibilité cognitive"
-    ],
-    techniques: [
-      "CCMX Facturation",
-      "Ciel paye",
-      "Ciel comptabilité",
-      "Microsoft Office",
-      "Maîtrise des outils analytiques, statistique et marketing"
-    ],
-    metier: [
-      "Gestion des backlogs et pending",
-      "Immersion et liaison entre les équipes commerciale, technique et sales",
-      "Négoce import-export",
-      "Développement des maquettes nouveaux produits",
-      "Élaboration et suivi de production des supports produits",
-      "Compétences transversales des phases créatives aux phases de production",
-      "Élaboration de planning de formation",
-      "Liaison avec les OPCA",
-      "Analyse des comptes",
-      "Revue analytique",
-      "Production des plaquettes sociales",
-      "Établissement des bulletins de paye",
-      "Déclaration des charges sociales"
-    ]
-  }
+  competences: [
+    "Communication",
+    "Gestion de la performance",
+    "Planification des affaires",
+    "Compétences analytiques",
+    "Aisance relationnelle",
+    "Qualité de présentation et de service",
+    "Négociation",
+    "Célérité",
+    "Réactivité",
+    "Écoute",
+    "Autonomie",
+    "Due diligence opérationnelle",
+    "Flexibilité cognitive",
+    "CCMX Facturation",
+    "Ciel paye",
+    "Ciel comptabilité",
+    "Microsoft Office",
+    "Maîtrise des outils analytiques, statistique et marketing",
+    "Gestion des backlogs et pending",
+    "Immersion et liaison entre les équipes commerciale, technique et sales",
+    "Négoce import-export",
+    "Développement des maquettes nouveaux produits",
+    "Élaboration et suivi de production des supports produits",
+    "Compétences transversales des phases créatives aux phases de production",
+    "Élaboration de planning de formation",
+    "Liaison avec les OPCA",
+    "Analyse des comptes",
+    "Revue analytique",
+    "Production des plaquettes sociales",
+    "Établissement des bulletins de paye",
+    "Déclaration des charges sociales"
+  ]
 };
 
