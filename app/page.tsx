@@ -161,7 +161,7 @@ export default function Home() {
               <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences techniques</h3>
               <div className="flex flex-wrap gap-4">
                 {cvData.competences.map((comp, idx) => (
-                  <span key={idx} className="text-base bg-blue-100 text-blue-900 px-5 py-3 rounded-lg border-2 border-blue-400 font-semibold">{comp}</span>
+                  <span key={idx} className="text-base text-blue-900 font-semibold">{comp}</span>
                 ))}
               </div>
             </div>
@@ -169,7 +169,7 @@ export default function Home() {
               <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences métier</h3>
               <div className="flex flex-wrap gap-4">
                 {cvData.competences.map((comp, idx) => (
-                  <span key={idx} className="text-base bg-blue-100 text-blue-900 px-5 py-3 rounded-lg border-2 border-blue-400 font-semibold">{comp}</span>
+                  <span key={idx} className="text-base text-blue-900 font-semibold">{comp}</span>
                 ))}
               </div>
             </div>
