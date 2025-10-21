@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV de Caroline Karpel - 30 Versions
 
-## Getting Started
+Ce projet Next.js contient **30 versions différentes de CV** pour Caroline Karpel, avec des designs élégants, colorés et stylés.
 
-First, run the development server:
+## 🎨 Caractéristiques
+
+- **30 designs de CV uniques** avec des couleurs variées et des styles différents
+- Toutes les informations complètes sans limitation
+- Navigation facile entre les versions
+- Optimisé pour l'impression (format A4)
+- Design responsive
+- Styles élégants avec Tailwind CSS
+- Variété de fonts, couleurs, traits, soulignements et layouts
+
+## 🚀 Lancement du projet
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Lancement sur le port 4000
+cd cv-app
+PORT=4000 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrez [http://localhost:4000](http://localhost:4000) dans votre navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Utilisation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Naviguez entre les 30 versions avec les boutons **PRÉCÉDENT** et **SUIVANT**
+2. Utilisez les numéros (1-30) en bas pour accéder directement à une version spécifique
+3. Cliquez sur **IMPRIMER** pour imprimer le CV au format A4
 
-## Learn More
+## 🎨 Palettes de couleurs utilisées
 
-To learn more about Next.js, take a look at the following resources:
+- Bleu (CV 1)
+- Violet/Purple (CV 2)
+- Teal (CV 3)
+- Émeraude/Green (CV 21)
+- Orange (CV 22)
+- Rose/Pink (CV 23)
+- Indigo (CV 24)
+- Cyan (CV 25)
+- Amber (CV 26)
+- Lime (CV 27)
+- Fuchsia (CV 28)
+- Sky Blue (CV 29)
+- Slate (CV 30)
+- Et plus encore...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/page.tsx` - Page principale avec les 30 templates de CV
+- `app/data/cv-data.ts` - Données complètes de Caroline Karpel
+- `app/globals.css` - Styles globaux et configuration d'impression
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Tous les CV sont optimisés pour tenir sur 1-2 pages A4 maximum et contiennent **toutes les informations** fournies.
