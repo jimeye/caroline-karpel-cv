@@ -2,8 +2,8 @@ export const cvData = {
   nom: "Caroline Karpel",
   localisation: "Paris, Île-de-France, France",
   posteActuel: "Sales Business Partner chez Ennov Group",
-  email: "caroline.karpel@example.com",
-  telephone: "+33 6 12 34 56 78",
+  email: "carokarpel@gmail.com",
+  telephone: "+33 6 61 78 99 76",
   profil: "Sales Business Partner expérimentée avec plus de 20 ans d'expertise dans la gestion commerciale, la facturation et le développement de projets B2B. Spécialisée dans l'optimisation des flux de trésorerie et la gestion des relations clients internationaux.",
   
   experiences: [

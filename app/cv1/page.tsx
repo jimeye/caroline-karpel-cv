@@ -37,56 +37,35 @@ export default function CV1Page() {
 
       {/* CV 1 - Classique élégant avec touches de couleur */}
       <div className="py-8 print:py-0 px-6 md:px-12">
-        <div className="print:w-[210mm] print:min-h-[297mm] print:max-h-[594mm] print:m-0 print:p-0">
-          <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
-            {/* Header avec photo et infos principales */}
-            <div className="border-b-4 border-blue-600 pb-8 mb-12 flex items-center gap-8">
-              <div className="flex-shrink-0">
-                <Image
-                  src="/og-caroline-karpel.jpg"
-                  alt="Caroline Karpel"
-                  width={180}
-                  height={180}
-                  className="rounded-full border-8 border-blue-400 shadow-xl"
-                />
-              </div>
-              <div className="flex-1">
-                <h1 className="text-6xl font-bold uppercase tracking-wider mb-4 text-blue-600">{cvData.nom}</h1>
-                <p className="text-2xl text-blue-800 uppercase tracking-wide font-semibold">{cvData.posteActuel}</p>
-                <p className="text-lg text-gray-700 mt-3">{cvData.localisation}</p>
-                <div className="mt-4 text-base text-gray-600">
-                  <p>📧 {cvData.email}</p>
-                  <p>📱 {cvData.telephone}</p>
-                </div>
-              </div>
+        <div className="print:w-[210mm] print:h-[297mm] print:m-0 print:p-0">
+          <div className="max-w-4xl mx-auto bg-white p-4 print:p-4 shadow-lg print:shadow-none">
+            {/* Header sans photo */}
+            <div className="border-b-2 border-blue-600 pb-1 mb-1">
+              <h1 className="text-3xl font-bold uppercase tracking-wider mb-0.5 text-blue-600">{cvData.nom}</h1>
+              <p className="text-base text-blue-800 uppercase tracking-wide font-semibold">{cvData.posteActuel}</p>
+              <p className="text-sm text-gray-700 mt-0.5">{cvData.localisation} · 📧 {cvData.email} · 📱 {cvData.telephone}</p>
             </div>
 
             {/* Profil Professionnel */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-6 text-blue-600">PROFIL PROFESSIONNEL</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">{cvData.profil}</p>
+            <section className="mb-1">
+              <h2 className="text-sm font-bold uppercase tracking-wider border-b-2 border-blue-600 pb-0.5 mb-0.5 text-blue-600">PROFIL PROFESSIONNEL</h2>
+              <p className="text-xs text-gray-700 leading-snug">{cvData.profil}</p>
             </section>
 
             {/* Expérience Professionnelle */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">EXPÉRIENCE PROFESSIONNELLE</h2>
-              <div className="space-y-8">
+            <section className="mb-1">
+              <h2 className="text-sm font-bold uppercase tracking-wider border-b-2 border-blue-600 pb-0.5 mb-0.5 text-blue-600">EXPÉRIENCE PROFESSIONNELLE</h2>
+              <div className="grid grid-cols-2 gap-2">
                 {cvData.experiences?.map((exp, idx) => (
-                  <div key={idx} className="mb-10 border-l-8 border-blue-400 pl-8 py-4 bg-blue-50">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-blue-800 mb-2">{exp.poste}</h3>
-                        <p className="text-lg text-blue-700 font-semibold">{exp.entreprise} · CDI</p>
-                      </div>
-                      <div className="text-right text-base text-gray-700">
-                        <p className="font-bold text-blue-700">{exp.duree}</p>
-                        <p className="text-gray-600 mt-1">{exp.duree}</p>
-                      </div>
+                  <div key={idx} className="border-l-4 border-blue-400 py-2 bg-blue-50">
+                    <div className="mb-1 text-center">
+                      <h3 className="text-lg font-bold text-blue-800">{exp.poste}</h3>
+                      <p className="text-base text-blue-700 font-semibold">{exp.entreprise} · CDI</p>
+                      <p className="text-base text-blue-700 font-semibold">{exp.duree}</p>
                     </div>
-                    <p className="text-base text-gray-700 mb-3">Paris, France · Sur site</p>
                     {exp.missions.length > 0 && (
-                      <ul className="text-base text-gray-800 space-y-3 ml-6 leading-relaxed mt-4">
-                        {exp.missions.map((mission, midx) => (
+                      <ul className="text-base text-gray-800 space-y-1 leading-relaxed mt-1 list-none">
+                        {exp.missions.slice(0, 2).map((mission, midx) => (
                           <li key={midx} className="leading-relaxed">• {mission}</li>
                         ))}
                       </ul>
@@ -96,47 +75,37 @@ export default function CV1Page() {
               </div>
             </section>
 
-            {/* Formation */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">FORMATION</h2>
-              <div className="bg-blue-50 p-8 rounded-lg border-l-8 border-blue-400">
-                <h3 className="text-2xl font-bold text-blue-800 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</h3>
-                <p className="text-lg text-blue-700 font-semibold mb-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
-                <p className="text-base text-gray-700">{"Économie et gestion"} · {cvData.formations?.[0]?.annee || "1995"}</p>
-                <p className="text-lg font-bold text-blue-800 mt-3">{"Mention Bien"}</p>
-              </div>
-            </section>
+            {/* Formation et Compétences en 2 colonnes */}
+            <div className="grid grid-cols-2 gap-2">
+              {/* Formation */}
+              <section>
+                <h2 className="text-sm font-bold uppercase tracking-wider border-b-2 border-blue-600 pb-0.5 mb-0.5 text-blue-600 text-center">FORMATION</h2>
+                <div className="bg-blue-50 p-2 border-l-4 border-blue-400 text-center">
+                  <h3 className="text-sm font-bold text-blue-800 text-center">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</h3>
+                  <p className="text-xs text-blue-700 font-semibold text-center">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                  <p className="text-xs text-gray-700 text-center">{cvData.formations?.[0]?.annee || "1995"} · Mention Bien</p>
+                </div>
+              </section>
 
-            {/* Compétences */}
-            <section>
-              <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">COMPÉTENCES</h2>
-              <div className="grid grid-cols-1 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences interpersonnelles</h3>
-                  <div className="flex flex-wrap gap-4">
-                    {cvData.competences?.map((comp, idx) => (
-                      <span key={idx} className="text-base text-blue-900 font-semibold">{comp}</span>
-                    ))}
+              {/* Compétences */}
+              <section>
+                <h2 className="text-sm font-bold uppercase tracking-wider border-b-2 border-blue-600 pb-0.5 mb-0.5 text-blue-600 text-center">COMPÉTENCES CLÉS</h2>
+                <div className="space-y-1">
+                  <div className="bg-blue-50 p-1 border-l-4 border-blue-600 text-center">
+                    <h3 className="text-xs font-bold uppercase text-blue-800 mb-0.5 text-center">Interpersonnelles</h3>
+                    <p className="text-xs text-gray-800 leading-snug text-center">Communication · Négociation · Réactivité · Autonomie</p>
+                  </div>
+                  <div className="bg-blue-50 p-1 border-l-4 border-blue-600 text-center">
+                    <h3 className="text-xs font-bold uppercase text-blue-800 mb-0.5 text-center">Techniques</h3>
+                    <p className="text-xs text-gray-800 leading-snug text-center">CCMX · MS Office · Outils analytiques · Ciel</p>
+                  </div>
+                  <div className="bg-blue-50 p-1 border-l-4 border-blue-600 text-center">
+                    <h3 className="text-xs font-bold uppercase text-blue-800 mb-0.5 text-center">Métier</h3>
+                    <p className="text-xs text-gray-800 leading-snug text-center">Gestion B2B · Facturation · Import-export · Due diligence</p>
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences techniques</h3>
-                  <div className="flex flex-wrap gap-4">
-                    {cvData.competences?.map((comp, idx) => (
-                      <span key={idx} className="text-base text-blue-900 font-semibold">{comp}</span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences métier</h3>
-                  <div className="flex flex-wrap gap-4">
-                    {cvData.competences?.map((comp, idx) => (
-                      <span key={idx} className="text-base text-blue-900 font-semibold">{comp}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </div>
       </div>
