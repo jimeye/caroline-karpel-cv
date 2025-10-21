@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { cvData } from './data/cv-data';
 
 export default function Home() {
@@ -10,10 +11,21 @@ export default function Home() {
     // CV 1 - Classique élégant avec touches de couleur
     () => (
       <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
-        <div className="border-b-4 border-blue-600 pb-8 mb-12">
-          <h1 className="text-6xl font-bold uppercase tracking-wider mb-4 text-blue-600">{cvData.nom}</h1>
-          <p className="text-2xl text-blue-800 uppercase tracking-wide font-semibold">{cvData.posteActuel}</p>
-          <p className="text-lg text-gray-700 mt-3">{cvData.localisation}</p>
+        <div className="border-b-4 border-blue-600 pb-8 mb-12 flex items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={180} 
+              height={180}
+              className="rounded-full border-8 border-blue-400 shadow-xl"
+            />
+          </div>
+          <div className="flex-1">
+            <h1 className="text-6xl font-bold uppercase tracking-wider mb-4 text-blue-600">{cvData.nom}</h1>
+            <p className="text-2xl text-blue-800 uppercase tracking-wide font-semibold">{cvData.posteActuel}</p>
+            <p className="text-lg text-gray-700 mt-3">{cvData.localisation}</p>
+          </div>
         </div>
         
         <section className="mb-12">
@@ -88,7 +100,16 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none flex">
         <div className="w-1/3 bg-gradient-to-b from-purple-700 to-purple-900 text-white p-10">
-          <div className="mb-10">
+          <div className="mb-10 text-center">
+            <div className="mb-6 inline-block">
+              <Image 
+                src="/og-caroline-karpel.jpg" 
+                alt="Caroline Karpel" 
+                width={160} 
+                height={160}
+                className="rounded-full border-8 border-purple-300 shadow-2xl"
+              />
+            </div>
             <h1 className="text-4xl font-bold mb-4">{cvData.nom}</h1>
             <p className="text-base uppercase tracking-wider text-purple-200">{cvData.localisation}</p>
           </div>
@@ -155,6 +176,15 @@ export default function Home() {
     () => (
       <div className="max-w-3xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
         <div className="text-center mb-12">
+          <div className="mb-6 inline-block">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={140} 
+              height={140}
+              className="rounded-full border-4 border-teal-600 shadow-lg mx-auto"
+            />
+          </div>
           <h1 className="text-6xl font-thin mb-4 text-teal-900">{cvData.nom}</h1>
           <div className="w-32 h-1 bg-gradient-to-r from-transparent via-teal-600 to-transparent mx-auto mb-4"></div>
           <p className="text-sm uppercase tracking-[0.3em] text-gray-700 font-medium">{cvData.posteActuel}</p>
@@ -1292,10 +1322,21 @@ export default function Home() {
     // CV 21 - Vert Émeraude Moderne
     () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
-        <div className="bg-gradient-to-r from-emerald-700 to-emerald-500 text-white p-16">
-          <h1 className="text-6xl font-bold mb-5">{cvData.nom}</h1>
-          <p className="text-3xl font-semibold">{cvData.posteActuel}</p>
-          <p className="text-xl opacity-95 mt-4">{cvData.localisation}</p>
+        <div className="bg-gradient-to-r from-emerald-700 to-emerald-500 text-white p-16 flex items-center gap-10">
+          <div className="flex-shrink-0">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={200} 
+              height={200}
+              className="rounded-full border-8 border-emerald-200 shadow-2xl"
+            />
+          </div>
+          <div className="flex-1">
+            <h1 className="text-6xl font-bold mb-5">{cvData.nom}</h1>
+            <p className="text-3xl font-semibold">{cvData.posteActuel}</p>
+            <p className="text-xl opacity-95 mt-4">{cvData.localisation}</p>
+          </div>
         </div>
         <div className="p-14">
           <section className="mb-12">
@@ -1344,10 +1385,21 @@ export default function Home() {
     // CV 22 - Orange Dynamique
     () => (
       <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
-        <div className="mb-14 border-l-[16px] border-orange-500 pl-10 bg-orange-50 py-10 rounded-r-xl">
-          <h1 className="text-6xl font-black text-orange-900 mb-4">{cvData.nom}</h1>
-          <p className="text-2xl text-orange-700 font-bold">{cvData.posteActuel}</p>
-          <p className="text-lg text-gray-700 mt-3">{cvData.localisation}</p>
+        <div className="mb-14 border-l-[16px] border-orange-500 pl-10 bg-orange-50 py-10 rounded-r-xl flex items-center gap-8">
+          <div className="flex-shrink-0">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={180} 
+              height={180}
+              className="rounded-2xl border-8 border-orange-400 shadow-2xl"
+            />
+          </div>
+          <div className="flex-1">
+            <h1 className="text-6xl font-black text-orange-900 mb-4">{cvData.nom}</h1>
+            <p className="text-2xl text-orange-700 font-bold">{cvData.posteActuel}</p>
+            <p className="text-lg text-gray-700 mt-3">{cvData.localisation}</p>
+          </div>
         </div>
         <section className="mb-12">
           <h2 className="text-4xl font-black uppercase tracking-wider mb-10 text-orange-900 underline decoration-orange-500 decoration-8 underline-offset-[16px]">PARCOURS PROFESSIONNEL</h2>
@@ -1392,6 +1444,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-gradient-to-br from-pink-50 to-white p-12 shadow-lg print:shadow-none">
         <header className="text-center mb-10 pb-6 border-b-2 border-pink-400">
+          <div className="mb-6 inline-block">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={160} 
+              height={160}
+              className="rounded-full border-8 border-pink-300 shadow-xl mx-auto"
+            />
+          </div>
           <h1 className="text-5xl font-serif mb-3 text-pink-900">{cvData.nom}</h1>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-400 to-rose-600 mx-auto mb-3"></div>
           <p className="text-base text-gray-700 font-medium">{cvData.posteActuel}</p>
@@ -1771,6 +1832,15 @@ export default function Home() {
       <div className="max-w-4xl mx-auto bg-white shadow-2xl print:shadow-none">
         <div className="grid grid-cols-3">
           <div className="col-span-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white p-8">
+            <div className="mb-8 text-center">
+              <Image 
+                src="/og-caroline-karpel.jpg" 
+                alt="Caroline Karpel" 
+                width={140} 
+                height={140}
+                className="rounded-full border-6 border-slate-600 shadow-2xl mx-auto mb-6"
+              />
+            </div>
             <h1 className="text-3xl font-bold mb-6 pb-4 border-b-2 border-slate-600">{cvData.nom}</h1>
             <div className="mb-8">
               <h2 className="text-xs uppercase tracking-widest mb-3 text-slate-400">CONTACT</h2>
