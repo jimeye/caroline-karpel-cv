@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CV DE CAROLINE KARPEL 40 VERSIONS ✨",
-  description: "40 versions de CV professionnels élégants et stylés pour Caroline Karpel - Sales Business Partner chez Ennov Group",
+  title: "CV DE CAROLINE KARPEL 50 VERSIONS ✨",
+  description: "50 versions de CV professionnels élégants et stylés pour Caroline Karpel - Sales Business Partner chez Ennov Group",
   icons: {
     icon: '/og-caroline-karpel.jpg',
   },
   openGraph: {
-    title: "CV DE CAROLINE KARPEL 40 VERSIONS ✨",
-    description: "40 designs de CV professionnels élégants - Sales Business Partner avec 25 ans d'expérience",
+    title: "CV DE CAROLINE KARPEL 50 VERSIONS ✨",
+    description: "50 designs de CV professionnels élégants - Sales Business Partner avec 25 ans d'expérience",
     images: [
       {
         url: '/og-caroline-karpel.jpg',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "CV DE CAROLINE KARPEL 40 VERSIONS ✨",
-    description: "40 versions de CV professionnels pour Caroline Karpel",
+    title: "CV DE CAROLINE KARPEL 50 VERSIONS ✨",
+    description: "50 versions de CV professionnels pour Caroline Karpel",
     images: ['/og-caroline-karpel.jpg'],
   },
 };

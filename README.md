@@ -1,10 +1,10 @@
-# CV DE CAROLINE KARPEL 40 VERSIONS ✨
+# CV DE CAROLINE KARPEL 50 VERSIONS ✨
 
-Ce projet Next.js contient **40 versions différentes de CV** pour Caroline Karpel, avec des designs élégants, colorés et épurés.
+Ce projet Next.js contient **50 versions différentes de CV** pour Caroline Karpel, avec des designs élégants, colorés et épurés.
 
 ## 🎨 Caractéristiques
 
-- **40 designs de CV uniques** avec des couleurs variées et des styles différents
+- **50 designs de CV uniques** avec des couleurs variées et des styles différents
 - **Photo professionnelle intégrée** dans tous les CV avec des styles variés
 - **Toutes les informations complètes** sans limitation
 - **Navigation facile** entre les versions
@@ -29,8 +29,8 @@ Ouvrez [http://localhost:4000](http://localhost:4000) dans votre navigateur.
 
 ## 📖 Utilisation
 
-1. Naviguez entre les 40 versions avec les boutons **PRÉCÉDENT** et **SUIVANT**
-2. Utilisez les numéros (1-40) en bas pour accéder directement à une version spécifique
+1. Naviguez entre les 50 versions avec les boutons **PRÉCÉDENT** et **SUIVANT**
+2. Utilisez les numéros (1-50) en bas pour accéder directement à une version spécifique
 3. Cliquez sur **IMPRIMER** pour imprimer le CV au format A4
 
 ## 🎨 Styles de CV disponibles
@@ -62,6 +62,18 @@ Ouvrez [http://localhost:4000](http://localhost:4000) dans votre navigateur.
 - **CV 38** - Bordures Fines élégantes
 - **CV 39** - Simple et Direct
 - **CV 40** - Ultra Épuré centré
+
+### CV Inspirés de Templates Professionnels (41-50)
+- **CV 41** - Sidebar Bleu Marine avec Accent Doré (inspiré ANKITA TIWARI)
+- **CV 42** - Sidebar Orange Moderne (inspiré KELLY WHITE)
+- **CV 43** - Layout Timeline Vert (inspiré Ehris Smith)
+- **CV 44** - Layout Corporate Teal (inspiré MARK WILLIAMS)
+- **CV 45** - Layout Créatif Rouge (inspiré LEO O'REILLY)
+- **CV 46** - Layout Minimaliste Violet
+- **CV 47** - Layout Asymétrique Rose
+- **CV 48** - Layout Grid Cyan
+- **CV 49** - Layout Centré Indigo
+- **CV 50** - Layout Ultra Moderne Émeraude
 
 ## 📸 Photo Professionnelle
 
