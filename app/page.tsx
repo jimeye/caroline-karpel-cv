@@ -95,10 +95,10 @@ export default function Home() {
       <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
         <div className="border-b-4 border-blue-600 pb-8 mb-12 flex items-center gap-8">
           <div className="flex-shrink-0">
-            <Image 
+        <Image
               src="/og-caroline-karpel.jpg" 
               alt="Caroline Karpel" 
-              width={180} 
+          width={180}
               height={180}
               className="rounded-full border-8 border-blue-400 shadow-xl"
             />
@@ -117,14 +117,14 @@ export default function Home() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-2xl font-bold text-blue-800 mb-2">{exp.poste}</h3>
-                  <p className="text-lg text-blue-700 font-semibold">{exp.entreprise} {"CDI" && `· ${"CDI"}`}</p>
+                  <p className="text-lg text-blue-700 font-semibold">{exp.entreprise} · CDI</p>
                 </div>
                 <div className="text-right text-base text-gray-700">
                   <p className="font-bold text-blue-700">{exp.duree}</p>
                   <p className="text-gray-600 mt-1">{exp.duree}</p>
                 </div>
               </div>
-              {"Paris, France" && <p className="text-base text-gray-700 mb-3">{"Paris, France"} {"Sur site" && `· ${"Sur site"}`}</p>}
+              <p className="text-base text-gray-700 mb-3">Paris, France · Sur site</p>
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-800 space-y-3 ml-6 leading-relaxed mt-4">
                   {exp.missions.map((mission, midx) => (
@@ -1361,14 +1361,14 @@ export default function Home() {
         <div className="flex">
           <div className="w-1/4 bg-black text-white p-6">
             <div className="mb-8 text-center">
-              <Image 
+            <Image
                 src="/og-caroline-karpel.jpg" 
                 alt="Caroline Karpel" 
                 width={120} 
                 height={120}
                 className="rounded-full mx-auto border-4 border-gray-700 mb-6"
               />
-            </div>
+        </div>
             <div className="mb-8">
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">FORMATION</h2>
@@ -1444,7 +1444,7 @@ export default function Home() {
     () => (
       <div className="max-w-3xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
         <header className="mb-12 flex items-center gap-10">
-          <Image 
+          <Image
             src="/og-caroline-karpel.jpg" 
             alt="Caroline Karpel" 
             width={130} 
@@ -1505,7 +1505,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
         <div className="bg-gradient-to-r from-emerald-700 to-emerald-500 text-white p-16 flex items-center gap-10">
           <div className="flex-shrink-0">
-            <Image 
+          <Image
               src="/og-caroline-karpel.jpg" 
               alt="Caroline Karpel" 
               width={200} 
@@ -1568,7 +1568,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
         <div className="mb-14 border-l-[16px] border-orange-500 pl-10 bg-orange-50 py-10 rounded-r-xl flex items-center gap-8">
           <div className="flex-shrink-0">
-            <Image 
+          <Image
               src="/og-caroline-karpel.jpg" 
               alt="Caroline Karpel" 
               width={180} 
