@@ -234,10 +234,19 @@ export default function Home() {
     // CV 4 - Timeline verticale
     () => (
       <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
-        <header className="mb-12">
-          <h1 className="text-4xl font-bold mb-2 text-gray-900">{cvData.nom}</h1>
-          <p className="text-lg text-gray-700 mb-1">{cvData.posteActuel}</p>
-          <p className="text-sm text-gray-500">{cvData.localisation}</p>
+        <header className="mb-12 flex items-center gap-8">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={140} 
+            height={140}
+            className="rounded-lg border-2 border-gray-300 shadow-md"
+          />
+          <div>
+            <h1 className="text-4xl font-bold mb-2 text-gray-900">{cvData.nom}</h1>
+            <p className="text-lg text-gray-700 mb-1">{cvData.posteActuel}</p>
+            <p className="text-sm text-gray-500">{cvData.localisation}</p>
+          </div>
         </header>
 
         <section className="mb-10">
@@ -300,10 +309,19 @@ export default function Home() {
     // CV 5 - Design épuré avec accents
     () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-10">
-          <h1 className="text-5xl font-extralight mb-3 tracking-wide">{cvData.nom}</h1>
-          <p className="text-xl font-light opacity-90">{cvData.posteActuel.split(' chez ')[0]}</p>
-          <p className="text-sm opacity-70 mt-2">{cvData.localisation}</p>
+        <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-10 flex items-center gap-8">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={150} 
+            height={150}
+            className="rounded-full border-4 border-gray-600"
+          />
+          <div>
+            <h1 className="text-5xl font-extralight mb-3 tracking-wide">{cvData.nom}</h1>
+            <p className="text-xl font-light opacity-90">{cvData.posteActuel.split(' chez ')[0]}</p>
+            <p className="text-sm opacity-70 mt-2">{cvData.localisation}</p>
+          </div>
         </div>
 
         <div className="p-12">
@@ -352,6 +370,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-white p-10 shadow-lg print:shadow-none">
         <header className="text-center mb-10 pb-8 border-b-4 border-double border-gray-400">
+          <div className="mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={130} 
+              height={130}
+              className="rounded-full mx-auto border-4 border-gray-300"
+            />
+          </div>
           <h1 className="text-5xl font-serif mb-3">{cvData.nom}</h1>
           <p className="text-base uppercase tracking-widest text-gray-700">{cvData.posteActuel}</p>
           <p className="text-sm text-gray-500 mt-2">{cvData.localisation}</p>
@@ -412,14 +439,23 @@ export default function Home() {
     // CV 7 - Corporate moderne
     () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
-        <div className="bg-black text-white p-8">
-          <div className="flex justify-between items-end">
-            <div>
-              <h1 className="text-4xl font-bold uppercase tracking-wider">{cvData.nom}</h1>
-              <p className="text-sm mt-2 opacity-80 uppercase tracking-widest">{cvData.posteActuel.split(' chez ')[0]}</p>
-            </div>
-            <div className="text-right text-xs opacity-70">
-              <p>{cvData.localisation}</p>
+        <div className="bg-black text-white p-8 flex items-center gap-8">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={120} 
+            height={120}
+            className="rounded border-4 border-gray-700"
+          />
+          <div className="flex-1">
+            <div className="flex justify-between items-end">
+              <div>
+                <h1 className="text-4xl font-bold uppercase tracking-wider">{cvData.nom}</h1>
+                <p className="text-sm mt-2 opacity-80 uppercase tracking-widest">{cvData.posteActuel.split(' chez ')[0]}</p>
+              </div>
+              <div className="text-right text-xs opacity-70">
+                <p>{cvData.localisation}</p>
+              </div>
             </div>
           </div>
         </div>
@@ -559,6 +595,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-white p-10 shadow-lg print:shadow-none">
         <header className="mb-10">
+          <div className="text-center mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={120} 
+              height={120}
+              className="rounded-full mx-auto border-2 border-gray-300"
+            />
+          </div>
           <div className="border-t-4 border-b-4 border-double border-black py-6">
             <h1 className="text-6xl font-serif text-center">{cvData.nom}</h1>
           </div>
@@ -854,6 +899,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
         <header className="text-center mb-12">
+          <div className="mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={130} 
+              height={130}
+              className="rounded-full mx-auto border-2 border-gray-200"
+            />
+          </div>
           <h1 className="text-5xl font-serif mb-4 text-gray-900">{cvData.nom}</h1>
           <div className="flex items-center justify-center gap-4">
             <div className="h-px w-16 bg-gray-400"></div>
@@ -989,9 +1043,18 @@ export default function Home() {
     // CV 16 - Infographic Style
     () => (
       <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white p-10 shadow-lg print:shadow-none">
-        <header className="relative mb-10">
+        <header className="relative mb-10 flex items-center gap-8">
           <div className="absolute -left-2 top-0 w-1 h-full bg-gradient-to-b from-gray-900 to-gray-600"></div>
-          <div className="pl-6">
+          <div className="pl-6 flex-shrink-0">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={130} 
+              height={130}
+              className="rounded border-2 border-gray-300"
+            />
+          </div>
+          <div className="flex-1">
             <h1 className="text-4xl font-black uppercase tracking-tight text-gray-900">{cvData.nom}</h1>
             <p className="text-lg text-gray-700 mt-1">{cvData.posteActuel}</p>
             <p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">{cvData.localisation}</p>
@@ -1055,6 +1118,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
         <header className="mb-10 relative">
+          <div className="text-center mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={120} 
+              height={120}
+              className="rounded-full mx-auto border-4 border-gray-400"
+            />
+          </div>
           <div className="border-4 border-double border-gray-300 p-6 relative">
             <div className="absolute -top-2 -left-2 w-8 h-8 bg-white border-2 border-gray-900"></div>
             <div className="absolute -top-2 -right-2 w-8 h-8 bg-white border-2 border-gray-900"></div>
@@ -1123,13 +1195,22 @@ export default function Home() {
     // CV 18 - Tech Moderne
     () => (
       <div className="max-w-4xl mx-auto bg-black text-white shadow-lg print:shadow-none">
-        <div className="p-10 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-          <h1 className="text-5xl font-black mb-3 tracking-tight">{cvData.nom}</h1>
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-white"></div>
-            <p className="text-base uppercase tracking-[0.3em] text-gray-300">{cvData.posteActuel.split(' chez ')[0]}</p>
+        <div className="p-10 bg-gradient-to-br from-gray-900 via-black to-gray-900 flex items-center gap-8">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={140} 
+            height={140}
+            className="rounded border-4 border-gray-700"
+          />
+          <div>
+            <h1 className="text-5xl font-black mb-3 tracking-tight">{cvData.nom}</h1>
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-white"></div>
+              <p className="text-base uppercase tracking-[0.3em] text-gray-300">{cvData.posteActuel.split(' chez ')[0]}</p>
+            </div>
+            <p className="text-xs text-gray-500 mt-2 ml-5">{cvData.localisation}</p>
           </div>
-          <p className="text-xs text-gray-500 mt-2 ml-5">{cvData.localisation}</p>
         </div>
 
         <div className="p-10 bg-white text-black">
@@ -1197,6 +1278,15 @@ export default function Home() {
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
         <div className="flex">
           <div className="w-1/4 bg-black text-white p-6">
+            <div className="mb-8 text-center">
+              <Image 
+                src="/og-caroline-karpel.jpg" 
+                alt="Caroline Karpel" 
+                width={120} 
+                height={120}
+                className="rounded-full mx-auto border-4 border-gray-700 mb-6"
+              />
+            </div>
             <div className="mb-8">
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">FORMATION</h2>
@@ -1271,10 +1361,19 @@ export default function Home() {
     // CV 20 - Ultra Clean
     () => (
       <div className="max-w-3xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
-        <header className="mb-12">
-          <h1 className="text-5xl font-thin mb-4 tracking-tight">{cvData.nom}</h1>
-          <p className="text-base text-gray-700 mb-2">{cvData.posteActuel}</p>
-          <p className="text-sm text-gray-500">{cvData.localisation}</p>
+        <header className="mb-12 flex items-center gap-10">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={130} 
+            height={130}
+            className="rounded-full border border-gray-200"
+          />
+          <div>
+            <h1 className="text-5xl font-thin mb-4 tracking-tight">{cvData.nom}</h1>
+            <p className="text-base text-gray-700 mb-2">{cvData.posteActuel}</p>
+            <p className="text-sm text-gray-500">{cvData.localisation}</p>
+          </div>
         </header>
 
         <section className="mb-12">
@@ -1503,10 +1602,19 @@ export default function Home() {
         <div className="flex">
           <div className="w-1 bg-gradient-to-b from-indigo-600 via-indigo-800 to-indigo-600"></div>
           <div className="flex-1">
-            <div className="bg-indigo-900 text-white p-10">
-              <h1 className="text-4xl font-bold mb-2">{cvData.nom}</h1>
-              <p className="text-lg opacity-90">{cvData.posteActuel.split(' chez ')[0]}</p>
-              <p className="text-sm opacity-75 mt-1">{cvData.localisation}</p>
+            <div className="bg-indigo-900 text-white p-10 flex items-center gap-8">
+              <Image 
+                src="/og-caroline-karpel.jpg" 
+                alt="Caroline Karpel" 
+                width={140} 
+                height={140}
+                className="rounded-lg border-4 border-indigo-600"
+              />
+              <div>
+                <h1 className="text-4xl font-bold mb-2">{cvData.nom}</h1>
+                <p className="text-lg opacity-90">{cvData.posteActuel.split(' chez ')[0]}</p>
+                <p className="text-sm opacity-75 mt-1">{cvData.localisation}</p>
+              </div>
             </div>
             <div className="p-10">
               <section className="mb-8">
@@ -1562,11 +1670,20 @@ export default function Home() {
     // CV 25 - Cyan Créatif
     () => (
       <div className="max-w-4xl mx-auto bg-white p-10 shadow-lg print:shadow-none">
-        <div className="relative mb-10">
+        <div className="relative mb-10 flex items-center gap-8">
           <div className="absolute -left-4 top-0 w-2 h-full bg-gradient-to-b from-cyan-400 to-cyan-600"></div>
-          <h1 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-800 mb-3">{cvData.nom}</h1>
-          <p className="text-lg text-cyan-700 font-bold">{cvData.posteActuel}</p>
-          <p className="text-sm text-gray-600">{cvData.localisation}</p>
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={150} 
+            height={150}
+            className="rounded-xl border-4 border-cyan-500 shadow-xl"
+          />
+          <div>
+            <h1 className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-800 mb-3">{cvData.nom}</h1>
+            <p className="text-lg text-cyan-700 font-bold">{cvData.posteActuel}</p>
+            <p className="text-sm text-gray-600">{cvData.localisation}</p>
+          </div>
         </div>
         <section className="mb-8">
           <h2 className="text-2xl font-black uppercase tracking-widest mb-6 text-cyan-900 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-cyan-400 after:to-cyan-600">PARCOURS</h2>
@@ -1611,6 +1728,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-50 via-white to-amber-50 p-12 shadow-lg print:shadow-none">
         <div className="text-center mb-10 bg-white p-8 rounded-lg shadow-md border-t-4 border-amber-500">
+          <div className="mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={140} 
+              height={140}
+              className="rounded-full mx-auto border-6 border-amber-400 shadow-lg"
+            />
+          </div>
           <h1 className="text-5xl font-bold text-amber-900 mb-3">{cvData.nom}</h1>
           <div className="flex items-center justify-center gap-3 mb-2">
             <div className="w-12 h-px bg-amber-500"></div>
@@ -1666,8 +1792,15 @@ export default function Home() {
     // CV 27 - Lime Énergique
     () => (
       <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
-        <div className="bg-gradient-to-r from-lime-600 to-lime-500 p-10 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-lime-600 to-lime-500 p-10 relative overflow-hidden flex items-center gap-8">
           <div className="absolute top-0 right-0 w-64 h-64 bg-lime-400 rounded-full -mr-32 -mt-32 opacity-20"></div>
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={150} 
+            height={150}
+            className="rounded-xl border-6 border-lime-200 shadow-2xl relative z-10"
+          />
           <div className="relative z-10">
             <h1 className="text-5xl font-black text-white mb-2">{cvData.nom}</h1>
             <p className="text-xl text-lime-100">{cvData.posteActuel}</p>
@@ -1725,10 +1858,19 @@ export default function Home() {
     // CV 28 - Fuchsia Audacieux
     () => (
       <div className="max-w-4xl mx-auto bg-black text-white shadow-lg print:shadow-none">
-        <div className="p-10 bg-gradient-to-br from-fuchsia-900 via-fuchsia-800 to-black">
-          <h1 className="text-6xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{cvData.nom}</h1>
-          <p className="text-xl text-fuchsia-300">{cvData.posteActuel}</p>
-          <p className="text-sm text-fuchsia-400 mt-2">{cvData.localisation}</p>
+        <div className="p-10 bg-gradient-to-br from-fuchsia-900 via-fuchsia-800 to-black flex items-center gap-8">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={150} 
+            height={150}
+            className="rounded-full border-6 border-fuchsia-500 shadow-2xl"
+          />
+          <div>
+            <h1 className="text-6xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-pink-400">{cvData.nom}</h1>
+            <p className="text-xl text-fuchsia-300">{cvData.posteActuel}</p>
+            <p className="text-sm text-fuchsia-400 mt-2">{cvData.localisation}</p>
+          </div>
         </div>
         <div className="p-10 bg-gradient-to-br from-gray-900 to-black">
           <section className="mb-8">
@@ -1773,6 +1915,15 @@ export default function Home() {
     () => (
       <div className="max-w-4xl mx-auto bg-gradient-to-b from-sky-50 to-white p-12 shadow-lg print:shadow-none">
         <div className="text-center mb-10">
+          <div className="mb-6">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={130} 
+              height={130}
+              className="rounded-full mx-auto border-6 border-sky-300 shadow-lg"
+            />
+          </div>
           <div className="inline-block bg-sky-900 text-white px-8 py-6 rounded-t-3xl">
             <h1 className="text-4xl font-bold mb-2">{cvData.nom}</h1>
             <p className="text-base text-sky-200">{cvData.posteActuel}</p>
@@ -1891,6 +2042,583 @@ export default function Home() {
         </div>
       </div>
     ),
+
+    // CV 31 - Pure Blanc Épuré
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-20 print:shadow-none">
+        <div className="mb-16 text-center">
+          <div className="mb-8">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={120} 
+              height={120}
+              className="rounded-full mx-auto border border-gray-200 shadow-sm"
+            />
+          </div>
+          <h1 className="text-5xl font-light mb-6 tracking-tight text-gray-900">{cvData.nom}</h1>
+          <div className="w-16 h-px bg-gray-300 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 mb-2">{cvData.posteActuel}</p>
+          <p className="text-base text-gray-500">{cvData.localisation}</p>
+        </div>
+
+        <section className="mb-16">
+          <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-10 text-center">Expérience</h2>
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-12">
+              <div className="mb-4">
+                <h3 className="text-xl font-light text-gray-900 mb-2">{exp.titre}</h3>
+                <p className="text-base text-gray-700">{exp.entreprise}</p>
+                <p className="text-sm text-gray-500 mt-1">{exp.periode}</p>
+              </div>
+              {exp.missions.length > 0 && (
+                <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
+                  {exp.missions.map((mission, midx) => (
+                    <li key={midx} className="pl-6 border-l border-gray-200">{mission}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="grid grid-cols-2 gap-12">
+          <section>
+            <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
+            <div className="space-y-2">
+              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                <p key={idx} className="text-sm text-gray-600">{comp}</p>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 32 - Ligne Fine Minimaliste
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-20 print:shadow-none">
+        <div className="flex items-start gap-12 mb-16 pb-10 border-b border-gray-200">
+          <div className="flex-shrink-0">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={140} 
+              height={140}
+              className="rounded-sm border border-gray-200"
+            />
+          </div>
+          <div className="flex-1 pt-4">
+            <h1 className="text-5xl font-thin mb-4 text-gray-900">{cvData.nom}</h1>
+            <p className="text-xl text-gray-600 mb-2">{cvData.posteActuel}</p>
+            <p className="text-base text-gray-500">{cvData.localisation}</p>
+          </div>
+        </div>
+
+        <section className="mb-16">
+          <h2 className="text-base uppercase tracking-wider text-gray-400 mb-8 pb-3 border-b border-gray-200">Parcours Professionnel</h2>
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-10">
+              <div className="flex justify-between items-baseline mb-3">
+                <h3 className="text-lg font-light text-gray-900">{exp.titre}</h3>
+                <span className="text-sm text-gray-500">{exp.periode}</span>
+              </div>
+              <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
+              {exp.missions.length > 0 && (
+                <ul className="text-base text-gray-600 space-y-2 mt-4">
+                  {exp.missions.map((mission, midx) => (
+                    <li key={midx} className="leading-relaxed">— {mission}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="grid grid-cols-2 gap-16">
+          <section>
+            <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Formation</h2>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600 mb-1">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Compétences</h2>
+            <div className="space-y-2">
+              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                <p key={idx} className="text-sm text-gray-600">{comp}</p>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 33 - Espace Blanc Maximum
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-24 print:shadow-none">
+        <div className="mb-20 text-center">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={100} 
+            height={100}
+            className="rounded-full mx-auto mb-10 opacity-90"
+          />
+          <h1 className="text-6xl font-extralight mb-8 text-gray-900">{cvData.nom}</h1>
+          <p className="text-lg text-gray-600">{cvData.posteActuel}</p>
+        </div>
+
+        <section className="mb-20">
+          <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-12 text-center">Expérience</h2>
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-16 text-center">
+              <h3 className="text-xl font-light text-gray-900 mb-3">{exp.titre}</h3>
+              <p className="text-base text-gray-600 mb-2">{exp.entreprise}</p>
+              <p className="text-sm text-gray-400 mb-6">{exp.periode}</p>
+              {exp.missions.length > 0 && (
+                <div className="max-w-2xl mx-auto">
+                  {exp.missions.slice(0, 3).map((mission, midx) => (
+                    <p key={midx} className="text-base text-gray-600 leading-relaxed mb-3">{mission}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="text-center space-y-12">
+          <section>
+            <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-light text-gray-900">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600 mt-2">{cvData.formation.etablissement}</p>
+          </section>
+          <section>
+            <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                <span key={idx} className="text-sm text-gray-600">{comp}</span>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 34 - Typographie Raffinée
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-20 print:shadow-none">
+        <header className="mb-16 pb-12 border-b border-gray-200">
+          <div className="flex items-center gap-10 mb-8">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={130} 
+              height={130}
+              className="rounded border border-gray-200"
+            />
+            <div>
+              <h1 className="text-5xl font-serif font-light mb-3 text-gray-900">{cvData.nom}</h1>
+              <p className="text-lg text-gray-600">{cvData.posteActuel}</p>
+            </div>
+          </div>
+          <p className="text-base text-gray-500">{cvData.localisation}</p>
+        </header>
+
+        <section className="mb-16">
+          <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-10">Expérience Professionnelle</h2>
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-12">
+              <h3 className="text-xl font-serif font-light text-gray-900 mb-2">{exp.titre}</h3>
+              <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
+              <p className="text-sm text-gray-500 mb-4">{exp.periode} · {exp.duree}</p>
+              {exp.missions.length > 0 && (
+                <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
+                  {exp.missions.map((mission, midx) => (
+                    <li key={midx}>{mission}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="grid grid-cols-2 gap-12">
+          <section>
+            <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-serif text-gray-900 mb-2">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
+            <div className="space-y-2">
+              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                <p key={idx} className="text-sm text-gray-600">{comp}</p>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 35 - Grille Minimaliste
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-16 print:shadow-none">
+        <div className="grid grid-cols-4 gap-10">
+          <div className="col-span-1 pt-4">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={150} 
+              height={150}
+              className="w-full rounded-sm border border-gray-200 mb-8"
+            />
+            <section className="mb-12">
+              <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
+              <p className="text-sm font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
+              <p className="text-sm text-gray-600 mb-1">{cvData.formation.etablissement}</p>
+              <p className="text-xs text-gray-500 mt-3">{cvData.formation.mention}</p>
+            </section>
+            <section>
+              <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
+              <div className="space-y-2">
+                {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+                  <p key={idx} className="text-xs text-gray-600 leading-relaxed">{comp}</p>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <div className="col-span-3">
+            <div className="mb-12">
+              <h1 className="text-4xl font-light mb-3 text-gray-900">{cvData.nom}</h1>
+              <p className="text-lg text-gray-600 mb-1">{cvData.posteActuel}</p>
+              <p className="text-sm text-gray-500">{cvData.localisation}</p>
+            </div>
+
+            <section>
+              <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-8 pb-3 border-b border-gray-200">Expérience Professionnelle</h2>
+              {cvData.experiences.map((exp, idx) => (
+                <div key={idx} className="mb-10">
+                  <div className="flex justify-between items-baseline mb-2">
+                    <h3 className="text-base font-light text-gray-900">{exp.titre}</h3>
+                    <span className="text-xs text-gray-500">{exp.periode}</span>
+                  </div>
+                  <p className="text-sm text-gray-700 mb-1">{exp.entreprise}</p>
+                  {exp.missions.length > 0 && (
+                    <ul className="text-sm text-gray-600 space-y-2 mt-3 leading-relaxed">
+                      {exp.missions.map((mission, midx) => (
+                        <li key={midx}>{mission}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </section>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 36 - Léger et Aéré
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-20 print:shadow-none">
+        <div className="text-center mb-16">
+          <div className="inline-block mb-8">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={110} 
+              height={110}
+              className="rounded-full border-2 border-gray-100"
+            />
+          </div>
+          <h1 className="text-5xl font-thin mb-6 text-gray-900 tracking-tight">{cvData.nom}</h1>
+          <p className="text-base text-gray-600 mb-2">{cvData.posteActuel}</p>
+          <p className="text-sm text-gray-400">{cvData.localisation}</p>
+        </div>
+
+        <section className="mb-16">
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-14">
+              <div className="mb-4">
+                <div className="flex justify-between items-baseline mb-2">
+                  <h3 className="text-xl font-light text-gray-900">{exp.titre}</h3>
+                  <span className="text-sm text-gray-400">{exp.periode}</span>
+                </div>
+                <p className="text-base text-gray-600">{exp.entreprise}</p>
+              </div>
+              {exp.missions.length > 0 && (
+                <div className="space-y-3">
+                  {exp.missions.map((mission, midx) => (
+                    <p key={midx} className="text-base text-gray-600 leading-relaxed">{mission}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="pt-12 border-t border-gray-200 grid grid-cols-2 gap-12">
+          <section>
+            <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-3">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Expertise</h2>
+            <div className="flex flex-wrap gap-3">
+              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                <span key={idx} className="text-sm text-gray-600">{comp}</span>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 37 - Points et Lignes
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-20 print:shadow-none">
+        <div className="flex items-center gap-12 mb-16">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={140} 
+            height={140}
+            className="rounded-full border border-gray-100"
+          />
+          <div className="flex-1">
+            <h1 className="text-5xl font-thin mb-4 text-gray-900">{cvData.nom}</h1>
+            <div className="flex items-center gap-4 text-gray-600">
+              <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
+              <p className="text-lg">{cvData.posteActuel}</p>
+            </div>
+          </div>
+        </div>
+
+        <section className="mb-16">
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-12 flex gap-8">
+              <div className="flex-shrink-0 pt-1">
+                <div className="w-3 h-3 border-2 border-gray-300 rounded-full"></div>
+              </div>
+              <div className="flex-1">
+                <div className="mb-3">
+                  <h3 className="text-lg font-light text-gray-900 mb-1">{exp.titre}</h3>
+                  <p className="text-base text-gray-700">{exp.entreprise}</p>
+                  <p className="text-sm text-gray-500 mt-1">{exp.periode}</p>
+                </div>
+                {exp.missions.length > 0 && (
+                  <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
+                    {exp.missions.map((mission, midx) => (
+                      <li key={midx}>{mission}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        <div className="grid grid-cols-3 gap-10 pt-10 border-t border-gray-200">
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <h2 className="text-sm uppercase tracking-wider text-gray-400">Formation</h2>
+            </div>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formation.diplome}</p>
+            <p className="text-sm text-gray-600">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+          </section>
+          <section className="col-span-2">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <h2 className="text-sm uppercase tracking-wider text-gray-400">Compétences</h2>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+                <p key={idx} className="text-sm text-gray-600">{comp}</p>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 38 - Bordures Fines
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-16 print:shadow-none">
+        <div className="border border-gray-200 p-12">
+          <div className="flex justify-between items-start mb-12 pb-10 border-b border-gray-200">
+            <div className="flex-1">
+              <h1 className="text-5xl font-extralight mb-4 text-gray-900">{cvData.nom}</h1>
+              <p className="text-lg text-gray-600 mb-2">{cvData.posteActuel}</p>
+              <p className="text-base text-gray-500">{cvData.localisation}</p>
+            </div>
+            <div className="flex-shrink-0 ml-10">
+              <Image 
+                src="/og-caroline-karpel.jpg" 
+                alt="Caroline Karpel" 
+                width={130} 
+                height={130}
+                className="border border-gray-200"
+              />
+            </div>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-8">Parcours</h2>
+            {cvData.experiences.map((exp, idx) => (
+              <div key={idx} className="mb-10 pb-8 border-b border-gray-100 last:border-0">
+                <h3 className="text-lg font-light text-gray-900 mb-2">{exp.titre}</h3>
+                <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
+                <p className="text-sm text-gray-500 mb-4">{exp.periode}</p>
+                {exp.missions.length > 0 && (
+                  <ul className="text-base text-gray-600 space-y-2 leading-relaxed">
+                    {exp.missions.map((mission, midx) => (
+                      <li key={midx}>{mission}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </section>
+
+          <div className="grid grid-cols-2 gap-12 pt-8 border-t border-gray-200">
+            <section>
+              <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
+              <p className="text-base font-light text-gray-900 mb-2">{cvData.formation.diplome}</p>
+              <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
+              <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+            </section>
+            <section>
+              <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
+              <div className="space-y-2">
+                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                  <p key={idx} className="text-sm text-gray-600">{comp}</p>
+                ))}
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 39 - Simple et Direct
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-20 print:shadow-none">
+        <div className="mb-16">
+          <div className="flex items-center gap-10 mb-10">
+            <Image 
+              src="/og-caroline-karpel.jpg" 
+              alt="Caroline Karpel" 
+              width={120} 
+              height={120}
+              className="rounded"
+            />
+            <div>
+              <h1 className="text-4xl font-light mb-3 text-gray-900">{cvData.nom}</h1>
+              <p className="text-lg text-gray-600">{cvData.posteActuel}</p>
+            </div>
+          </div>
+        </div>
+
+        <section className="mb-16">
+          <h2 className="text-base uppercase tracking-wide text-gray-400 mb-8">Expérience</h2>
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-10">
+              <h3 className="text-lg font-light text-gray-900 mb-1">{exp.titre}</h3>
+              <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
+              <p className="text-sm text-gray-500 mb-4">{exp.periode}</p>
+              {exp.missions.length > 0 && (
+                <ul className="text-base text-gray-600 space-y-2 leading-relaxed list-disc list-inside">
+                  {exp.missions.map((mission, midx) => (
+                    <li key={midx}>{mission}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="grid grid-cols-2 gap-12">
+          <section>
+            <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Compétences</h2>
+            <div className="space-y-2">
+              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                <p key={idx} className="text-sm text-gray-600">{comp}</p>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
+
+    // CV 40 - Ultra Épuré
+    () => (
+      <div className="max-w-3xl mx-auto bg-white p-24 print:shadow-none">
+        <div className="text-center mb-20">
+          <Image 
+            src="/og-caroline-karpel.jpg" 
+            alt="Caroline Karpel" 
+            width={100} 
+            height={100}
+            className="rounded-full mx-auto mb-12 border border-gray-100"
+          />
+          <h1 className="text-6xl font-hairline mb-6 text-gray-900">{cvData.nom}</h1>
+          <p className="text-base text-gray-500">{cvData.posteActuel}</p>
+        </div>
+
+        <section className="mb-20">
+          {cvData.experiences.map((exp, idx) => (
+            <div key={idx} className="mb-16">
+              <h3 className="text-xl font-light text-gray-900 mb-2 text-center">{exp.titre}</h3>
+              <p className="text-base text-gray-600 text-center mb-1">{exp.entreprise}</p>
+              <p className="text-sm text-gray-400 text-center mb-6">{exp.periode}</p>
+              {exp.missions.length > 0 && (
+                <div className="max-w-2xl mx-auto space-y-4">
+                  {exp.missions.slice(0, 3).map((mission, midx) => (
+                    <p key={midx} className="text-base text-gray-600 text-center leading-relaxed">{mission}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </section>
+
+        <div className="text-center space-y-16">
+          <section>
+            <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
+            <p className="text-base font-light text-gray-900">{cvData.formation.diplome}</p>
+            <p className="text-base text-gray-600 mt-1">{cvData.formation.etablissement}</p>
+            <p className="text-sm text-gray-500 mt-2">{cvData.formation.mention}</p>
+          </section>
+          <section>
+            <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                <span key={idx} className="text-sm text-gray-500">{comp}</span>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    ),
   ];
 
   return (
@@ -1898,9 +2626,9 @@ export default function Home() {
       <div className="print:hidden bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL</h1>
+            <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL 40 VERSIONS ✨</h1>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-600">VERSION {currentCV} / 30</span>
+              <span className="text-sm text-gray-600">VERSION {currentCV} / 40</span>
               <div className="flex gap-2">
                 <button
                   onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
@@ -1910,8 +2638,8 @@ export default function Home() {
                   PRÉCÉDENT
                 </button>
                 <button
-                  onClick={() => setCurrentCV(Math.min(30, currentCV + 1))}
-                  disabled={currentCV === 30}
+                  onClick={() => setCurrentCV(Math.min(40, currentCV + 1))}
+                  disabled={currentCV === 40}
                   className="px-4 py-2 bg-gray-900 text-white text-sm uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
                 >
                   SUIVANT
@@ -1926,7 +2654,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-            {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => (
+            {Array.from({ length: 40 }, (_, i) => i + 1).map((num) => (
               <button
                 key={num}
                 onClick={() => setCurrentCV(num)}
