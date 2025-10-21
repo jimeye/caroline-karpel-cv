@@ -103,4 +103,3 @@ export const cvData = {
     "Déclaration des charges sociales"
   ]
 };
-

@@ -116,15 +116,15 @@ export default function Home() {
             <div key={idx} className="mb-10 border-l-8 border-blue-400 pl-8 py-4 bg-blue-50">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-800 mb-2">{exp.titre}</h3>
-                  <p className="text-lg text-blue-700 font-semibold">{exp.entreprise} {exp.type && `· ${exp.type}`}</p>
+                  <h3 className="text-2xl font-bold text-blue-800 mb-2">{exp.poste}</h3>
+                  <p className="text-lg text-blue-700 font-semibold">{exp.entreprise} {"CDI" && `· ${"CDI"}`}</p>
                 </div>
                 <div className="text-right text-base text-gray-700">
-                  <p className="font-bold text-blue-700">{exp.periode}</p>
+                  <p className="font-bold text-blue-700">{exp.duree}</p>
                   <p className="text-gray-600 mt-1">{exp.duree}</p>
                 </div>
               </div>
-              {exp.lieu && <p className="text-base text-gray-700 mb-3">{exp.lieu} {exp.mode && `· ${exp.mode}`}</p>}
+              {"Paris, France" && <p className="text-base text-gray-700 mb-3">{"Paris, France"} {"Sur site" && `· ${"Sur site"}`}</p>}
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-800 space-y-3 ml-6 leading-relaxed mt-4">
                   {exp.missions.map((mission, midx) => (
@@ -152,7 +152,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences interpersonnelles</h3>
               <div className="flex flex-wrap gap-4">
-                {cvData.competences.interpersonnelles.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <span key={idx} className="text-base bg-blue-100 text-blue-900 px-5 py-3 rounded-lg border-2 border-blue-400 font-semibold">{comp}</span>
                 ))}
               </div>
@@ -160,7 +160,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences techniques</h3>
               <div className="flex flex-wrap gap-4">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <span key={idx} className="text-base bg-blue-100 text-blue-900 px-5 py-3 rounded-lg border-2 border-blue-400 font-semibold">{comp}</span>
                 ))}
               </div>
@@ -168,7 +168,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold uppercase tracking-wide text-blue-800 mb-5 underline decoration-blue-400 decoration-4 underline-offset-8">Compétences métier</h3>
               <div className="flex flex-wrap gap-4">
-                {cvData.competences.metier.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <span key={idx} className="text-base bg-blue-100 text-blue-900 px-5 py-3 rounded-lg border-2 border-blue-400 font-semibold">{comp}</span>
                 ))}
               </div>
@@ -209,7 +209,7 @@ export default function Home() {
           <section className="mb-10">
             <h2 className="text-lg font-bold uppercase tracking-widest border-b-2 border-purple-300 pb-3 mb-6">COMPÉTENCES</h2>
             <div className="space-y-3 text-sm">
-              {cvData.competences.interpersonnelles.map((comp, idx) => (
+              {cvData.competences.map((comp, idx) => (
                 <div key={idx} className="text-purple-100 flex items-start"><span className="text-purple-300 mr-3 text-lg font-bold">▸</span><span>{comp}</span></div>
               ))}
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
           <section>
             <h2 className="text-lg font-bold uppercase tracking-widest border-b-2 border-purple-300 pb-3 mb-6">OUTILS</h2>
             <div className="space-y-3 text-sm text-purple-100">
-              {cvData.competences.techniques.map((comp, idx) => (
+              {cvData.competences.map((comp, idx) => (
                 <div key={idx} className="flex items-start"><span className="text-purple-300 mr-3 text-lg font-bold">▸</span><span>{comp}</span></div>
               ))}
             </div>
@@ -236,9 +236,9 @@ export default function Home() {
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-8 bg-purple-50 p-6 rounded-lg border-l-8 border-purple-600">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-purple-900 mb-2">{exp.titre}</h3>
+                  <h3 className="text-xl font-bold text-purple-900 mb-2">{exp.poste}</h3>
                   <p className="text-base text-purple-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
-                  <p className="text-base text-purple-600 mt-1">{exp.periode}</p>
+                  <p className="text-base text-purple-600 mt-1">{exp.duree}</p>
                 </div>
                 {exp.missions.length > 0 && (
                   <ul className="text-base text-gray-800 space-y-3 leading-relaxed mt-4">
@@ -278,9 +278,9 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8 pb-8 border-b border-teal-200 last:border-0">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-light text-teal-900">{exp.titre}</h3>
+                <h3 className="text-lg font-light text-teal-900">{exp.poste}</h3>
                 <p className="text-sm text-gray-700 font-medium">{exp.entreprise}</p>
-                <p className="text-xs text-teal-600 mt-1">{exp.periode} · {exp.duree}</p>
+                <p className="text-xs text-teal-600 mt-1">{exp.duree} · {exp.duree}</p>
               </div>
               {exp.missions.length > 0 && (
                 <ul className="text-xs text-gray-700 space-y-1 max-w-2xl mx-auto">
@@ -305,7 +305,7 @@ export default function Home() {
         <section>
           <h2 className="text-xs uppercase tracking-[0.4em] text-center mb-6 text-teal-800">EXPERTISE</h2>
           <div className="flex flex-wrap justify-center gap-2 text-xs">
-            {[...cvData.competences.interpersonnelles, ...cvData.competences.techniques].map((comp, idx) => (
+            {[...cvData.competences, ...cvData.competences].map((comp, idx) => (
               <span key={idx} className="border-2 border-teal-600 text-teal-900 px-4 py-1.5 rounded hover:bg-teal-600 hover:text-white transition-colors">{comp}</span>
             ))}
           </div>
@@ -341,9 +341,9 @@ export default function Home() {
               <div key={idx} className="mb-8 relative">
                 <div className="absolute -left-[33px] w-4 h-4 bg-black rounded-full"></div>
                 <div className="bg-gray-50 p-4 rounded">
-                  <h3 className="text-base font-bold text-gray-900">{exp.titre}</h3>
+                  <h3 className="text-base font-bold text-gray-900">{exp.poste}</h3>
                   <p className="text-sm font-semibold text-gray-700">{exp.entreprise}</p>
-                  <p className="text-xs text-gray-600 mb-2">{exp.periode} · {exp.duree}</p>
+                  <p className="text-xs text-gray-600 mb-2">{exp.duree} · {exp.duree}</p>
                   {exp.missions.length > 0 && (
                     <ul className="text-xs text-gray-700 space-y-1 mt-2">
                       {exp.missions.slice(0, 3).map((mission, midx) => (
@@ -378,7 +378,7 @@ export default function Home() {
             </h2>
             <div className="bg-gray-50 p-4 rounded">
               <ul className="text-xs space-y-1">
-                {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                {cvData.competences.slice(0, 8).map((comp, idx) => (
                   <li key={idx} className="text-gray-700">▸ {comp}</li>
                 ))}
               </ul>
@@ -411,9 +411,9 @@ export default function Home() {
             <h2 className="text-xl font-semibold uppercase tracking-widest mb-6 pb-3 border-b-2 border-gray-800">Expérience</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 pl-4 border-l-4 border-gray-200">
-                <h3 className="text-base font-semibold text-gray-900">{exp.titre}</h3>
-                <p className="text-sm text-gray-700 font-medium">{exp.entreprise} · {exp.type}</p>
-                <p className="text-xs text-gray-600 mb-2">{exp.periode} ({exp.duree})</p>
+                <h3 className="text-base font-semibold text-gray-900">{exp.poste}</h3>
+                <p className="text-sm text-gray-700 font-medium">{exp.entreprise} · {"CDI"}</p>
+                <p className="text-xs text-gray-600 mb-2">{exp.duree} ({exp.duree})</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-xs text-gray-700 space-y-1">
                     {exp.missions.slice(0, 3).map((mission, midx) => (
@@ -438,7 +438,7 @@ export default function Home() {
             <section className="col-span-2">
               <h2 className="text-lg font-semibold uppercase tracking-widest mb-4 pb-2 border-b-2 border-gray-800">Compétences</h2>
               <div className="flex flex-wrap gap-2">
-                {[...cvData.competences.interpersonnelles.slice(0, 8), ...cvData.competences.techniques].map((comp, idx) => (
+                {[...cvData.competences.slice(0, 8), ...cvData.competences].map((comp, idx) => (
                   <span key={idx} className="text-[10px] bg-gray-800 text-white px-3 py-1 uppercase tracking-wide">{comp}</span>
                 ))}
               </div>
@@ -471,8 +471,8 @@ export default function Home() {
             <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Expérience Professionnelle</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-5">
-                <p className="text-xs font-bold uppercase tracking-wide text-gray-800">{exp.periode}</p>
-                <h3 className="text-sm font-semibold mt-1">{exp.titre}</h3>
+                <p className="text-xs font-bold uppercase tracking-wide text-gray-800">{exp.duree}</p>
+                <h3 className="text-sm font-semibold mt-1">{exp.poste}</h3>
                 <p className="text-xs text-gray-700 italic">{exp.entreprise}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-[10px] text-gray-600 mt-1 space-y-0.5">
@@ -499,7 +499,7 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Compétences Interpersonnelles</h2>
               <div className="grid grid-cols-2 gap-2">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <div key={idx} className="text-[10px] text-gray-700">• {comp}</div>
                 ))}
               </div>
@@ -508,7 +508,7 @@ export default function Home() {
             <div>
               <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Outils & Techniques</h2>
               <div className="space-y-1">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <div key={idx} className="text-[10px] text-gray-700">• {comp}</div>
                 ))}
               </div>
@@ -552,12 +552,12 @@ export default function Home() {
               <div key={idx} className="mb-6 bg-gray-50 p-5 rounded-sm">
                 <div className="flex justify-between mb-2">
                   <div>
-                    <h3 className="text-base font-bold">{exp.titre}</h3>
+                    <h3 className="text-base font-bold">{exp.poste}</h3>
                     <p className="text-sm text-gray-700">{exp.entreprise}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs font-semibold">{exp.duree}</p>
-                    <p className="text-xs text-gray-600">{exp.periode}</p>
+                    <p className="text-xs text-gray-600">{exp.duree}</p>
                   </div>
                 </div>
                 {exp.missions.length > 0 && (
@@ -595,7 +595,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-50 p-4 rounded-sm">
                 <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
-                  {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                  {cvData.competences.slice(0, 10).map((comp, idx) => (
                     <div key={idx} className="text-gray-700">▪ {comp}</div>
                   ))}
                 </div>
@@ -631,7 +631,7 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-sm font-bold uppercase tracking-wide mb-4">COMPÉTENCES</h2>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                {cvData.competences.slice(0, 8).map((comp, idx) => (
                   <div key={idx} className="text-[10px] text-gray-700 border-l-2 border-gray-900 pl-2">{comp}</div>
                 ))}
               </div>
@@ -640,7 +640,7 @@ export default function Home() {
             <section>
               <h2 className="text-sm font-bold uppercase tracking-wide mb-4">OUTILS</h2>
               <div className="space-y-1">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <div key={idx} className="text-[10px] text-gray-700">{comp}</div>
                 ))}
               </div>
@@ -652,10 +652,10 @@ export default function Home() {
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6">
                 <div className="mb-2">
-                  <h3 className="text-base font-bold">{exp.titre}</h3>
+                  <h3 className="text-base font-bold">{exp.poste}</h3>
                   <div className="flex justify-between items-start">
                     <p className="text-sm text-gray-700">{exp.entreprise}</p>
-                    <p className="text-xs text-gray-600">{exp.periode}</p>
+                    <p className="text-xs text-gray-600">{exp.duree}</p>
                   </div>
                   <p className="text-xs text-gray-500">{exp.duree}</p>
                 </div>
@@ -698,9 +698,9 @@ export default function Home() {
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Parcours Professionnel</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-5 break-inside-avoid">
-                <p className="text-xs font-bold uppercase">{exp.titre}</p>
+                <p className="text-xs font-bold uppercase">{exp.poste}</p>
                 <p className="text-xs italic text-gray-700">{exp.entreprise}</p>
-                <p className="text-[10px] text-gray-500">{exp.periode}</p>
+                <p className="text-[10px] text-gray-500">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-[10px] text-gray-700 mt-1 space-y-0.5">
                     {exp.missions.slice(0, 2).map((mission, midx) => (
@@ -725,7 +725,7 @@ export default function Home() {
           <section className="break-inside-avoid mb-8">
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Domaines d'Excellence</h2>
             <div className="space-y-1">
-              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+              {cvData.competences.slice(0, 10).map((comp, idx) => (
                 <p key={idx} className="text-[10px] text-gray-700">◆ {comp}</p>
               ))}
             </div>
@@ -734,7 +734,7 @@ export default function Home() {
           <section className="break-inside-avoid">
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Maîtrise Technique</h2>
             <div className="space-y-1">
-              {cvData.competences.techniques.map((comp, idx) => (
+              {cvData.competences.map((comp, idx) => (
                 <p key={idx} className="text-[10px] text-gray-700">◆ {comp}</p>
               ))}
             </div>
@@ -761,7 +761,7 @@ export default function Home() {
               {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6">
                   <div className="bg-gradient-to-r from-gray-900 to-gray-700 text-white px-3 py-2 mb-2">
-                    <h3 className="text-sm font-bold uppercase">{exp.titre}</h3>
+                    <h3 className="text-sm font-bold uppercase">{exp.poste}</h3>
                     <p className="text-xs opacity-90">{exp.entreprise} · {exp.duree}</p>
                   </div>
                   {exp.missions.length > 0 && (
@@ -789,7 +789,7 @@ export default function Home() {
                 <h2 className="text-sm font-black uppercase tracking-wider">EXPERTISE</h2>
               </div>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+                {cvData.competences.slice(0, 8).map((comp, idx) => (
                   <div key={idx} className="text-[10px] bg-white border-l-4 border-gray-900 pl-2 py-1">{comp}</div>
                 ))}
               </div>
@@ -813,8 +813,8 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-7">
               <div className="flex justify-between items-baseline mb-1">
-                <h3 className="text-base font-semibold text-gray-900">{exp.titre}</h3>
-                <span className="text-xs text-gray-500">{exp.periode}</span>
+                <h3 className="text-base font-semibold text-gray-900">{exp.poste}</h3>
+                <span className="text-xs text-gray-500">{exp.duree}</span>
               </div>
               <p className="text-sm text-gray-700 mb-2">{exp.entreprise} · {exp.duree}</p>
               {exp.missions.length > 0 && (
@@ -842,7 +842,7 @@ export default function Home() {
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">COMPÉTENCES</h2>
             <div className="space-y-1.5">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-700">• {comp}</p>
               ))}
             </div>
@@ -867,12 +867,12 @@ export default function Home() {
               <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm">
                 <div className="flex justify-between mb-2">
                   <div>
-                    <h3 className="text-lg font-bold text-gray-900">{exp.titre}</h3>
+                    <h3 className="text-lg font-bold text-gray-900">{exp.poste}</h3>
                     <p className="text-sm text-gray-700 font-medium">{exp.entreprise}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-xs font-semibold text-gray-600">{exp.duree}</p>
-                    <p className="text-xs text-gray-500">{exp.periode}</p>
+                    <p className="text-xs text-gray-500">{exp.duree}</p>
                   </div>
                 </div>
                 {exp.missions.length > 0 && (
@@ -898,7 +898,7 @@ export default function Home() {
             <section className="bg-white p-6 rounded-lg shadow-sm">
               <h2 className="text-xl font-bold mb-4 text-gray-800 border-l-8 border-gray-900 pl-4">COMPÉTENCES</h2>
               <div className="grid grid-cols-1 gap-2">
-                {cvData.competences.interpersonnelles.slice(0, 7).map((comp, idx) => (
+                {cvData.competences.slice(0, 7).map((comp, idx) => (
                   <div key={idx} className="text-xs bg-gray-100 px-3 py-2 rounded text-gray-700">• {comp}</div>
                 ))}
               </div>
@@ -927,10 +927,10 @@ export default function Home() {
                 <div key={idx} className="mb-4">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
-                      <h3 className="text-sm font-bold">{exp.titre}</h3>
+                      <h3 className="text-sm font-bold">{exp.poste}</h3>
                       <p className="text-xs text-gray-700">{exp.entreprise}</p>
                     </div>
-                    <p className="text-[10px] text-gray-600 text-right">{exp.periode}<br/>{exp.duree}</p>
+                    <p className="text-[10px] text-gray-600 text-right">{exp.duree}<br/>{exp.duree}</p>
                   </div>
                   {exp.missions.length > 0 && (
                     <ul className="text-[10px] text-gray-600 mt-1 space-y-0.5">
@@ -958,7 +958,7 @@ export default function Home() {
             <section className="mb-6">
               <h2 className="text-sm font-bold uppercase mb-3 bg-gray-900 text-white px-2 py-1">COMPÉTENCES</h2>
               <div className="space-y-1">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <p key={idx} className="text-[9px] text-gray-700">• {comp}</p>
                 ))}
               </div>
@@ -967,7 +967,7 @@ export default function Home() {
             <section>
               <h2 className="text-sm font-bold uppercase mb-3 bg-gray-900 text-white px-2 py-1">OUTILS</h2>
               <div className="space-y-1">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <p key={idx} className="text-[9px] text-gray-700">• {comp}</p>
                 ))}
               </div>
@@ -1004,9 +1004,9 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8">
               <div className="text-center mb-3">
-                <h3 className="text-lg font-semibold text-gray-900">{exp.titre}</h3>
+                <h3 className="text-lg font-semibold text-gray-900">{exp.poste}</h3>
                 <p className="text-sm text-gray-700 font-medium">{exp.entreprise}</p>
-                <p className="text-xs text-gray-500 mt-1">{exp.periode} · {exp.duree}</p>
+                <p className="text-xs text-gray-500 mt-1">{exp.duree} · {exp.duree}</p>
               </div>
               {exp.missions.length > 0 && (
                 <div className="max-w-2xl mx-auto">
@@ -1035,7 +1035,7 @@ export default function Home() {
           <section>
             <h2 className="text-center text-sm uppercase tracking-[0.4em] text-gray-500 mb-6">Compétences Clés</h2>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-700 text-center">• {comp}</p>
               ))}
             </div>
@@ -1073,7 +1073,7 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-700">COMPÉTENCES</h2>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <div key={idx}>
                     <p className="text-[10px] text-gray-600 mb-1">{comp}</p>
                     <div className="w-full h-1 bg-gray-300">
@@ -1087,7 +1087,7 @@ export default function Home() {
             <section>
               <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-700">OUTILS</h2>
               <div className="flex flex-wrap gap-1.5">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <span key={idx} className="text-[9px] bg-gray-900 text-white px-2 py-1">{comp}</span>
                 ))}
               </div>
@@ -1101,8 +1101,8 @@ export default function Home() {
                 <div key={idx} className="mb-6">
                   <div className="mb-2">
                     <div className="flex justify-between items-start mb-1">
-                      <h3 className="text-base font-bold text-gray-900">{exp.titre}</h3>
-                      <span className="text-xs text-gray-600">{exp.periode}</span>
+                      <h3 className="text-base font-bold text-gray-900">{exp.poste}</h3>
+                      <span className="text-xs text-gray-600">{exp.duree}</span>
                     </div>
                     <p className="text-sm text-gray-700 font-medium">{exp.entreprise}</p>
                     <p className="text-xs text-gray-600">{exp.duree}</p>
@@ -1152,9 +1152,9 @@ export default function Home() {
               <div key={idx} className="mb-5 relative pl-6">
                 <div className="absolute left-0 top-2 w-2 h-2 bg-gray-900 rounded-full"></div>
                 <div className="bg-white border-l-4 border-gray-300 pl-4 py-2">
-                  <h3 className="text-sm font-bold text-gray-900">{exp.titre}</h3>
+                  <h3 className="text-sm font-bold text-gray-900">{exp.poste}</h3>
                   <p className="text-xs text-gray-700 font-medium">{exp.entreprise}</p>
-                  <p className="text-[10px] text-gray-500">{exp.periode} · {exp.duree}</p>
+                  <p className="text-[10px] text-gray-500">{exp.duree} · {exp.duree}</p>
                   {exp.missions.length > 0 && (
                     <ul className="text-[10px] text-gray-600 mt-2 space-y-0.5">
                       {exp.missions.slice(0, 2).map((mission, midx) => (
@@ -1182,7 +1182,7 @@ export default function Home() {
               <h2 className="text-xs font-bold uppercase tracking-widest">EXPERTISE</h2>
             </div>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <div key={idx} className="bg-white p-2">
                   <p className="text-[9px] text-gray-700 font-medium">{comp}</p>
                   <div className="w-full h-0.5 bg-gray-200 mt-1">
@@ -1229,9 +1229,9 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 border-l-2 border-gray-200 pl-6 relative">
               <div className="absolute -left-2 top-0 w-4 h-4 bg-white border-2 border-gray-400 rounded-full"></div>
-              <h3 className="text-base font-serif font-semibold italic">{exp.titre}</h3>
+              <h3 className="text-base font-serif font-semibold italic">{exp.poste}</h3>
               <p className="text-sm text-gray-700">{exp.entreprise}</p>
-              <p className="text-xs text-gray-500 mb-2">{exp.periode} · {exp.duree}</p>
+              <p className="text-xs text-gray-500 mb-2">{exp.duree} · {exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-xs text-gray-600 space-y-1">
                   {exp.missions.slice(0, 3).map((mission, midx) => (
@@ -1265,7 +1265,7 @@ export default function Home() {
               <div className="flex-1 h-px bg-gray-300"></div>
             </div>
             <div className="space-y-1.5">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <p key={idx} className="text-xs text-gray-700 text-center">◇ {comp}</p>
               ))}
             </div>
@@ -1305,11 +1305,11 @@ export default function Home() {
               <div key={idx} className="mb-6 border border-gray-200 p-4">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <h3 className="text-base font-bold uppercase tracking-wide">{exp.titre}</h3>
+                    <h3 className="text-base font-bold uppercase tracking-wide">{exp.poste}</h3>
                     <p className="text-sm text-gray-700">{exp.entreprise}</p>
                   </div>
                   <div className="text-right text-xs text-gray-600">
-                    <p>{exp.periode}</p>
+                    <p>{exp.duree}</p>
                     <p>{exp.duree}</p>
                   </div>
                 </div>
@@ -1345,7 +1345,7 @@ export default function Home() {
                 <h2 className="text-base font-black uppercase tracking-widest">EXPERTISE</h2>
               </div>
               <div className="grid grid-cols-2 gap-1 text-[10px]">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <div key={idx} className="bg-black text-white px-2 py-1 text-center">{comp}</div>
                 ))}
               </div>
@@ -1384,7 +1384,7 @@ export default function Home() {
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">COMPÉTENCES</h2>
               <div className="space-y-2 text-[9px]">
-                {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+                {cvData.competences.slice(0, 12).map((comp, idx) => (
                   <p key={idx} className="opacity-90">{comp}</p>
                 ))}
               </div>
@@ -1394,7 +1394,7 @@ export default function Home() {
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">OUTILS</h2>
               <div className="space-y-1 text-[9px]">
-                {cvData.competences.techniques.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <p key={idx} className="opacity-90">{comp}</p>
                 ))}
               </div>
@@ -1417,11 +1417,11 @@ export default function Home() {
                 <div key={idx} className="mb-6">
                   <div className="flex justify-between items-start mb-2">
                     <div>
-                      <h3 className="text-base font-bold">{exp.titre}</h3>
+                      <h3 className="text-base font-bold">{exp.poste}</h3>
                       <p className="text-sm text-gray-700">{exp.entreprise}</p>
                     </div>
                     <div className="text-right text-xs text-gray-600">
-                      <p>{exp.periode}</p>
+                      <p>{exp.duree}</p>
                       <p>{exp.duree}</p>
                     </div>
                   </div>
@@ -1463,8 +1463,8 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8">
               <div className="flex justify-between items-baseline mb-2">
-                <h3 className="text-base font-medium">{exp.titre}</h3>
-                <span className="text-xs text-gray-500">{exp.periode}</span>
+                <h3 className="text-base font-medium">{exp.poste}</h3>
+                <span className="text-xs text-gray-500">{exp.duree}</span>
               </div>
               <p className="text-sm text-gray-700 mb-1">{exp.entreprise}</p>
               <p className="text-xs text-gray-500 mb-3">{exp.duree}</p>
@@ -1492,7 +1492,7 @@ export default function Home() {
         <section>
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
           <div className="flex flex-wrap gap-3">
-            {[...cvData.competences.interpersonnelles, ...cvData.competences.techniques].map((comp, idx) => (
+            {[...cvData.competences, ...cvData.competences].map((comp, idx) => (
               <span key={idx} className="text-xs text-gray-700 border-b border-gray-300 pb-1">{comp}</span>
             ))}
           </div>
@@ -1524,9 +1524,9 @@ export default function Home() {
             <h2 className="text-4xl font-bold mb-10 text-emerald-700 border-b-8 border-emerald-500 pb-4 inline-block">EXPÉRIENCE</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-10 bg-emerald-50 p-8 rounded-xl border-l-8 border-emerald-600 shadow-md">
-                <h3 className="text-2xl font-bold text-emerald-900 mb-2">{exp.titre}</h3>
+                <h3 className="text-2xl font-bold text-emerald-900 mb-2">{exp.poste}</h3>
                 <p className="text-lg text-emerald-700 font-bold mb-2">{exp.entreprise} · {exp.duree}</p>
-                <p className="text-base text-emerald-600 mb-4">{exp.periode}</p>
+                <p className="text-base text-emerald-600 mb-4">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-base text-gray-800 space-y-3 mt-4 leading-relaxed">
                     {exp.missions.map((mission, midx) => (
@@ -1553,7 +1553,7 @@ export default function Home() {
             <section>
               <h2 className="text-3xl font-bold mb-6 text-emerald-700 border-b-8 border-emerald-500 pb-4 inline-block">COMPÉTENCES</h2>
               <div className="flex flex-wrap gap-3">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <span key={idx} className="text-sm bg-emerald-600 text-white px-5 py-3 rounded-full font-semibold shadow-md">{comp}</span>
                 ))}
               </div>
@@ -1586,9 +1586,9 @@ export default function Home() {
           <h2 className="text-4xl font-black uppercase tracking-wider mb-10 text-orange-900 underline decoration-orange-500 decoration-8 underline-offset-[16px]">PARCOURS PROFESSIONNEL</h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10 relative pl-12 before:content-[''] before:absolute before:left-0 before:top-3 before:w-8 before:h-8 before:bg-orange-500 before:rounded-full before:shadow-lg">
-              <h3 className="text-2xl font-bold text-orange-900 mb-2">{exp.titre}</h3>
+              <h3 className="text-2xl font-bold text-orange-900 mb-2">{exp.poste}</h3>
               <p className="text-lg text-orange-700 font-bold mb-1">{exp.entreprise}</p>
-              <p className="text-base text-gray-700 mb-4">{exp.periode} · {exp.duree}</p>
+              <p className="text-base text-gray-700 mb-4">{exp.duree} · {exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-800 space-y-3 mt-4 leading-relaxed">
                   {exp.missions.map((mission, midx) => (
@@ -1612,7 +1612,7 @@ export default function Home() {
           <section className="col-span-2 bg-orange-50 p-8 rounded-xl shadow-md border-t-8 border-orange-500">
             <h2 className="text-2xl font-black uppercase text-orange-900 mb-6">EXPERTISE</h2>
             <div className="flex flex-wrap gap-3">
-              {cvData.competences.interpersonnelles.map((comp, idx) => (
+              {cvData.competences.map((comp, idx) => (
                 <span key={idx} className="text-sm bg-white border-3 border-orange-500 text-orange-900 px-4 py-2 rounded-lg font-bold shadow-sm">{comp}</span>
               ))}
             </div>
@@ -1643,9 +1643,9 @@ export default function Home() {
           <h2 className="text-xl font-serif italic mb-6 text-pink-900 border-l-4 border-pink-400 pl-4">Expérience Professionnelle</h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm border-t-4 border-pink-400">
-              <h3 className="text-base font-semibold text-pink-900">{exp.titre}</h3>
+              <h3 className="text-base font-semibold text-pink-900">{exp.poste}</h3>
               <p className="text-sm text-pink-700 font-medium">{exp.entreprise} · {exp.duree}</p>
-              <p className="text-xs text-gray-600 mb-2">{exp.periode}</p>
+              <p className="text-xs text-gray-600 mb-2">{exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-xs text-gray-700 space-y-1">
                   {exp.missions.map((mission, midx) => (
@@ -1669,7 +1669,7 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-serif italic mb-4 text-pink-900 border-l-4 border-pink-400 pl-4">Compétences</h2>
             <div className="flex flex-wrap gap-2">
-              {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+              {cvData.competences.slice(0, 12).map((comp, idx) => (
                 <span key={idx} className="text-[10px] bg-gradient-to-r from-pink-100 to-rose-100 text-pink-900 px-3 py-1 rounded-full border border-pink-300">{comp}</span>
               ))}
             </div>
@@ -1706,9 +1706,9 @@ export default function Home() {
                 </div>
                 {cvData.experiences?.map((exp, idx) => (
                   <div key={idx} className="mb-6 border-l-4 border-indigo-300 pl-6 bg-indigo-50 py-4">
-                    <h3 className="text-base font-bold text-indigo-900">{exp.titre}</h3>
+                    <h3 className="text-base font-bold text-indigo-900">{exp.poste}</h3>
                     <p className="text-sm text-indigo-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
-                    <p className="text-xs text-gray-600 mb-2">{exp.periode}</p>
+                    <p className="text-xs text-gray-600 mb-2">{exp.duree}</p>
                     {exp.missions.length > 0 && (
                       <ul className="text-xs text-gray-700 space-y-1">
                         {exp.missions.map((mission, midx) => (
@@ -1737,7 +1737,7 @@ export default function Home() {
                     <h2 className="text-lg font-bold text-indigo-900">COMPÉTENCES</h2>
                   </div>
                   <div className="space-y-2">
-                    {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                    {cvData.competences.slice(0, 10).map((comp, idx) => (
                       <div key={idx} className="text-xs bg-indigo-900 text-white px-3 py-1.5 rounded">{comp}</div>
                     ))}
                   </div>
@@ -1773,9 +1773,9 @@ export default function Home() {
             <div key={idx} className="mb-6 relative">
               <div className="absolute -left-6 top-2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-cyan-200"></div>
               <div className="bg-gradient-to-r from-cyan-50 to-white p-5 rounded-r-lg border-l-4 border-cyan-500">
-                <h3 className="text-base font-bold text-cyan-900">{exp.titre}</h3>
+                <h3 className="text-base font-bold text-cyan-900">{exp.poste}</h3>
                 <p className="text-sm text-cyan-700 font-semibold">{exp.entreprise}</p>
-                <p className="text-xs text-gray-600">{exp.periode} · {exp.duree}</p>
+                <p className="text-xs text-gray-600">{exp.duree} · {exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-xs text-gray-700 space-y-1 mt-2">
                     {exp.missions.map((mission, midx) => (
@@ -1797,7 +1797,7 @@ export default function Home() {
           <section className="col-span-2">
             <h2 className="text-base font-black uppercase tracking-widest mb-4 text-cyan-900">COMPÉTENCES</h2>
             <div className="grid grid-cols-2 gap-2">
-              {cvData.competences.interpersonnelles.map((comp, idx) => (
+              {cvData.competences.map((comp, idx) => (
                 <div key={idx} className="text-[10px] bg-gradient-to-r from-cyan-100 to-cyan-50 text-cyan-900 px-3 py-2 rounded font-semibold border-l-4 border-cyan-500">{comp}</div>
               ))}
             </div>
@@ -1832,9 +1832,9 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="border-l-4 border-amber-500 pl-4">
-                <h3 className="text-base font-bold text-amber-900">{exp.titre}</h3>
+                <h3 className="text-base font-bold text-amber-900">{exp.poste}</h3>
                 <p className="text-sm text-amber-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
-                <p className="text-xs text-gray-600 mb-2">{exp.periode}</p>
+                <p className="text-xs text-gray-600 mb-2">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-xs text-gray-700 space-y-1">
                     {exp.missions.map((mission, midx) => (
@@ -1862,7 +1862,7 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-bold mb-4 text-amber-900 bg-amber-100 px-4 py-2 rounded inline-block">COMPÉTENCES</h2>
             <div className="flex flex-wrap gap-2">
-              {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+              {cvData.competences.slice(0, 12).map((comp, idx) => (
                 <span key={idx} className="text-[10px] bg-white text-amber-900 px-3 py-1.5 rounded-full shadow-sm border border-amber-300 font-medium">{comp}</span>
               ))}
             </div>
@@ -1897,9 +1897,9 @@ export default function Home() {
             </h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 border-2 border-lime-200 rounded-lg p-5 hover:border-lime-500 transition-colors">
-                <h3 className="text-base font-bold text-lime-900">{exp.titre}</h3>
+                <h3 className="text-base font-bold text-lime-900">{exp.poste}</h3>
                 <p className="text-sm text-lime-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
-                <p className="text-xs text-gray-600 mb-2">{exp.periode}</p>
+                <p className="text-xs text-gray-600 mb-2">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-xs text-gray-700 space-y-1">
                     {exp.missions.map((mission, midx) => (
@@ -1927,7 +1927,7 @@ export default function Home() {
                 COMPÉTENCES
               </h2>
               <div className="flex flex-wrap gap-2">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <span key={idx} className="text-[10px] bg-lime-600 text-white px-3 py-1 rounded font-bold">{comp}</span>
                 ))}
               </div>
@@ -1959,9 +1959,9 @@ export default function Home() {
             <h2 className="text-2xl font-black uppercase tracking-widest mb-6 text-fuchsia-400 border-b-2 border-fuchsia-600 pb-2">EXPÉRIENCE</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 bg-gradient-to-r from-fuchsia-950 to-gray-900 p-5 rounded border-l-4 border-fuchsia-600">
-                <h3 className="text-base font-bold text-fuchsia-300">{exp.titre}</h3>
+                <h3 className="text-base font-bold text-fuchsia-300">{exp.poste}</h3>
                 <p className="text-sm text-fuchsia-400 font-semibold">{exp.entreprise} · {exp.duree}</p>
-                <p className="text-xs text-gray-400 mb-2">{exp.periode}</p>
+                <p className="text-xs text-gray-400 mb-2">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-xs text-gray-300 space-y-1">
                     {exp.missions.map((mission, midx) => (
@@ -1983,7 +1983,7 @@ export default function Home() {
             <section className="bg-gradient-to-br from-fuchsia-950 to-gray-900 p-6 rounded border-t-4 border-fuchsia-600">
               <h2 className="text-lg font-black uppercase mb-4 text-fuchsia-400">COMPÉTENCES</h2>
               <div className="flex flex-wrap gap-2">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <span key={idx} className="text-[10px] border border-fuchsia-600 text-fuchsia-300 px-2 py-1 rounded">{comp}</span>
                 ))}
               </div>
@@ -2020,9 +2020,9 @@ export default function Home() {
           </h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white rounded-xl shadow-md p-6 border-t-4 border-sky-500">
-              <h3 className="text-base font-bold text-sky-900">{exp.titre}</h3>
+              <h3 className="text-base font-bold text-sky-900">{exp.poste}</h3>
               <p className="text-sm text-sky-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
-              <p className="text-xs text-gray-600 mb-2">{exp.periode}</p>
+              <p className="text-xs text-gray-600 mb-2">{exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-xs text-gray-700 space-y-1">
                   {exp.missions.map((mission, midx) => (
@@ -2050,7 +2050,7 @@ export default function Home() {
             <h2 className="text-lg font-bold mb-4 text-center text-sky-900 bg-sky-100 py-2 rounded-t-lg">COMPÉTENCES</h2>
             <div className="bg-white rounded-b-xl shadow-md p-5">
               <div className="flex flex-wrap gap-2 justify-center">
-                {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+                {cvData.competences.slice(0, 12).map((comp, idx) => (
                   <span key={idx} className="text-[10px] bg-sky-100 text-sky-900 px-3 py-1.5 rounded-full border border-sky-300">{comp}</span>
                 ))}
               </div>
@@ -2089,7 +2089,7 @@ export default function Home() {
             <div>
               <h2 className="text-xs uppercase tracking-widest mb-4 text-slate-400 border-b border-slate-700 pb-2">COMPÉTENCES</h2>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.map((comp, idx) => (
+                {cvData.competences.map((comp, idx) => (
                   <div key={idx} className="text-[10px] text-slate-300 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-slate-500 rounded-full"></div>
                     <span>{comp}</span>
@@ -2107,9 +2107,9 @@ export default function Home() {
               <h2 className="text-xl font-bold mb-6 text-slate-900 border-l-4 border-slate-800 pl-4">EXPÉRIENCE PROFESSIONNELLE</h2>
               {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6 pb-6 border-b border-slate-200 last:border-0">
-                  <h3 className="text-base font-bold text-slate-900">{exp.titre}</h3>
+                  <h3 className="text-base font-bold text-slate-900">{exp.poste}</h3>
                   <p className="text-sm text-slate-700 font-semibold">{exp.entreprise}</p>
-                  <p className="text-xs text-slate-600">{exp.periode} · {exp.duree}</p>
+                  <p className="text-xs text-slate-600">{exp.duree} · {exp.duree}</p>
                   {exp.missions.length > 0 && (
                     <ul className="text-xs text-slate-700 space-y-1 mt-2">
                       {exp.missions.map((mission, midx) => (
@@ -2149,9 +2149,9 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-12">
               <div className="mb-4">
-                <h3 className="text-xl font-light text-gray-900 mb-2">{exp.titre}</h3>
+                <h3 className="text-xl font-light text-gray-900 mb-2">{exp.poste}</h3>
                 <p className="text-base text-gray-700">{exp.entreprise}</p>
-                <p className="text-sm text-gray-500 mt-1">{exp.periode}</p>
+                <p className="text-sm text-gray-500 mt-1">{exp.duree}</p>
               </div>
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
@@ -2174,7 +2174,7 @@ export default function Home() {
           <section>
             <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-600">{comp}</p>
               ))}
             </div>
@@ -2208,8 +2208,8 @@ export default function Home() {
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10">
               <div className="flex justify-between items-baseline mb-3">
-                <h3 className="text-lg font-light text-gray-900">{exp.titre}</h3>
-                <span className="text-sm text-gray-500">{exp.periode}</span>
+                <h3 className="text-lg font-light text-gray-900">{exp.poste}</h3>
+                <span className="text-sm text-gray-500">{exp.duree}</span>
               </div>
               <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
               {exp.missions.length > 0 && (
@@ -2233,7 +2233,7 @@ export default function Home() {
           <section>
             <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Compétences</h2>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+              {cvData.competences.slice(0, 10).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-600">{comp}</p>
               ))}
             </div>
@@ -2261,9 +2261,9 @@ export default function Home() {
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-12 text-center">Expérience</h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-16 text-center">
-              <h3 className="text-xl font-light text-gray-900 mb-3">{exp.titre}</h3>
+              <h3 className="text-xl font-light text-gray-900 mb-3">{exp.poste}</h3>
               <p className="text-base text-gray-600 mb-2">{exp.entreprise}</p>
-              <p className="text-sm text-gray-400 mb-6">{exp.periode}</p>
+              <p className="text-sm text-gray-400 mb-6">{exp.duree}</p>
               {exp.missions.length > 0 && (
                 <div className="max-w-2xl mx-auto">
                   {exp.missions.slice(0, 3).map((mission, midx) => (
@@ -2284,7 +2284,7 @@ export default function Home() {
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
             <div className="flex flex-wrap justify-center gap-4">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <span key={idx} className="text-sm text-gray-600">{comp}</span>
               ))}
             </div>
@@ -2317,9 +2317,9 @@ export default function Home() {
           <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-10">Expérience Professionnelle</h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-12">
-              <h3 className="text-xl font-serif font-light text-gray-900 mb-2">{exp.titre}</h3>
+              <h3 className="text-xl font-serif font-light text-gray-900 mb-2">{exp.poste}</h3>
               <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
-              <p className="text-sm text-gray-500 mb-4">{exp.periode} · {exp.duree}</p>
+              <p className="text-sm text-gray-500 mb-4">{exp.duree} · {exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
                   {exp.missions.map((mission, midx) => (
@@ -2341,7 +2341,7 @@ export default function Home() {
           <section>
             <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+              {cvData.competences.slice(0, 10).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-600">{comp}</p>
               ))}
             </div>
@@ -2371,7 +2371,7 @@ export default function Home() {
             <section>
               <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Compétences</h2>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+                {cvData.competences.slice(0, 12).map((comp, idx) => (
                   <p key={idx} className="text-xs text-gray-600 leading-relaxed">{comp}</p>
                 ))}
               </div>
@@ -2390,8 +2390,8 @@ export default function Home() {
               {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-10">
                   <div className="flex justify-between items-baseline mb-2">
-                    <h3 className="text-base font-light text-gray-900">{exp.titre}</h3>
-                    <span className="text-xs text-gray-500">{exp.periode}</span>
+                    <h3 className="text-base font-light text-gray-900">{exp.poste}</h3>
+                    <span className="text-xs text-gray-500">{exp.duree}</span>
                   </div>
                   <p className="text-sm text-gray-700 mb-1">{exp.entreprise}</p>
                   {exp.missions.length > 0 && (
@@ -2432,8 +2432,8 @@ export default function Home() {
             <div key={idx} className="mb-14">
               <div className="mb-4">
                 <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="text-xl font-light text-gray-900">{exp.titre}</h3>
-                  <span className="text-sm text-gray-400">{exp.periode}</span>
+                  <h3 className="text-xl font-light text-gray-900">{exp.poste}</h3>
+                  <span className="text-sm text-gray-400">{exp.duree}</span>
                 </div>
                 <p className="text-base text-gray-600">{exp.entreprise}</p>
               </div>
@@ -2458,7 +2458,7 @@ export default function Home() {
           <section>
             <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Expertise</h2>
             <div className="flex flex-wrap gap-3">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <span key={idx} className="text-sm text-gray-600">{comp}</span>
               ))}
             </div>
@@ -2495,9 +2495,9 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <div className="mb-3">
-                  <h3 className="text-lg font-light text-gray-900 mb-1">{exp.titre}</h3>
+                  <h3 className="text-lg font-light text-gray-900 mb-1">{exp.poste}</h3>
                   <p className="text-base text-gray-700">{exp.entreprise}</p>
-                  <p className="text-sm text-gray-500 mt-1">{exp.periode}</p>
+                  <p className="text-sm text-gray-500 mt-1">{exp.duree}</p>
                 </div>
                 {exp.missions.length > 0 && (
                   <ul className="text-base text-gray-600 space-y-3 leading-relaxed">
@@ -2527,7 +2527,7 @@ export default function Home() {
               <h2 className="text-sm uppercase tracking-wider text-gray-400">Compétences</h2>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {cvData.competences.interpersonnelles.slice(0, 12).map((comp, idx) => (
+              {cvData.competences.slice(0, 12).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-600">{comp}</p>
               ))}
             </div>
@@ -2561,9 +2561,9 @@ export default function Home() {
             <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-8">Parcours</h2>
             {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-10 pb-8 border-b border-gray-100 last:border-0">
-                <h3 className="text-lg font-light text-gray-900 mb-2">{exp.titre}</h3>
+                <h3 className="text-lg font-light text-gray-900 mb-2">{exp.poste}</h3>
                 <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
-                <p className="text-sm text-gray-500 mb-4">{exp.periode}</p>
+                <p className="text-sm text-gray-500 mb-4">{exp.duree}</p>
                 {exp.missions.length > 0 && (
                   <ul className="text-base text-gray-600 space-y-2 leading-relaxed">
                     {exp.missions.map((mission, midx) => (
@@ -2585,7 +2585,7 @@ export default function Home() {
             <section>
               <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Compétences</h2>
               <div className="space-y-2">
-                {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+                {cvData.competences.slice(0, 10).map((comp, idx) => (
                   <p key={idx} className="text-sm text-gray-600">{comp}</p>
                 ))}
               </div>
@@ -2618,9 +2618,9 @@ export default function Home() {
           <h2 className="text-base uppercase tracking-wide text-gray-400 mb-8">Expérience</h2>
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10">
-              <h3 className="text-lg font-light text-gray-900 mb-1">{exp.titre}</h3>
+              <h3 className="text-lg font-light text-gray-900 mb-1">{exp.poste}</h3>
               <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
-              <p className="text-sm text-gray-500 mb-4">{exp.periode}</p>
+              <p className="text-sm text-gray-500 mb-4">{exp.duree}</p>
               {exp.missions.length > 0 && (
                 <ul className="text-base text-gray-600 space-y-2 leading-relaxed list-disc list-inside">
                   {exp.missions.map((mission, midx) => (
@@ -2642,7 +2642,7 @@ export default function Home() {
           <section>
             <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Compétences</h2>
             <div className="space-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 10).map((comp, idx) => (
+              {cvData.competences.slice(0, 10).map((comp, idx) => (
                 <p key={idx} className="text-sm text-gray-600">{comp}</p>
               ))}
             </div>
@@ -2669,9 +2669,9 @@ export default function Home() {
         <section className="mb-20">
           {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-16">
-              <h3 className="text-xl font-light text-gray-900 mb-2 text-center">{exp.titre}</h3>
+              <h3 className="text-xl font-light text-gray-900 mb-2 text-center">{exp.poste}</h3>
               <p className="text-base text-gray-600 text-center mb-1">{exp.entreprise}</p>
-              <p className="text-sm text-gray-400 text-center mb-6">{exp.periode}</p>
+              <p className="text-sm text-gray-400 text-center mb-6">{exp.duree}</p>
               {exp.missions.length > 0 && (
                 <div className="max-w-2xl mx-auto space-y-4">
                   {exp.missions.slice(0, 3).map((mission, midx) => (
@@ -2693,7 +2693,7 @@ export default function Home() {
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-              {cvData.competences.interpersonnelles.slice(0, 8).map((comp, idx) => (
+              {cvData.competences.slice(0, 8).map((comp, idx) => (
                 <span key={idx} className="text-sm text-gray-500">{comp}</span>
               ))}
             </div>
