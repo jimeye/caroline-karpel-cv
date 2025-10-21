@@ -723,7 +723,7 @@ export default function Home() {
           </section>
 
           <section className="break-inside-avoid mb-8">
-            <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Domaines d'Excellence</h2>
+            <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Domaines d&apos;Excellence</h2>
             <div className="space-y-1">
               {cvData.competences.slice(0, 10).map((comp, idx) => (
                 <p key={idx} className="text-[10px] text-gray-700">◆ {comp}</p>
