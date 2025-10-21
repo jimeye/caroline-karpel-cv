@@ -112,7 +112,7 @@ export default function Home() {
         
         <section className="mb-12">
           <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">EXPÉRIENCE PROFESSIONNELLE</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10 border-l-8 border-blue-400 pl-8 py-4 bg-blue-50">
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -139,9 +139,9 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold uppercase tracking-wider border-b-4 border-blue-600 pb-3 mb-8 text-blue-600">FORMATION</h2>
           <div className="border-l-8 border-blue-400 pl-8 py-6 bg-blue-50">
-            <h3 className="text-2xl font-bold text-blue-800 mb-2">{cvData.formations[0].diplome}</h3>
-            <p className="text-lg text-blue-700 font-semibold mb-2">{cvData.formations[0].etablissement}</p>
-            <p className="text-base text-gray-700">{"Économie et gestion"} · {cvData.formations[0].annee}</p>
+            <h3 className="text-2xl font-bold text-blue-800 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</h3>
+            <p className="text-lg text-blue-700 font-semibold mb-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+            <p className="text-base text-gray-700">{"Économie et gestion"} · {cvData.formations?.[0]?.annee || "1995"}</p>
             <p className="text-lg font-bold text-blue-800 mt-3">{"Mention Bien"}</p>
           </div>
         </section>
@@ -199,9 +199,9 @@ export default function Home() {
           <section className="mb-10">
             <h2 className="text-lg font-bold uppercase tracking-widest border-b-2 border-purple-300 pb-3 mb-6">FORMATION</h2>
             <div className="text-base">
-              <p className="font-bold mb-2 text-purple-100 text-lg">{cvData.formations[0].diplome}</p>
-              <p className="text-purple-200 mb-2">{cvData.formations[0].etablissement}</p>
-              <p className="text-purple-300 text-sm mt-2">{cvData.formations[0].annee}</p>
+              <p className="font-bold mb-2 text-purple-100 text-lg">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-purple-200 mb-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-purple-300 text-sm mt-2">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-purple-100 mt-4 font-bold text-lg">{"Mention Bien"}</p>
             </div>
           </section>
@@ -233,7 +233,7 @@ export default function Home() {
 
           <section>
             <h2 className="text-2xl font-bold uppercase tracking-wide border-b-4 border-purple-600 pb-3 mb-8 text-purple-800">EXPÉRIENCE</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-8 bg-purple-50 p-6 rounded-lg border-l-8 border-purple-600">
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-purple-900 mb-2">{exp.titre}</h3>
@@ -275,7 +275,7 @@ export default function Home() {
 
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.4em] text-center mb-8 text-teal-800">PARCOURS PROFESSIONNEL</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8 pb-8 border-b border-teal-200 last:border-0">
               <div className="text-center mb-3">
                 <h3 className="text-lg font-light text-teal-900">{exp.titre}</h3>
@@ -296,8 +296,8 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.4em] text-center mb-6 text-teal-800">FORMATION</h2>
           <div className="text-center">
-            <p className="text-base font-light text-teal-900">{cvData.formations[0].diplome}</p>
-            <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-teal-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-xs text-teal-700 font-semibold mt-1">{"Mention Bien"}</p>
           </div>
         </section>
@@ -337,7 +337,7 @@ export default function Home() {
             EXPÉRIENCE PROFESSIONNELLE
           </h2>
           <div className="relative border-l-2 border-gray-300 ml-4 pl-8">
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-8 relative">
                 <div className="absolute -left-[33px] w-4 h-4 bg-black rounded-full"></div>
                 <div className="bg-gray-50 p-4 rounded">
@@ -364,9 +364,9 @@ export default function Home() {
               FORMATION
             </h2>
             <div className="bg-gray-50 p-4 rounded">
-              <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-xs font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -409,7 +409,7 @@ export default function Home() {
         <div className="p-12">
           <section className="mb-10">
             <h2 className="text-xl font-semibold uppercase tracking-widest mb-6 pb-3 border-b-2 border-gray-800">Expérience</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 pl-4 border-l-4 border-gray-200">
                 <h3 className="text-base font-semibold text-gray-900">{exp.titre}</h3>
                 <p className="text-sm text-gray-700 font-medium">{exp.entreprise} · {exp.type}</p>
@@ -429,8 +429,8 @@ export default function Home() {
             <section className="col-span-1">
               <h2 className="text-lg font-semibold uppercase tracking-widest mb-4 pb-2 border-b-2 border-gray-800">Formation</h2>
               <div className="text-xs">
-                <p className="font-semibold">{cvData.formations[0].diplome}</p>
-                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="font-semibold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
                 <p className="text-gray-600 mt-1">{"Mention Bien"}</p>
               </div>
             </section>
@@ -469,7 +469,7 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-10">
           <section>
             <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Expérience Professionnelle</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-5">
                 <p className="text-xs font-bold uppercase tracking-wide text-gray-800">{exp.periode}</p>
                 <h3 className="text-sm font-semibold mt-1">{exp.titre}</h3>
@@ -489,9 +489,9 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-lg font-serif mb-4 pb-2 border-b border-gray-400 uppercase">Formation</h2>
               <div>
-                <h3 className="text-sm font-semibold">{cvData.formations[0].diplome}</h3>
-                <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
-                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <h3 className="text-sm font-semibold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</h3>
+                <p className="text-xs text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="text-xs font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
               </div>
             </div>
@@ -548,7 +548,7 @@ export default function Home() {
               <div className="w-1 h-6 bg-black mr-3"></div>
               <h2 className="text-xl font-bold uppercase tracking-wider">PARCOURS PROFESSIONNEL</h2>
             </div>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 bg-gray-50 p-5 rounded-sm">
                 <div className="flex justify-between mb-2">
                   <div>
@@ -581,9 +581,9 @@ export default function Home() {
                 <h2 className="text-lg font-bold uppercase tracking-wider">FORMATION</h2>
               </div>
               <div className="bg-gray-50 p-4 rounded-sm">
-                <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
-                <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
-                <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-bold text-sm">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-xs text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="text-xs font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
@@ -621,9 +621,9 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-sm font-bold uppercase tracking-wide mb-4">FORMATION</h2>
               <div className="text-xs">
-                <p className="font-bold">{cvData.formations[0].diplome}</p>
-                <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-                <p className="text-[10px] text-gray-500 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-bold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-[10px] text-gray-500 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
@@ -649,7 +649,7 @@ export default function Home() {
 
           <div className="w-2/3">
             <h2 className="text-lg font-bold uppercase tracking-wider mb-6">EXPÉRIENCE PROFESSIONNELLE</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6">
                 <div className="mb-2">
                   <h3 className="text-base font-bold">{exp.titre}</h3>
@@ -696,7 +696,7 @@ export default function Home() {
         <div className="columns-2 gap-10">
           <section className="break-inside-avoid mb-8">
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Parcours Professionnel</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-5 break-inside-avoid">
                 <p className="text-xs font-bold uppercase">{exp.titre}</p>
                 <p className="text-xs italic text-gray-700">{exp.entreprise}</p>
@@ -715,9 +715,9 @@ export default function Home() {
           <section className="break-inside-avoid mb-8">
             <h2 className="text-lg font-serif italic mb-4 border-b border-gray-400 pb-1">Formation Académique</h2>
             <div>
-              <p className="text-sm font-bold">{cvData.formations[0].diplome}</p>
-              <p className="text-xs text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-sm font-bold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-xs text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-[10px] text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-xs font-semibold mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -758,7 +758,7 @@ export default function Home() {
               <div className="bg-gray-100 px-4 py-2 mb-4">
                 <h2 className="text-base font-black uppercase tracking-widest">EXPÉRIENCE</h2>
               </div>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6">
                   <div className="bg-gradient-to-r from-gray-900 to-gray-700 text-white px-3 py-2 mb-2">
                     <h3 className="text-sm font-bold uppercase">{exp.titre}</h3>
@@ -780,8 +780,8 @@ export default function Home() {
                 <h2 className="text-sm font-black uppercase tracking-wider">FORMATION</h2>
               </div>
               <div className="mb-6 text-xs">
-                <p className="font-bold">{cvData.formations[0].diplome}</p>
-                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
+                <p className="font-bold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
                 <p className="text-gray-600 mt-1">{"Mention Bien"}</p>
               </div>
 
@@ -810,7 +810,7 @@ export default function Home() {
 
         <section className="mb-10">
           <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6">EXPÉRIENCE PROFESSIONNELLE</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-7">
               <div className="flex justify-between items-baseline mb-1">
                 <h3 className="text-base font-semibold text-gray-900">{exp.titre}</h3>
@@ -832,9 +832,9 @@ export default function Home() {
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">FORMATION</h2>
             <div>
-              <p className="font-semibold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-semibold text-sm text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm text-gray-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -863,7 +863,7 @@ export default function Home() {
         <div className="p-10">
           <section className="mb-10">
             <h2 className="text-2xl font-bold mb-6 text-gray-800 border-l-8 border-gray-900 pl-4">EXPÉRIENCE PROFESSIONNELLE</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm">
                 <div className="flex justify-between mb-2">
                   <div>
@@ -889,9 +889,9 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-6">
             <section className="bg-white p-6 rounded-lg shadow-sm">
               <h2 className="text-xl font-bold mb-4 text-gray-800 border-l-8 border-gray-900 pl-4">FORMATION</h2>
-              <p className="font-bold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-semibold text-gray-700 mt-3">{"Mention Bien"}</p>
             </section>
 
@@ -923,7 +923,7 @@ export default function Home() {
           <div className="col-span-2">
             <section className="mb-6">
               <h2 className="text-base font-bold uppercase mb-3 bg-gray-900 text-white px-3 py-1">EXPÉRIENCE</h2>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-4">
                   <div className="flex justify-between items-start">
                     <div className="flex-1">
@@ -948,9 +948,9 @@ export default function Home() {
             <section className="mb-6">
               <h2 className="text-sm font-bold uppercase mb-3 bg-gray-900 text-white px-2 py-1">FORMATION</h2>
               <div className="text-[10px]">
-                <p className="font-bold">{cvData.formations[0].diplome}</p>
-                <p className="text-gray-700">{cvData.formations[0].etablissement}</p>
-                <p className="text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-bold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </section>
@@ -1001,7 +1001,7 @@ export default function Home() {
 
         <section className="mb-12">
           <h2 className="text-center text-sm uppercase tracking-[0.4em] text-gray-500 mb-8">Expérience Professionnelle</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8">
               <div className="text-center mb-3">
                 <h3 className="text-lg font-semibold text-gray-900">{exp.titre}</h3>
@@ -1025,9 +1025,9 @@ export default function Home() {
           <section>
             <h2 className="text-center text-sm uppercase tracking-[0.4em] text-gray-500 mb-6">Formation</h2>
             <div className="text-center">
-              <p className="font-semibold text-sm text-gray-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-2">{cvData.formations[0].annee}</p>
+              <p className="font-semibold text-sm text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-2">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-semibold text-gray-700 mt-3">{"Mention Bien"}</p>
             </div>
           </section>
@@ -1063,9 +1063,9 @@ export default function Home() {
             <section className="mb-8">
               <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-gray-700">FORMATION</h2>
               <div className="text-xs">
-                <p className="font-bold text-gray-900">{cvData.formations[0].diplome}</p>
-                <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+                <p className="font-bold text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-[10px] text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="font-semibold text-gray-700 mt-2">{"Mention Bien"}</p>
               </div>
             </section>
@@ -1097,7 +1097,7 @@ export default function Home() {
           <div className="col-span-3 p-8">
             <section>
               <h2 className="text-xl font-bold uppercase tracking-wider mb-6 pb-2 border-b-2 border-gray-900">EXPÉRIENCE PROFESSIONNELLE</h2>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6">
                   <div className="mb-2">
                     <div className="flex justify-between items-start mb-1">
@@ -1148,7 +1148,7 @@ export default function Home() {
             <div className="bg-gray-900 text-white px-4 py-2 mb-4">
               <h2 className="text-sm font-bold uppercase tracking-widest">PARCOURS PROFESSIONNEL</h2>
             </div>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-5 relative pl-6">
                 <div className="absolute left-0 top-2 w-2 h-2 bg-gray-900 rounded-full"></div>
                 <div className="bg-white border-l-4 border-gray-300 pl-4 py-2">
@@ -1172,9 +1172,9 @@ export default function Home() {
               <h2 className="text-xs font-bold uppercase tracking-widest">FORMATION</h2>
             </div>
             <div className="bg-white p-3 mb-4 text-[10px]">
-              <p className="font-bold text-gray-900">{cvData.formations[0].diplome}</p>
-              <p className="text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-              <p className="text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="font-semibold mt-2">{"Mention Bien"}</p>
             </div>
 
@@ -1226,7 +1226,7 @@ export default function Home() {
             <h2 className="px-4 text-sm uppercase tracking-[0.3em] text-gray-700 font-serif">Expérience</h2>
             <div className="flex-1 h-px bg-gray-300"></div>
           </div>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 border-l-2 border-gray-200 pl-6 relative">
               <div className="absolute -left-2 top-0 w-4 h-4 bg-white border-2 border-gray-400 rounded-full"></div>
               <h3 className="text-base font-serif font-semibold italic">{exp.titre}</h3>
@@ -1251,9 +1251,9 @@ export default function Home() {
               <div className="flex-1 h-px bg-gray-300"></div>
             </div>
             <div className="text-center">
-              <p className="font-serif font-semibold text-sm">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-serif font-semibold text-sm">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-semibold mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -1301,7 +1301,7 @@ export default function Home() {
               <div className="w-1 h-6 bg-black"></div>
               <h2 className="text-xl font-black uppercase tracking-widest">EXPÉRIENCE</h2>
             </div>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 border border-gray-200 p-4">
                 <div className="flex justify-between items-start mb-2">
                   <div>
@@ -1333,9 +1333,9 @@ export default function Home() {
                 <div className="w-1 h-5 bg-black"></div>
                 <h2 className="text-base font-black uppercase tracking-widest">FORMATION</h2>
         </div>
-              <p className="font-bold text-sm">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-bold mt-2">{"Mention Bien"}</p>
             </section>
 
@@ -1373,9 +1373,9 @@ export default function Home() {
               <div className="w-8 h-1 bg-white mb-4"></div>
               <h2 className="text-xs uppercase tracking-widest mb-3">FORMATION</h2>
               <div className="text-[10px]">
-                <p className="font-bold mb-1">{cvData.formations[0].diplome}</p>
-                <p className="opacity-90">{cvData.formations[0].etablissement}</p>
-                <p className="opacity-70 mt-2">{cvData.formations[0].annee}</p>
+                <p className="font-bold mb-1">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="opacity-90">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="opacity-70 mt-2">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="font-semibold mt-2">{"Mention Bien"}</p>
               </div>
             </div>
@@ -1413,7 +1413,7 @@ export default function Home() {
                 <div className="w-12 h-px bg-black"></div>
                 <h2 className="text-lg font-bold uppercase tracking-wider">EXPÉRIENCE PROFESSIONNELLE</h2>
               </div>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6">
                   <div className="flex justify-between items-start mb-2">
                     <div>
@@ -1460,7 +1460,7 @@ export default function Home() {
 
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-8">Expérience Professionnelle</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-8">
               <div className="flex justify-between items-baseline mb-2">
                 <h3 className="text-base font-medium">{exp.titre}</h3>
@@ -1482,9 +1482,9 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
           <div>
-            <p className="text-base font-medium">{cvData.formations[0].diplome}</p>
-            <p className="text-sm text-gray-700 mt-1">{cvData.formations[0].etablissement}</p>
-            <p className="text-xs text-gray-500 mt-1">{cvData.formations[0].annee}</p>
+            <p className="text-base font-medium">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-sm text-gray-700 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+            <p className="text-xs text-gray-500 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
             <p className="text-sm text-gray-700 mt-2">{"Mention Bien"}</p>
           </div>
         </section>
@@ -1522,7 +1522,7 @@ export default function Home() {
         <div className="p-14">
           <section className="mb-12">
             <h2 className="text-4xl font-bold mb-10 text-emerald-700 border-b-8 border-emerald-500 pb-4 inline-block">EXPÉRIENCE</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-10 bg-emerald-50 p-8 rounded-xl border-l-8 border-emerald-600 shadow-md">
                 <h3 className="text-2xl font-bold text-emerald-900 mb-2">{exp.titre}</h3>
                 <p className="text-lg text-emerald-700 font-bold mb-2">{exp.entreprise} · {exp.duree}</p>
@@ -1544,9 +1544,9 @@ export default function Home() {
             <section>
               <h2 className="text-3xl font-bold mb-6 text-emerald-700 border-b-8 border-emerald-500 pb-4 inline-block">FORMATION</h2>
               <div className="bg-emerald-50 p-6 rounded-xl shadow-md">
-                <p className="font-bold text-xl text-emerald-900 mb-2">{cvData.formations[0].diplome}</p>
-                <p className="text-lg text-emerald-700 mb-2">{cvData.formations[0].etablissement}</p>
-                <p className="text-base text-gray-700 mt-3">{cvData.formations[0].annee}</p>
+                <p className="font-bold text-xl text-emerald-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                <p className="text-lg text-emerald-700 mb-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+                <p className="text-base text-gray-700 mt-3">{cvData.formations?.[0]?.annee || "1995"}</p>
                 <p className="text-xl font-bold text-emerald-700 mt-4">{"Mention Bien"}</p>
               </div>
             </section>
@@ -1584,7 +1584,7 @@ export default function Home() {
         </div>
         <section className="mb-12">
           <h2 className="text-4xl font-black uppercase tracking-wider mb-10 text-orange-900 underline decoration-orange-500 decoration-8 underline-offset-[16px]">PARCOURS PROFESSIONNEL</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10 relative pl-12 before:content-[''] before:absolute before:left-0 before:top-3 before:w-8 before:h-8 before:bg-orange-500 before:rounded-full before:shadow-lg">
               <h3 className="text-2xl font-bold text-orange-900 mb-2">{exp.titre}</h3>
               <p className="text-lg text-orange-700 font-bold mb-1">{exp.entreprise}</p>
@@ -1605,8 +1605,8 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-10">
           <section className="bg-orange-50 p-8 rounded-xl shadow-md border-t-8 border-orange-500">
             <h2 className="text-2xl font-black uppercase text-orange-900 mb-6">FORMATION</h2>
-            <p className="text-xl font-bold mb-2">{cvData.formations[0].diplome}</p>
-            <p className="text-base mb-2">{cvData.formations[0].etablissement}</p>
+            <p className="text-xl font-bold mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base mb-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-lg text-orange-700 font-bold mt-4">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2 bg-orange-50 p-8 rounded-xl shadow-md border-t-8 border-orange-500">
@@ -1641,7 +1641,7 @@ export default function Home() {
         </header>
         <section className="mb-8">
           <h2 className="text-xl font-serif italic mb-6 text-pink-900 border-l-4 border-pink-400 pl-4">Expérience Professionnelle</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm border-t-4 border-pink-400">
               <h3 className="text-base font-semibold text-pink-900">{exp.titre}</h3>
               <p className="text-sm text-pink-700 font-medium">{exp.entreprise} · {exp.duree}</p>
@@ -1660,9 +1660,9 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-serif italic mb-4 text-pink-900 border-l-4 border-pink-400 pl-4">Formation</h2>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <p className="font-semibold text-sm text-pink-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-semibold text-sm text-pink-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-semibold text-pink-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -1704,7 +1704,7 @@ export default function Home() {
                   <div className="w-12 h-1 bg-indigo-600"></div>
                   <h2 className="text-2xl font-bold text-indigo-900">EXPÉRIENCE</h2>
                 </div>
-                {cvData.experiences.map((exp, idx) => (
+                {cvData.experiences?.map((exp, idx) => (
                   <div key={idx} className="mb-6 border-l-4 border-indigo-300 pl-6 bg-indigo-50 py-4">
                     <h3 className="text-base font-bold text-indigo-900">{exp.titre}</h3>
                     <p className="text-sm text-indigo-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
@@ -1726,8 +1726,8 @@ export default function Home() {
                     <h2 className="text-lg font-bold text-indigo-900">FORMATION</h2>
                   </div>
                   <div className="bg-indigo-50 p-4 rounded">
-                    <p className="font-bold text-sm text-indigo-900">{cvData.formations[0].diplome}</p>
-                    <p className="text-xs">{cvData.formations[0].etablissement}</p>
+                    <p className="font-bold text-sm text-indigo-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+                    <p className="text-xs">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
                     <p className="text-xs text-indigo-700 font-semibold mt-2">{"Mention Bien"}</p>
                   </div>
                 </section>
@@ -1769,7 +1769,7 @@ export default function Home() {
         </div>
         <section className="mb-8">
           <h2 className="text-2xl font-black uppercase tracking-widest mb-6 text-cyan-900 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-gradient-to-r after:from-cyan-400 after:to-cyan-600">PARCOURS</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 relative">
               <div className="absolute -left-6 top-2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-cyan-200"></div>
               <div className="bg-gradient-to-r from-cyan-50 to-white p-5 rounded-r-lg border-l-4 border-cyan-500">
@@ -1790,8 +1790,8 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-6">
           <section className="col-span-1 bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-6 rounded-lg">
             <h2 className="text-base font-black uppercase mb-4">FORMATION</h2>
-            <p className="text-sm font-bold">{cvData.formations[0].diplome}</p>
-            <p className="text-xs opacity-90 mt-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-sm font-bold">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-xs opacity-90 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm font-bold mt-3">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2">
@@ -1829,7 +1829,7 @@ export default function Home() {
         </div>
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-6 text-amber-900 bg-amber-100 px-4 py-2 rounded inline-block">EXPÉRIENCE PROFESSIONNELLE</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="border-l-4 border-amber-500 pl-4">
                 <h3 className="text-base font-bold text-amber-900">{exp.titre}</h3>
@@ -1853,9 +1853,9 @@ export default function Home() {
           <section>
             <h2 className="text-xl font-bold mb-4 text-amber-900 bg-amber-100 px-4 py-2 rounded inline-block">FORMATION</h2>
             <div className="bg-white p-5 rounded-lg shadow-sm">
-              <p className="font-bold text-sm text-amber-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-700">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm text-amber-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-700">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-bold text-amber-700 mt-2">{"Mention Bien"}</p>
             </div>
           </section>
@@ -1895,7 +1895,7 @@ export default function Home() {
               <span className="w-2 h-8 bg-lime-600"></span>
               EXPÉRIENCE PROFESSIONNELLE
             </h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 border-2 border-lime-200 rounded-lg p-5 hover:border-lime-500 transition-colors">
                 <h3 className="text-base font-bold text-lime-900">{exp.titre}</h3>
                 <p className="text-sm text-lime-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
@@ -1916,9 +1916,9 @@ export default function Home() {
                 <span className="w-1.5 h-6 bg-lime-600"></span>
                 FORMATION
               </h2>
-              <p className="font-bold text-sm text-lime-900">{cvData.formations[0].diplome}</p>
-              <p className="text-sm">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm text-lime-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-bold text-lime-700 mt-2">{"Mention Bien"}</p>
             </section>
             <section className="border-2 border-lime-200 rounded-lg p-6">
@@ -1957,7 +1957,7 @@ export default function Home() {
         <div className="p-10 bg-gradient-to-br from-gray-900 to-black">
           <section className="mb-8">
             <h2 className="text-2xl font-black uppercase tracking-widest mb-6 text-fuchsia-400 border-b-2 border-fuchsia-600 pb-2">EXPÉRIENCE</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-6 bg-gradient-to-r from-fuchsia-950 to-gray-900 p-5 rounded border-l-4 border-fuchsia-600">
                 <h3 className="text-base font-bold text-fuchsia-300">{exp.titre}</h3>
                 <p className="text-sm text-fuchsia-400 font-semibold">{exp.entreprise} · {exp.duree}</p>
@@ -1975,9 +1975,9 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-6">
             <section className="bg-gradient-to-br from-fuchsia-950 to-gray-900 p-6 rounded border-t-4 border-fuchsia-600">
               <h2 className="text-lg font-black uppercase mb-4 text-fuchsia-400">FORMATION</h2>
-              <p className="font-bold text-sm text-fuchsia-300">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-300">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-400 mt-1">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm text-fuchsia-300">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-300">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-400 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-bold text-fuchsia-400 mt-2">{"Mention Bien"}</p>
             </section>
             <section className="bg-gradient-to-br from-fuchsia-950 to-gray-900 p-6 rounded border-t-4 border-fuchsia-600">
@@ -2018,7 +2018,7 @@ export default function Home() {
             <span className="bg-white px-4 relative z-10">EXPÉRIENCE PROFESSIONNELLE</span>
             <div className="absolute top-1/2 left-0 right-0 h-px bg-sky-300 -z-0"></div>
           </h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-6 bg-white rounded-xl shadow-md p-6 border-t-4 border-sky-500">
               <h3 className="text-base font-bold text-sky-900">{exp.titre}</h3>
               <p className="text-sm text-sky-700 font-semibold">{exp.entreprise} · {exp.duree}</p>
@@ -2040,9 +2040,9 @@ export default function Home() {
           <section>
             <h2 className="text-lg font-bold mb-4 text-center text-sky-900 bg-sky-100 py-2 rounded-t-lg">FORMATION</h2>
             <div className="bg-white rounded-b-xl shadow-md p-5">
-              <p className="font-bold text-sm text-sky-900 text-center">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-center">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-gray-600 mt-1 text-center">{cvData.formations[0].annee}</p>
+              <p className="font-bold text-sm text-sky-900 text-center">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-center">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-gray-600 mt-1 text-center">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-sm font-bold text-sky-700 mt-2 text-center">{"Mention Bien"}</p>
             </div>
           </section>
@@ -2081,9 +2081,9 @@ export default function Home() {
             </div>
             <div className="mb-8">
               <h2 className="text-xs uppercase tracking-widest mb-4 text-slate-400 border-b border-slate-700 pb-2">FORMATION</h2>
-              <p className="text-xs font-bold text-slate-100 mb-1">{cvData.formations[0].diplome}</p>
-              <p className="text-xs text-slate-300">{cvData.formations[0].etablissement}</p>
-              <p className="text-xs text-slate-400 mt-1">{cvData.formations[0].annee}</p>
+              <p className="text-xs font-bold text-slate-100 mb-1">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-xs text-slate-300">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
+              <p className="text-xs text-slate-400 mt-1">{cvData.formations?.[0]?.annee || "1995"}</p>
               <p className="text-xs font-bold text-slate-200 mt-2">{"Mention Bien"}</p>
             </div>
             <div>
@@ -2105,7 +2105,7 @@ export default function Home() {
             </div>
             <section>
               <h2 className="text-xl font-bold mb-6 text-slate-900 border-l-4 border-slate-800 pl-4">EXPÉRIENCE PROFESSIONNELLE</h2>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-6 pb-6 border-b border-slate-200 last:border-0">
                   <h3 className="text-base font-bold text-slate-900">{exp.titre}</h3>
                   <p className="text-sm text-slate-700 font-semibold">{exp.entreprise}</p>
@@ -2146,7 +2146,7 @@ export default function Home() {
 
         <section className="mb-16">
           <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-10 text-center">Expérience</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-12">
               <div className="mb-4">
                 <h3 className="text-xl font-light text-gray-900 mb-2">{exp.titre}</h3>
@@ -2167,8 +2167,8 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2205,7 +2205,7 @@ export default function Home() {
 
         <section className="mb-16">
           <h2 className="text-base uppercase tracking-wider text-gray-400 mb-8 pb-3 border-b border-gray-200">Parcours Professionnel</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10">
               <div className="flex justify-between items-baseline mb-3">
                 <h3 className="text-lg font-light text-gray-900">{exp.titre}</h3>
@@ -2226,8 +2226,8 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-16">
           <section>
             <h2 className="text-base uppercase tracking-wider text-gray-400 mb-6 pb-3 border-b border-gray-200">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600 mb-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600 mb-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2259,7 +2259,7 @@ export default function Home() {
 
         <section className="mb-20">
           <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-12 text-center">Expérience</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-16 text-center">
               <h3 className="text-xl font-light text-gray-900 mb-3">{exp.titre}</h3>
               <p className="text-base text-gray-600 mb-2">{exp.entreprise}</p>
@@ -2278,8 +2278,8 @@ export default function Home() {
         <div className="text-center space-y-12">
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600 mt-2">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600 mt-2">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
           </section>
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Compétences</h2>
@@ -2315,7 +2315,7 @@ export default function Home() {
 
         <section className="mb-16">
           <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-10">Expérience Professionnelle</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-12">
               <h3 className="text-xl font-serif font-light text-gray-900 mb-2">{exp.titre}</h3>
               <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
@@ -2334,8 +2334,8 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm font-serif uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-serif text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-serif text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2364,8 +2364,8 @@ export default function Home() {
             />
             <section className="mb-12">
               <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-              <p className="text-sm font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-              <p className="text-sm text-gray-600 mb-1">{cvData.formations[0].etablissement}</p>
+              <p className="text-sm font-light text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-sm text-gray-600 mb-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
               <p className="text-xs text-gray-500 mt-3">{"Mention Bien"}</p>
             </section>
             <section>
@@ -2387,7 +2387,7 @@ export default function Home() {
 
             <section>
               <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-8 pb-3 border-b border-gray-200">Expérience Professionnelle</h2>
-              {cvData.experiences.map((exp, idx) => (
+              {cvData.experiences?.map((exp, idx) => (
                 <div key={idx} className="mb-10">
                   <div className="flex justify-between items-baseline mb-2">
                     <h3 className="text-base font-light text-gray-900">{exp.titre}</h3>
@@ -2428,7 +2428,7 @@ export default function Home() {
         </div>
 
         <section className="mb-16">
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-14">
               <div className="mb-4">
                 <div className="flex justify-between items-baseline mb-2">
@@ -2451,8 +2451,8 @@ export default function Home() {
         <div className="pt-12 border-t border-gray-200 grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-xs uppercase tracking-widest text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-3">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2488,7 +2488,7 @@ export default function Home() {
         </div>
 
         <section className="mb-16">
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-12 flex gap-8">
               <div className="flex-shrink-0 pt-1">
                 <div className="w-3 h-3 border-2 border-gray-300 rounded-full"></div>
@@ -2517,8 +2517,8 @@ export default function Home() {
               <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
               <h2 className="text-sm uppercase tracking-wider text-gray-400">Formation</h2>
             </div>
-            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations[0].diplome}</p>
-            <p className="text-sm text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-sm text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section className="col-span-2">
@@ -2559,7 +2559,7 @@ export default function Home() {
 
           <section className="mb-12">
             <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-8">Parcours</h2>
-            {cvData.experiences.map((exp, idx) => (
+            {cvData.experiences?.map((exp, idx) => (
               <div key={idx} className="mb-10 pb-8 border-b border-gray-100 last:border-0">
                 <h3 className="text-lg font-light text-gray-900 mb-2">{exp.titre}</h3>
                 <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
@@ -2578,8 +2578,8 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-12 pt-8 border-t border-gray-200">
             <section>
               <h2 className="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6">Formation</h2>
-              <p className="text-base font-light text-gray-900 mb-2">{cvData.formations[0].diplome}</p>
-              <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+              <p className="text-base font-light text-gray-900 mb-2">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+              <p className="text-base text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
               <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
             </section>
             <section>
@@ -2616,7 +2616,7 @@ export default function Home() {
 
         <section className="mb-16">
           <h2 className="text-base uppercase tracking-wide text-gray-400 mb-8">Expérience</h2>
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-10">
               <h3 className="text-lg font-light text-gray-900 mb-1">{exp.titre}</h3>
               <p className="text-base text-gray-700 mb-1">{exp.entreprise}</p>
@@ -2635,8 +2635,8 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12">
           <section>
             <h2 className="text-base uppercase tracking-wide text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900 mb-1">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2667,7 +2667,7 @@ export default function Home() {
         </div>
 
         <section className="mb-20">
-          {cvData.experiences.map((exp, idx) => (
+          {cvData.experiences?.map((exp, idx) => (
             <div key={idx} className="mb-16">
               <h3 className="text-xl font-light text-gray-900 mb-2 text-center">{exp.titre}</h3>
               <p className="text-base text-gray-600 text-center mb-1">{exp.entreprise}</p>
@@ -2686,8 +2686,8 @@ export default function Home() {
         <div className="text-center space-y-16">
           <section>
             <h2 className="text-xs uppercase tracking-[0.5em] text-gray-400 mb-6">Formation</h2>
-            <p className="text-base font-light text-gray-900">{cvData.formations[0].diplome}</p>
-            <p className="text-base text-gray-600 mt-1">{cvData.formations[0].etablissement}</p>
+            <p className="text-base font-light text-gray-900">{cvData.formations?.[0]?.diplome || "Maîtrise de gestion (MSG)"}</p>
+            <p className="text-base text-gray-600 mt-1">{cvData.formations?.[0]?.etablissement || "Université Paris 1 Panthéon-Sorbonne"}</p>
             <p className="text-sm text-gray-500 mt-2">{"Mention Bien"}</p>
           </section>
           <section>
@@ -2733,7 +2733,7 @@ export default function Home() {
               <div>
                 <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide">Compétences</h3>
                 <div className="space-y-3">
-                  {cvData.competences.slice(0, 6).map((comp, i) => (
+                  {cvData.competences?.slice(0, 6).map((comp, i) => (
                     <div key={i} className="bg-slate-700 px-3 py-2 rounded text-sm">
                       {comp}
                     </div>
@@ -2753,7 +2753,7 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-yellow-400 pb-2">Expérience Professionnelle</h2>
               <div className="space-y-6">
-                {cvData.experiences.map((exp, i) => (
+                {cvData.experiences?.map((exp, i) => (
                   <div key={i} className="border-l-4 border-yellow-400 pl-4">
                     <h3 className="font-bold text-lg text-slate-800">{exp.poste}</h3>
                     <p className="text-slate-600 font-semibold">{exp.entreprise} • {exp.duree}</p>
@@ -2771,7 +2771,7 @@ export default function Home() {
             <div>
               <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-yellow-400 pb-2">Formation</h2>
               <div className="space-y-4">
-                {cvData.formations.map((formation, i) => (
+                {cvData.formations?.map((formation, i) => (
                   <div key={i} className="border-l-4 border-yellow-400 pl-4">
                     <h3 className="font-bold text-lg text-slate-800">{formation.diplome}</h3>
                     <p className="text-slate-600 font-semibold">{formation.etablissement} • {formation.annee}</p>
@@ -2821,7 +2821,7 @@ export default function Home() {
                 Expérience Professionnelle
               </h2>
               <div className="space-y-6">
-                {cvData.experiences.map((exp, i) => (
+                {cvData.experiences?.map((exp, i) => (
                   <div key={i} className="bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500">
                     <h3 className="font-bold text-lg text-gray-900">{exp.poste}</h3>
                     <p className="text-orange-600 font-semibold">{exp.entreprise} • {exp.duree}</p>
@@ -2863,7 +2863,7 @@ export default function Home() {
             <div className="mb-8">
               <h3 className="text-xl font-bold mb-4 text-orange-100">Compétences</h3>
               <div className="space-y-3">
-                {cvData.competences.slice(0, 8).map((comp, i) => (
+                {cvData.competences?.slice(0, 8).map((comp, i) => (
                   <div key={i} className="bg-orange-400 px-3 py-2 rounded text-sm font-medium">
                     {comp}
                   </div>
@@ -2874,7 +2874,7 @@ export default function Home() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-orange-100">Formation</h3>
               <div className="space-y-4">
-                {cvData.formations.map((formation, i) => (
+                {cvData.formations?.map((formation, i) => (
                   <div key={i} className="bg-orange-400 p-3 rounded">
                     <h4 className="font-bold text-sm">{formation.diplome}</h4>
                     <p className="text-xs text-orange-100">{formation.etablissement}</p>
@@ -2923,7 +2923,7 @@ export default function Home() {
           </h2>
           <div className="relative">
             <div className="absolute left-6 top-0 bottom-0 w-1 bg-green-200"></div>
-            {cvData.experiences.map((exp, i) => (
+            {cvData.experiences?.map((exp, i) => (
               <div key={i} className="relative flex mb-8">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
                   {i + 1}
@@ -2953,7 +2953,7 @@ export default function Home() {
               Formation
             </h2>
             <div className="space-y-4">
-              {cvData.formations.map((formation, i) => (
+              {cvData.formations?.map((formation, i) => (
                 <div key={i} className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
                   <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
                   <p className="text-green-600 font-semibold">{formation.etablissement}</p>
@@ -3020,7 +3020,7 @@ export default function Home() {
               <div>
                 <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide border-b border-yellow-400 pb-2">Compétences Clés</h3>
                 <div className="space-y-2">
-                  {cvData.competences.slice(0, 8).map((comp, i) => (
+                  {cvData.competences?.slice(0, 8).map((comp, i) => (
                     <div key={i} className="bg-teal-700 px-3 py-2 rounded text-sm border-l-2 border-yellow-400">
                       {comp}
                     </div>
@@ -3031,7 +3031,7 @@ export default function Home() {
               <div>
                 <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide border-b border-yellow-400 pb-2">Formation</h3>
                 <div className="space-y-3">
-                  {cvData.formations.map((formation, i) => (
+                  {cvData.formations?.map((formation, i) => (
                     <div key={i} className="bg-teal-700 p-3 rounded">
                       <h4 className="font-bold text-sm text-yellow-400">{formation.diplome}</h4>
                       <p className="text-xs text-teal-200">{formation.etablissement}</p>
@@ -3053,7 +3053,7 @@ export default function Home() {
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-teal-800 mb-6 border-b-4 border-yellow-400 pb-2">Expérience Professionnelle</h2>
               <div className="space-y-8">
-                {cvData.experiences.map((exp, i) => (
+                {cvData.experiences?.map((exp, i) => (
                   <div key={i} className="border-l-4 border-teal-500 pl-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
                     <p className="text-teal-600 font-semibold text-lg mb-2">{exp.entreprise} • {exp.duree}</p>
@@ -3120,7 +3120,7 @@ export default function Home() {
             Expérience Professionnelle
           </h2>
           <div className="space-y-8">
-            {cvData.experiences.map((exp, i) => (
+            {cvData.experiences?.map((exp, i) => (
               <div key={i} className="bg-gray-50 p-6 rounded-lg border-2 border-red-200">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -3153,7 +3153,7 @@ export default function Home() {
               Formation
             </h2>
             <div className="space-y-4">
-              {cvData.formations.map((formation, i) => (
+              {cvData.formations?.map((formation, i) => (
                 <div key={i} className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
                   <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
                   <p className="text-red-600 font-semibold">{formation.etablissement}</p>
@@ -3211,7 +3211,7 @@ export default function Home() {
           <h2 className="text-3xl font-light text-gray-900 mb-8 text-center">Expérience Professionnelle</h2>
           <div className="w-16 h-1 bg-purple-400 mx-auto mb-12"></div>
           <div className="space-y-12">
-            {cvData.experiences.map((exp, i) => (
+            {cvData.experiences?.map((exp, i) => (
               <div key={i} className="text-center">
                 <h3 className="text-2xl font-medium text-gray-900 mb-2">{exp.poste}</h3>
                 <p className="text-purple-600 font-medium text-lg mb-2">{exp.entreprise}</p>
@@ -3233,7 +3233,7 @@ export default function Home() {
             <h2 className="text-2xl font-light text-gray-900 mb-6">Formation</h2>
             <div className="w-12 h-1 bg-purple-400 mx-auto mb-6"></div>
             <div className="space-y-6">
-              {cvData.formations.map((formation, i) => (
+              {cvData.formations?.map((formation, i) => (
                 <div key={i}>
                   <h3 className="font-medium text-lg text-gray-900">{formation.diplome}</h3>
                   <p className="text-purple-600">{formation.etablissement}</p>
@@ -3289,7 +3289,7 @@ export default function Home() {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-pink-500 pb-2">Expérience Professionnelle</h2>
               <div className="space-y-8">
-                {cvData.experiences.map((exp, i) => (
+                {cvData.experiences?.map((exp, i) => (
                   <div key={i} className="relative">
                     <div className="absolute -left-4 top-0 w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">
                       {i + 1}
@@ -3336,7 +3336,7 @@ export default function Home() {
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-6 text-pink-100">Compétences</h3>
               <div className="space-y-3">
-                {cvData.competences.slice(0, 10).map((comp, i) => (
+                {cvData.competences?.slice(0, 10).map((comp, i) => (
                   <div key={i} className="bg-pink-400 px-4 py-2 rounded text-sm font-medium">
                     {comp}
                   </div>
@@ -3347,7 +3347,7 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-bold mb-6 text-pink-100">Formation</h3>
               <div className="space-y-4">
-                {cvData.formations.map((formation, i) => (
+                {cvData.formations?.map((formation, i) => (
                   <div key={i} className="bg-pink-400 p-4 rounded">
                     <h4 className="font-bold text-sm text-pink-900">{formation.diplome}</h4>
                     <p className="text-xs text-pink-100">{formation.etablissement}</p>
@@ -3399,7 +3399,7 @@ export default function Home() {
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-cyan-500 pb-2">Expérience Professionnelle</h2>
           <div className="grid grid-cols-2 gap-8">
-            {cvData.experiences.map((exp, i) => (
+            {cvData.experiences?.map((exp, i) => (
               <div key={i} className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-500">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
                 <p className="text-cyan-600 font-semibold text-lg mb-2">{exp.entreprise}</p>
@@ -3422,7 +3422,7 @@ export default function Home() {
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-cyan-500 pb-2">Formation</h2>
             <div className="space-y-4">
-              {cvData.formations.map((formation, i) => (
+              {cvData.formations?.map((formation, i) => (
                 <div key={i} className="bg-cyan-50 p-4 rounded-lg">
                   <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
                   <p className="text-cyan-600 font-semibold">{formation.etablissement}</p>
@@ -3477,7 +3477,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Expérience Professionnelle</h2>
           <div className="w-24 h-2 bg-indigo-500 mx-auto mb-12"></div>
           <div className="space-y-16">
-            {cvData.experiences.map((exp, i) => (
+            {cvData.experiences?.map((exp, i) => (
               <div key={i} className="text-center">
                 <div className="w-16 h-16 bg-indigo-500 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
                   {i + 1}
@@ -3504,7 +3504,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Formation</h2>
             <div className="w-20 h-2 bg-indigo-500 mx-auto mb-8"></div>
             <div className="space-y-8">
-              {cvData.formations.map((formation, i) => (
+              {cvData.formations?.map((formation, i) => (
                 <div key={i} className="bg-indigo-50 p-6 rounded-lg">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{formation.diplome}</h3>
                   <p className="text-indigo-600 font-semibold text-lg">{formation.etablissement}</p>
@@ -3570,7 +3570,7 @@ export default function Home() {
               Expérience Professionnelle
             </h2>
             <div className="space-y-8">
-              {cvData.experiences.map((exp, i) => (
+              {cvData.experiences?.map((exp, i) => (
                 <div key={i} className="bg-gradient-to-r from-emerald-50 to-emerald-100 p-8 rounded-lg border-l-8 border-emerald-500">
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -3603,7 +3603,7 @@ export default function Home() {
                 Formation
               </h2>
               <div className="space-y-6">
-                {cvData.formations.map((formation, i) => (
+                {cvData.formations?.map((formation, i) => (
                   <div key={i} className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{formation.diplome}</h3>
                     <p className="text-emerald-600 font-semibold text-lg">{formation.etablissement}</p>
