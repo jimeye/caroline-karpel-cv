@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { cvData } from '../data/cv-data';
 
 export default function CV1Page() {
@@ -22,12 +23,12 @@ export default function CV1Page() {
                 >
                   IMPRIMER
                 </button>
-                <a
+                <Link
                   href="/"
                   className="px-4 py-2 bg-gray-900 text-white text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors"
                 >
                   RETOUR
-                </a>
+                </Link>
               </div>
             </div>
           </div>
