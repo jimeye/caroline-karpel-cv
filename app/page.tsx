@@ -2619,6 +2619,935 @@ export default function Home() {
         </div>
       </div>
     ),
+
+    // CV 41 - Sidebar Bleu Marine avec Accent Doré (inspiré ANKITA TIWARI)
+    () => (
+      <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
+        <div className="flex">
+          {/* Sidebar Bleu Marine */}
+          <div className="w-80 bg-slate-800 text-white p-12">
+            <div className="text-center mb-8">
+              <Image
+                src="/og-caroline-karpel.jpg"
+                alt="Caroline Karpel"
+                width={140}
+                height={140}
+                className="rounded-full mx-auto border-4 border-yellow-400 shadow-xl"
+              />
+            </div>
+            <h1 className="text-3xl font-bold mb-2 text-yellow-400">{cvData.nom}</h1>
+            <p className="text-lg mb-8 text-gray-200">{cvData.posteActuel}</p>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide">Contact</h3>
+                <div className="space-y-3 text-sm">
+                  <p>📧 {cvData.email}</p>
+                  <p>📱 {cvData.telephone}</p>
+                  <p>📍 {cvData.localisation}</p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide">Compétences</h3>
+                <div className="space-y-3">
+                  {cvData.competences.slice(0, 6).map((comp, i) => (
+                    <div key={i} className="bg-slate-700 px-3 py-2 rounded text-sm">
+                      {comp}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contenu Principal */}
+          <div className="flex-1 p-12">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-yellow-400 pb-2">Profil Professionnel</h2>
+              <p className="text-gray-700 leading-relaxed">{cvData.profil}</p>
+            </div>
+            
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-yellow-400 pb-2">Expérience Professionnelle</h2>
+              <div className="space-y-6">
+                {cvData.experiences.map((exp, i) => (
+                  <div key={i} className="border-l-4 border-yellow-400 pl-4">
+                    <h3 className="font-bold text-lg text-slate-800">{exp.poste}</h3>
+                    <p className="text-slate-600 font-semibold">{exp.entreprise} • {exp.duree}</p>
+                    <p className="text-gray-700 mt-2">{exp.description}</p>
+                    <ul className="mt-2 space-y-1">
+                      {exp.missions.map((mission, j) => (
+                        <li key={j} className="text-gray-700 text-sm">• {mission}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-bold text-slate-800 mb-4 border-b-2 border-yellow-400 pb-2">Formation</h2>
+              <div className="space-y-4">
+                {cvData.formations.map((formation, i) => (
+                  <div key={i} className="border-l-4 border-yellow-400 pl-4">
+                    <h3 className="font-bold text-lg text-slate-800">{formation.diplome}</h3>
+                    <p className="text-slate-600 font-semibold">{formation.etablissement} • {formation.annee}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 42 - Sidebar Orange avec Layout Moderne (inspiré KELLY WHITE)
+    () => (
+      <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
+        <div className="flex">
+          {/* Contenu Principal */}
+          <div className="flex-1 p-12">
+            <div className="mb-8">
+              <div className="flex items-center gap-6 mb-6">
+                <Image
+                  src="/og-caroline-karpel.jpg"
+                  alt="Caroline Karpel"
+                  width={120}
+                  height={120}
+                  className="rounded-full border-4 border-orange-400 shadow-lg"
+                />
+                <div>
+                  <h1 className="text-4xl font-bold text-gray-900 mb-2">{cvData.nom}</h1>
+                  <p className="text-xl text-orange-600 font-semibold">{cvData.posteActuel}</p>
+                  <p className="text-gray-600">{cvData.localisation}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-8 h-8 bg-orange-500 rounded-full mr-3"></span>
+                Profil Professionnel
+              </h2>
+              <p className="text-gray-700 leading-relaxed">{cvData.profil}</p>
+            </div>
+            
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="w-8 h-8 bg-orange-500 rounded-full mr-3"></span>
+                Expérience Professionnelle
+              </h2>
+              <div className="space-y-6">
+                {cvData.experiences.map((exp, i) => (
+                  <div key={i} className="bg-gray-50 p-6 rounded-lg border-l-4 border-orange-500">
+                    <h3 className="font-bold text-lg text-gray-900">{exp.poste}</h3>
+                    <p className="text-orange-600 font-semibold">{exp.entreprise} • {exp.duree}</p>
+                    <p className="text-gray-700 mt-2">{exp.description}</p>
+                    <ul className="mt-3 space-y-1">
+                      {exp.missions.map((mission, j) => (
+                        <li key={j} className="text-gray-700 text-sm flex items-start">
+                          <span className="text-orange-500 mr-2">▶</span>
+                          {mission}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Sidebar Orange */}
+          <div className="w-80 bg-gradient-to-b from-orange-500 to-orange-600 text-white p-12">
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-4 text-orange-100">Contact</h3>
+              <div className="space-y-3 text-sm">
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-orange-400 rounded-full mr-3 flex items-center justify-center text-xs">📧</span>
+                  {cvData.email}
+                </p>
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-orange-400 rounded-full mr-3 flex items-center justify-center text-xs">📱</span>
+                  {cvData.telephone}
+                </p>
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-orange-400 rounded-full mr-3 flex items-center justify-center text-xs">📍</span>
+                  {cvData.localisation}
+                </p>
+              </div>
+            </div>
+            
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-4 text-orange-100">Compétences</h3>
+              <div className="space-y-3">
+                {cvData.competences.slice(0, 8).map((comp, i) => (
+                  <div key={i} className="bg-orange-400 px-3 py-2 rounded text-sm font-medium">
+                    {comp}
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-orange-100">Formation</h3>
+              <div className="space-y-4">
+                {cvData.formations.map((formation, i) => (
+                  <div key={i} className="bg-orange-400 p-3 rounded">
+                    <h4 className="font-bold text-sm">{formation.diplome}</h4>
+                    <p className="text-xs text-orange-100">{formation.etablissement}</p>
+                    <p className="text-xs text-orange-200">{formation.annee}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 43 - Layout Timeline avec Accents Verts (inspiré Ehris Smith)
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
+        <div className="text-center mb-12">
+          <Image
+            src="/og-caroline-karpel.jpg"
+            alt="Caroline Karpel"
+            width={150}
+            height={150}
+            className="rounded-full mx-auto border-6 border-green-500 shadow-xl mb-6"
+          />
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">{cvData.nom}</h1>
+          <p className="text-2xl text-green-600 font-semibold mb-2">{cvData.posteActuel}</p>
+          <p className="text-lg text-gray-600">{cvData.localisation}</p>
+          <div className="flex justify-center space-x-6 mt-4 text-sm text-gray-600">
+            <span>📧 {cvData.email}</span>
+            <span>📱 {cvData.telephone}</span>
+          </div>
+        </div>
+        
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+            <span className="w-10 h-10 bg-green-500 rounded-full mr-4 flex items-center justify-center text-white font-bold">P</span>
+            Profil Professionnel
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed">{cvData.profil}</p>
+        </div>
+        
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
+            <span className="w-10 h-10 bg-green-500 rounded-full mr-4 flex items-center justify-center text-white font-bold">E</span>
+            Expérience Professionnelle
+          </h2>
+          <div className="relative">
+            <div className="absolute left-6 top-0 bottom-0 w-1 bg-green-200"></div>
+            {cvData.experiences.map((exp, i) => (
+              <div key={i} className="relative flex mb-8">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                  {i + 1}
+                </div>
+                <div className="ml-8 flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                  <p className="text-green-600 font-semibold text-lg mb-2">{exp.entreprise} • {exp.duree}</p>
+                  <p className="text-gray-700 mb-3">{exp.description}</p>
+                  <ul className="space-y-2">
+                    {exp.missions.map((mission, j) => (
+                      <li key={j} className="text-gray-700 flex items-start">
+                        <span className="text-green-500 mr-2 mt-1">●</span>
+                        {mission}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-green-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">F</span>
+              Formation
+            </h2>
+            <div className="space-y-4">
+              {cvData.formations.map((formation, i) => (
+                <div key={i} className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                  <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
+                  <p className="text-green-600 font-semibold">{formation.etablissement}</p>
+                  <p className="text-gray-600">{formation.annee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-green-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">C</span>
+              Compétences
+            </h2>
+            <div className="grid grid-cols-2 gap-3">
+              {cvData.competences.map((comp, i) => (
+                <div key={i} className="bg-green-100 px-4 py-3 rounded-lg text-center font-medium text-gray-800">
+                  {comp}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 44 - Layout Corporate avec Sidebar Teal (inspiré MARK WILLIAMS)
+    () => (
+      <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
+        <div className="flex">
+          {/* Sidebar Teal */}
+          <div className="w-80 bg-teal-800 text-white p-12">
+            <div className="text-center mb-8">
+              <Image
+                src="/og-caroline-karpel.jpg"
+                alt="Caroline Karpel"
+                width={130}
+                height={130}
+                className="rounded-full mx-auto border-4 border-yellow-400 shadow-xl"
+              />
+            </div>
+            <h1 className="text-2xl font-bold mb-2 text-yellow-400 text-center">{cvData.nom}</h1>
+            <p className="text-center text-teal-200 mb-8">{cvData.posteActuel}</p>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide border-b border-yellow-400 pb-2">Contact</h3>
+                <div className="space-y-3 text-sm">
+                  <p className="flex items-center">
+                    <span className="w-5 h-5 bg-yellow-400 rounded mr-3"></span>
+                    {cvData.email}
+                  </p>
+                  <p className="flex items-center">
+                    <span className="w-5 h-5 bg-yellow-400 rounded mr-3"></span>
+                    {cvData.telephone}
+                  </p>
+                  <p className="flex items-center">
+                    <span className="w-5 h-5 bg-yellow-400 rounded mr-3"></span>
+                    {cvData.localisation}
+                  </p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide border-b border-yellow-400 pb-2">Compétences Clés</h3>
+                <div className="space-y-2">
+                  {cvData.competences.slice(0, 8).map((comp, i) => (
+                    <div key={i} className="bg-teal-700 px-3 py-2 rounded text-sm border-l-2 border-yellow-400">
+                      {comp}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-yellow-400 font-bold text-lg mb-4 uppercase tracking-wide border-b border-yellow-400 pb-2">Formation</h3>
+                <div className="space-y-3">
+                  {cvData.formations.map((formation, i) => (
+                    <div key={i} className="bg-teal-700 p-3 rounded">
+                      <h4 className="font-bold text-sm text-yellow-400">{formation.diplome}</h4>
+                      <p className="text-xs text-teal-200">{formation.etablissement}</p>
+                      <p className="text-xs text-yellow-300">{formation.annee}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contenu Principal */}
+          <div className="flex-1 p-12">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-teal-800 mb-4 border-b-4 border-yellow-400 pb-2">Profil Professionnel</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">{cvData.profil}</p>
+            </div>
+            
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-teal-800 mb-6 border-b-4 border-yellow-400 pb-2">Expérience Professionnelle</h2>
+              <div className="space-y-8">
+                {cvData.experiences.map((exp, i) => (
+                  <div key={i} className="border-l-4 border-teal-500 pl-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                    <p className="text-teal-600 font-semibold text-lg mb-2">{exp.entreprise} • {exp.duree}</p>
+                    <p className="text-gray-700 mb-3">{exp.description}</p>
+                    <ul className="space-y-2">
+                      {exp.missions.map((mission, j) => (
+                        <li key={j} className="text-gray-700 flex items-start">
+                          <span className="text-teal-500 mr-2 mt-1">▶</span>
+                          {mission}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 45 - Layout Créatif avec Accents Rouges (inspiré LEO O'REILLY)
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
+        <div className="mb-12">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-6">
+              <Image
+                src="/og-caroline-karpel.jpg"
+                alt="Caroline Karpel"
+                width={140}
+                height={140}
+                className="rounded-full border-6 border-red-500 shadow-xl"
+              />
+              <div>
+                <h1 className="text-4xl font-bold text-gray-900 mb-2">{cvData.nom}</h1>
+                <p className="text-2xl text-red-600 font-semibold">{cvData.posteActuel}</p>
+                <p className="text-lg text-gray-600">{cvData.localisation}</p>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="bg-red-50 p-4 rounded-lg border-2 border-red-200">
+                <h3 className="text-red-600 font-bold mb-2">Contact</h3>
+                <p className="text-sm text-gray-700">📧 {cvData.email}</p>
+                <p className="text-sm text-gray-700">📱 {cvData.telephone}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-red-600 mb-6 flex items-center">
+            <span className="w-10 h-10 bg-red-500 rounded-full mr-4 flex items-center justify-center text-white font-bold">P</span>
+            Profil Professionnel
+          </h2>
+          <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
+            <p className="text-lg text-gray-700 leading-relaxed">{cvData.profil}</p>
+          </div>
+        </div>
+        
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-red-600 mb-6 flex items-center">
+            <span className="w-10 h-10 bg-red-500 rounded-full mr-4 flex items-center justify-center text-white font-bold">E</span>
+            Expérience Professionnelle
+          </h2>
+          <div className="space-y-8">
+            {cvData.experiences.map((exp, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-lg border-2 border-red-200">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                    <p className="text-red-600 font-semibold text-lg">{exp.entreprise}</p>
+                    <p className="text-gray-600">{exp.duree}</p>
+                  </div>
+                  <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">
+                    {i + 1}
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-4">{exp.description}</p>
+                <ul className="space-y-2">
+                  {exp.missions.map((mission, j) => (
+                    <li key={j} className="text-gray-700 flex items-start">
+                      <span className="text-red-500 mr-2 mt-1 font-bold">▶</span>
+                      {mission}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold text-red-600 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-red-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">F</span>
+              Formation
+            </h2>
+            <div className="space-y-4">
+              {cvData.formations.map((formation, i) => (
+                <div key={i} className="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                  <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
+                  <p className="text-red-600 font-semibold">{formation.etablissement}</p>
+                  <p className="text-gray-600">{formation.annee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h2 className="text-2xl font-bold text-red-600 mb-6 flex items-center">
+              <span className="w-8 h-8 bg-red-500 rounded-full mr-3 flex items-center justify-center text-white font-bold text-sm">C</span>
+              Compétences
+            </h2>
+            <div className="grid grid-cols-2 gap-3">
+              {cvData.competences.map((comp, i) => (
+                <div key={i} className="bg-red-100 px-4 py-3 rounded-lg text-center font-medium text-gray-800 border border-red-200">
+                  {comp}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 46 - Layout Minimaliste avec Accents Violets
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
+        <div className="text-center mb-16">
+          <Image
+            src="/og-caroline-karpel.jpg"
+            alt="Caroline Karpel"
+            width={160}
+            height={160}
+            className="rounded-full mx-auto border-4 border-purple-400 shadow-xl mb-8"
+          />
+          <h1 className="text-5xl font-light text-gray-900 mb-4 tracking-wide">{cvData.nom}</h1>
+          <div className="w-24 h-1 bg-purple-400 mx-auto mb-6"></div>
+          <p className="text-2xl text-purple-600 font-medium mb-4">{cvData.posteActuel}</p>
+          <p className="text-lg text-gray-600 mb-6">{cvData.localisation}</p>
+          <div className="flex justify-center space-x-8 text-gray-600">
+            <span>📧 {cvData.email}</span>
+            <span>📱 {cvData.telephone}</span>
+          </div>
+        </div>
+        
+        <div className="mb-16">
+          <h2 className="text-3xl font-light text-gray-900 mb-6 text-center">Profil Professionnel</h2>
+          <div className="w-16 h-1 bg-purple-400 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">{cvData.profil}</p>
+        </div>
+        
+        <div className="mb-16">
+          <h2 className="text-3xl font-light text-gray-900 mb-8 text-center">Expérience Professionnelle</h2>
+          <div className="w-16 h-1 bg-purple-400 mx-auto mb-12"></div>
+          <div className="space-y-12">
+            {cvData.experiences.map((exp, i) => (
+              <div key={i} className="text-center">
+                <h3 className="text-2xl font-medium text-gray-900 mb-2">{exp.poste}</h3>
+                <p className="text-purple-600 font-medium text-lg mb-2">{exp.entreprise}</p>
+                <p className="text-gray-600 mb-4">{exp.duree}</p>
+                <p className="text-gray-700 mb-4 max-w-2xl mx-auto">{exp.description}</p>
+                <ul className="space-y-2 max-w-2xl mx-auto">
+                  {exp.missions.map((mission, j) => (
+                    <li key={j} className="text-gray-700">• {mission}</li>
+                  ))}
+                </ul>
+                {i < cvData.experiences.length - 1 && <div className="w-8 h-8 border-2 border-purple-400 rounded-full mx-auto mt-8"></div>}
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-16">
+          <div className="text-center">
+            <h2 className="text-2xl font-light text-gray-900 mb-6">Formation</h2>
+            <div className="w-12 h-1 bg-purple-400 mx-auto mb-6"></div>
+            <div className="space-y-6">
+              {cvData.formations.map((formation, i) => (
+                <div key={i}>
+                  <h3 className="font-medium text-lg text-gray-900">{formation.diplome}</h3>
+                  <p className="text-purple-600">{formation.etablissement}</p>
+                  <p className="text-gray-600">{formation.annee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-light text-gray-900 mb-6">Compétences</h2>
+            <div className="w-12 h-1 bg-purple-400 mx-auto mb-6"></div>
+            <div className="grid grid-cols-2 gap-4">
+              {cvData.competences.map((comp, i) => (
+                <div key={i} className="bg-purple-50 px-4 py-3 rounded-lg text-gray-800">
+                  {comp}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 47 - Layout Asymétrique avec Sidebar Rose
+    () => (
+      <div className="max-w-4xl mx-auto bg-white shadow-lg print:shadow-none">
+        <div className="flex">
+          {/* Contenu Principal */}
+          <div className="flex-1 p-12">
+            <div className="mb-12">
+              <div className="flex items-center gap-8 mb-8">
+                <Image
+                  src="/og-caroline-karpel.jpg"
+                  alt="Caroline Karpel"
+                  width={140}
+                  height={140}
+                  className="rounded-full border-6 border-pink-400 shadow-xl"
+                />
+                <div>
+                  <h1 className="text-4xl font-bold text-gray-900 mb-2">{cvData.nom}</h1>
+                  <p className="text-2xl text-pink-600 font-semibold">{cvData.posteActuel}</p>
+                  <p className="text-lg text-gray-600">{cvData.localisation}</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-pink-500 pb-2">Profil Professionnel</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">{cvData.profil}</p>
+            </div>
+            
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-pink-500 pb-2">Expérience Professionnelle</h2>
+              <div className="space-y-8">
+                {cvData.experiences.map((exp, i) => (
+                  <div key={i} className="relative">
+                    <div className="absolute -left-4 top-0 w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {i + 1}
+                    </div>
+                    <div className="ml-6">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                      <p className="text-pink-600 font-semibold text-lg mb-2">{exp.entreprise} • {exp.duree}</p>
+                      <p className="text-gray-700 mb-3">{exp.description}</p>
+                      <ul className="space-y-2">
+                        {exp.missions.map((mission, j) => (
+                          <li key={j} className="text-gray-700 flex items-start">
+                            <span className="text-pink-500 mr-2 mt-1">●</span>
+                            {mission}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Sidebar Rose */}
+          <div className="w-80 bg-gradient-to-b from-pink-500 to-pink-600 text-white p-12">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-pink-100">Contact</h3>
+              <div className="space-y-4 text-sm">
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-pink-400 rounded-full mr-3 flex items-center justify-center text-xs">📧</span>
+                  {cvData.email}
+                </p>
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-pink-400 rounded-full mr-3 flex items-center justify-center text-xs">📱</span>
+                  {cvData.telephone}
+                </p>
+                <p className="flex items-center">
+                  <span className="w-6 h-6 bg-pink-400 rounded-full mr-3 flex items-center justify-center text-xs">📍</span>
+                  {cvData.localisation}
+                </p>
+              </div>
+            </div>
+            
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-pink-100">Compétences</h3>
+              <div className="space-y-3">
+                {cvData.competences.slice(0, 10).map((comp, i) => (
+                  <div key={i} className="bg-pink-400 px-4 py-2 rounded text-sm font-medium">
+                    {comp}
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-pink-100">Formation</h3>
+              <div className="space-y-4">
+                {cvData.formations.map((formation, i) => (
+                  <div key={i} className="bg-pink-400 p-4 rounded">
+                    <h4 className="font-bold text-sm text-pink-900">{formation.diplome}</h4>
+                    <p className="text-xs text-pink-100">{formation.etablissement}</p>
+                    <p className="text-xs text-pink-200">{formation.annee}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 48 - Layout Grid avec Accents Cyan
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-12 shadow-lg print:shadow-none">
+        <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="col-span-2">
+            <h1 className="text-5xl font-bold text-gray-900 mb-4">{cvData.nom}</h1>
+            <p className="text-2xl text-cyan-600 font-semibold mb-2">{cvData.posteActuel}</p>
+            <p className="text-lg text-gray-600">{cvData.localisation}</p>
+          </div>
+          <div className="text-center">
+            <Image
+              src="/og-caroline-karpel.jpg"
+              alt="Caroline Karpel"
+              width={140}
+              height={140}
+              className="rounded-full mx-auto border-6 border-cyan-400 shadow-xl"
+            />
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="col-span-2">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-cyan-500 pb-2">Profil Professionnel</h2>
+            <p className="text-gray-700 leading-relaxed">{cvData.profil}</p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-cyan-500 pb-2">Contact</h2>
+            <div className="space-y-3 text-sm">
+              <p>📧 {cvData.email}</p>
+              <p>📱 {cvData.telephone}</p>
+              <p>📍 {cvData.localisation}</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-cyan-500 pb-2">Expérience Professionnelle</h2>
+          <div className="grid grid-cols-2 gap-8">
+            {cvData.experiences.map((exp, i) => (
+              <div key={i} className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-500">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                <p className="text-cyan-600 font-semibold text-lg mb-2">{exp.entreprise}</p>
+                <p className="text-gray-600 mb-3">{exp.duree}</p>
+                <p className="text-gray-700 mb-3">{exp.description}</p>
+                <ul className="space-y-1">
+                  {exp.missions.slice(0, 3).map((mission, j) => (
+                    <li key={j} className="text-gray-700 text-sm flex items-start">
+                      <span className="text-cyan-500 mr-2">▶</span>
+                      {mission}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-8">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-cyan-500 pb-2">Formation</h2>
+            <div className="space-y-4">
+              {cvData.formations.map((formation, i) => (
+                <div key={i} className="bg-cyan-50 p-4 rounded-lg">
+                  <h3 className="font-bold text-lg text-gray-900">{formation.diplome}</h3>
+                  <p className="text-cyan-600 font-semibold">{formation.etablissement}</p>
+                  <p className="text-gray-600">{formation.annee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-cyan-500 pb-2">Compétences</h2>
+            <div className="grid grid-cols-2 gap-3">
+              {cvData.competences.map((comp, i) => (
+                <div key={i} className="bg-cyan-100 px-4 py-3 rounded-lg text-center font-medium text-gray-800">
+                  {comp}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 49 - Layout Centré avec Accents Indigo
+    () => (
+      <div className="max-w-4xl mx-auto bg-white p-16 shadow-lg print:shadow-none">
+        <div className="text-center mb-16">
+          <Image
+            src="/og-caroline-karpel.jpg"
+            alt="Caroline Karpel"
+            width={180}
+            height={180}
+            className="rounded-full mx-auto border-8 border-indigo-400 shadow-2xl mb-8"
+          />
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">{cvData.nom}</h1>
+          <div className="w-32 h-2 bg-indigo-500 mx-auto mb-6"></div>
+          <p className="text-3xl text-indigo-600 font-semibold mb-4">{cvData.posteActuel}</p>
+          <p className="text-xl text-gray-600 mb-8">{cvData.localisation}</p>
+          <div className="flex justify-center space-x-12 text-lg text-gray-600">
+            <span>📧 {cvData.email}</span>
+            <span>📱 {cvData.telephone}</span>
+          </div>
+        </div>
+        
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Profil Professionnel</h2>
+          <div className="w-24 h-2 bg-indigo-500 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">{cvData.profil}</p>
+        </div>
+        
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Expérience Professionnelle</h2>
+          <div className="w-24 h-2 bg-indigo-500 mx-auto mb-12"></div>
+          <div className="space-y-16">
+            {cvData.experiences.map((exp, i) => (
+              <div key={i} className="text-center">
+                <div className="w-16 h-16 bg-indigo-500 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                  {i + 1}
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">{exp.poste}</h3>
+                <p className="text-indigo-600 font-semibold text-2xl mb-4">{exp.entreprise}</p>
+                <p className="text-gray-600 text-lg mb-6">{exp.duree}</p>
+                <p className="text-gray-700 text-lg mb-6 max-w-3xl mx-auto">{exp.description}</p>
+                <ul className="space-y-3 max-w-3xl mx-auto">
+                  {exp.missions.map((mission, j) => (
+                    <li key={j} className="text-gray-700 text-lg">• {mission}</li>
+                  ))}
+                </ul>
+                {i < cvData.experiences.length - 1 && (
+                  <div className="w-12 h-12 border-4 border-indigo-300 rounded-full mx-auto mt-12"></div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-16">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Formation</h2>
+            <div className="w-20 h-2 bg-indigo-500 mx-auto mb-8"></div>
+            <div className="space-y-8">
+              {cvData.formations.map((formation, i) => (
+                <div key={i} className="bg-indigo-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{formation.diplome}</h3>
+                  <p className="text-indigo-600 font-semibold text-lg">{formation.etablissement}</p>
+                  <p className="text-gray-600">{formation.annee}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Compétences</h2>
+            <div className="w-20 h-2 bg-indigo-500 mx-auto mb-8"></div>
+            <div className="grid grid-cols-2 gap-4">
+              {cvData.competences.map((comp, i) => (
+                <div key={i} className="bg-indigo-100 px-6 py-4 rounded-lg text-center font-medium text-gray-800 text-lg">
+                  {comp}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    // CV 50 - Layout Ultra Moderne avec Accents Émeraude
+    () => (
+      <div className="max-w-4xl mx-auto bg-white shadow-2xl print:shadow-none">
+        <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-12">
+          <div className="flex items-center gap-8">
+            <Image
+              src="/og-caroline-karpel.jpg"
+              alt="Caroline Karpel"
+              width={160}
+              height={160}
+              className="rounded-full border-8 border-white shadow-2xl"
+            />
+            <div>
+              <h1 className="text-5xl font-bold mb-4">{cvData.nom}</h1>
+              <p className="text-3xl font-semibold mb-2 text-emerald-100">{cvData.posteActuel}</p>
+              <p className="text-xl text-emerald-100">{cvData.localisation}</p>
+              <div className="flex space-x-8 mt-4 text-emerald-100">
+                <span>📧 {cvData.email}</span>
+                <span>📱 {cvData.telephone}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="p-12">
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6 flex items-center">
+              <span className="w-12 h-12 bg-emerald-500 rounded-full mr-4 flex items-center justify-center text-white font-bold text-xl">P</span>
+              Profil Professionnel
+            </h2>
+            <div className="bg-emerald-50 p-8 rounded-lg border-l-8 border-emerald-500">
+              <p className="text-xl text-gray-700 leading-relaxed">{cvData.profil}</p>
+            </div>
+          </div>
+          
+          <div className="mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 flex items-center">
+              <span className="w-12 h-12 bg-emerald-500 rounded-full mr-4 flex items-center justify-center text-white font-bold text-xl">E</span>
+              Expérience Professionnelle
+            </h2>
+            <div className="space-y-8">
+              {cvData.experiences.map((exp, i) => (
+                <div key={i} className="bg-gradient-to-r from-emerald-50 to-emerald-100 p-8 rounded-lg border-l-8 border-emerald-500">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{exp.poste}</h3>
+                      <p className="text-emerald-600 font-semibold text-xl">{exp.entreprise}</p>
+                      <p className="text-gray-600 text-lg">{exp.duree}</p>
+                    </div>
+                    <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-2xl">
+                      {i + 1}
+                    </div>
+                  </div>
+                  <p className="text-gray-700 text-lg mb-4">{exp.description}</p>
+                  <ul className="space-y-2">
+                    {exp.missions.map((mission, j) => (
+                      <li key={j} className="text-gray-700 text-lg flex items-start">
+                        <span className="text-emerald-500 mr-3 mt-1 font-bold text-xl">▶</span>
+                        {mission}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="w-10 h-10 bg-emerald-500 rounded-full mr-3 flex items-center justify-center text-white font-bold">F</span>
+                Formation
+              </h2>
+              <div className="space-y-6">
+                {cvData.formations.map((formation, i) => (
+                  <div key={i} className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{formation.diplome}</h3>
+                    <p className="text-emerald-600 font-semibold text-lg">{formation.etablissement}</p>
+                    <p className="text-gray-600">{formation.annee}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="w-10 h-10 bg-emerald-500 rounded-full mr-3 flex items-center justify-center text-white font-bold">C</span>
+                Compétences
+              </h2>
+              <div className="grid grid-cols-2 gap-4">
+                {cvData.competences.map((comp, i) => (
+                  <div key={i} className="bg-emerald-100 px-6 py-4 rounded-lg text-center font-medium text-gray-800 text-lg border-2 border-emerald-200">
+                    {comp}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
   ];
 
   return (
@@ -2626,9 +3555,9 @@ export default function Home() {
       <div className="print:hidden bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL 40 VERSIONS ✨</h1>
+            <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL 50 VERSIONS ✨</h1>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-600">VERSION {currentCV} / 40</span>
+              <span className="text-sm text-gray-600">VERSION {currentCV} / 50</span>
               <div className="flex gap-2">
                 <button
                   onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
@@ -2638,8 +3567,8 @@ export default function Home() {
                   PRÉCÉDENT
                 </button>
                 <button
-                  onClick={() => setCurrentCV(Math.min(40, currentCV + 1))}
-                  disabled={currentCV === 40}
+                  onClick={() => setCurrentCV(Math.min(50, currentCV + 1))}
+                  disabled={currentCV === 50}
                   className="px-4 py-2 bg-gray-900 text-white text-sm uppercase tracking-wider disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-colors"
                 >
                   SUIVANT
@@ -2654,7 +3583,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-4 flex gap-2 overflow-x-auto pb-2">
-            {Array.from({ length: 40 }, (_, i) => i + 1).map((num) => (
+            {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => (
               <button
                 key={num}
                 onClick={() => setCurrentCV(num)}
