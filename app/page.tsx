@@ -3701,7 +3701,7 @@ export default function Home() {
       </div>
 
       <div 
-        className="py-8 print:py-0 touch-container"
+        className="py-8 print:py-0 touch-container px-4 md:px-8"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
