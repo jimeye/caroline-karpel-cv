@@ -3601,13 +3601,6 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold text-gray-900">CV DE CAROLINE KARPEL 50 VERSIONS ✨</h1>
             <div className="flex items-center gap-4">
-              <span className="text-sm text-gray-600">VERSION {currentCV} / 50</span>
-              <div className="text-xs text-gray-500 hidden md:block">
-                💡 Utilisez ← → ou ↑ ↓ pour naviguer
-              </div>
-              <div className="text-xs text-gray-500 md:hidden">
-                👆 Glissez avec le doigt pour naviguer
-              </div>
               <div className="flex gap-2">
                 <button
                   onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
