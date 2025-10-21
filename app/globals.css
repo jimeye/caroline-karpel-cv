@@ -22,6 +22,24 @@
 .smooth-scroll {
   scroll-behavior: smooth;
 }
+
+/* Styles pour la navigation tactile */
+.touch-container {
+  touch-action: pan-y;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Amélioration de l'expérience tactile sur mobile */
+@media (max-width: 768px) {
+  .touch-container {
+    -webkit-overflow-scrolling: touch;
+  }
+}
   
   body {
     print-color-adjust: exact;

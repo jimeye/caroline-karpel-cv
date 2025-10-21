@@ -6,6 +6,8 @@ import { cvData } from './data/cv-data';
 
 export default function Home() {
   const [currentCV, setCurrentCV] = useState(1);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Raccourcis clavier pour navigation
   useEffect(() => {
@@ -24,6 +26,30 @@ export default function Home() {
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
+
+  // Navigation tactile (swipe) pour mobile et tablette
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentCV(prev => Math.min(50, prev + 1));
+    } else if (isRightSwipe) {
+      setCurrentCV(prev => Math.max(1, prev - 1));
+    }
+  };
 
   const cvTemplates = [
     // CV 1 - Classique élégant avec touches de couleur
@@ -3579,6 +3605,9 @@ export default function Home() {
               <div className="text-xs text-gray-500 hidden md:block">
                 💡 Utilisez ← → ou ↑ ↓ pour naviguer
               </div>
+              <div className="text-xs text-gray-500 md:hidden">
+                👆 Glissez avec le doigt pour naviguer
+              </div>
               <div className="flex gap-2">
                 <button
                   onClick={() => setCurrentCV(Math.max(1, currentCV - 1))}
@@ -3637,7 +3666,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="py-8 print:py-0">
+      <div 
+        className="py-8 print:py-0 touch-container"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="print:w-[210mm] print:min-h-[297mm] print:max-h-[594mm] print:m-0 print:p-0">
           {cvTemplates[currentCV - 1]()}
         </div>
